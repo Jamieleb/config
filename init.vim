@@ -55,6 +55,8 @@ call plug#begin("~/.vim/plugged")
   Plug 'junegunn/limelight.vim'
   " Async tasks
   Plug 'skywind3000/asyncrun.vim'
+  " Rails functionality
+  Plug 'tpope/vim-rails'
 call plug#end()
 
 " Config Section
