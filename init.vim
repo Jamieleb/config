@@ -53,7 +53,8 @@ call plug#begin("~/.vim/plugged")
   Plug 'junegunn/goyo.vim'
   " block highlighting
   Plug 'junegunn/limelight.vim'
-
+  " Async tasks
+  Plug 'skywind3000/asyncrun.vim'
 call plug#end()
 
 " Config Section
@@ -140,7 +141,6 @@ nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 " Map search highlighting toggle to <F3>
-set hlsearch!
 nnoremap <F3> :set hlsearch!<CR>
 
 " Goyo Limelight integration
@@ -164,7 +164,13 @@ let g:floaterm_autohide = v:false
 
 command! Vifm FloatermNew vifm
 command! Lg FloatermNew lazygit
-command! Ranger FloatermNew ranger
+command! Rgr FloatermNew ranger
+
+" AsyncRun default quickfix list show
+let g:asyncrun_open = 6
+command! Rspec AsyncRun bundle exec rspec %
+command! Fspec FloatermNew bundle exec rspec %
+command! Push AsyncRun git push
 
 set number
 set relativenumber
