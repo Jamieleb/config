@@ -57,6 +57,8 @@ call plug#begin("~/.vim/plugged")
   Plug 'skywind3000/asyncrun.vim'
   " Rails functionality
   Plug 'tpope/vim-rails'
+  " Repeat plugin commands with .
+  Plug 'tpope/vim-repeat'
 call plug#end()
 
 " Config Section
@@ -76,6 +78,8 @@ let g:NERDTreeStatusline = ''
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " Toggle
 " nnoremap <silent> <C-b> :NERDTreeToggle %<CR>
+
+:let mapleader="\\"
 
 " open  new split panes to right and below
 set splitright
@@ -183,3 +187,6 @@ set smartindent
 set spell
 set spelllang=en_gb
 
+" remap increment/decrement because of Tmux leader
+nnoremap ga <C-a>
+nnoremap gA <C-x>
