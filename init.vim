@@ -20,14 +20,14 @@ call plug#begin("~/.vim/plugged")
   " Themes
   Plug 'dracula/vim'
   Plug 'morhetz/gruvbox'
-  Plug 'arcticicestudio/nord-vim' 
+  Plug 'arcticicestudio/nord-vim'
   Plug 'jacoborus/tender.vim'
   Plug 'pgdouyon/vim-yin-yang'
 
   "Floating window buffers
   Plug 'voldikss/vim-floaterm'
 
-  " Telescope dependecies
+  " Telescope dependencies
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
@@ -59,16 +59,11 @@ if (has("termguicolors"))
   set termguicolors
 endif
 " Theme
-" syntax enable 
 colorscheme tender
-
 :let  mapleader=" "
-
-" open new split panes to right and below
-set splitright
-set splitbelow
-
 let g:indentLine_char = '|'
+
+
 
 " Floaterm custom commands
 nnoremap <silent> <F7> :FloatermNew<CR>
