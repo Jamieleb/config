@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+
+# NeoVim setup - src: ThePrimeagen
+mkdir -p ~/.config/nvim/plugin
+mkdir -p ~/.config/nvim/after/plugin
+mkdir -p ~/.config/nvim/lua
+
+# link wholesale
+for f in `find . -regex ".*\.vim$\|.*\.lua$"`; do
+    rm -rf ~/.config/nvim/$f
+    ln -s ~/config/$f ~/.config/nvim/$f
+done
+
+# Other setup
+
+rm ~/.tmux.conf
+rm ~/.zshrc
+ln -s ~/config/tmux.conf ~/.tmux.conf
+ln -s ~/config/zshrc ~/.zshrc
