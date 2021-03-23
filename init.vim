@@ -58,6 +58,7 @@ call plug#end()
 if (has("termguicolors"))
   set termguicolors
 endif
+
 " Theme
 colorscheme tender
 :let  mapleader=" "
@@ -116,6 +117,11 @@ nnoremap <Leader>qj :cnext<CR>
 nnoremap <Leader>qk :cprevious<CR>
 nnoremap <Leader>lj :lnext<CR>
 nnoremap <Leader>lk :lprevious<CR>
+
+" Telescope remaps
+nnoremap <Leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
+nnoremap <Leader>ff :lua require('telescope.builtin').find_files()<CR>
+nnoremap <Leader><Leader> :lua require('telescope.builtin').find_files()<CR>
 
 augroup CUSTOM
     autocmd!
