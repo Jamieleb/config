@@ -33,6 +33,12 @@ call plug#begin("~/.vim/plugged")
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
+  " lsp plugins
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'kabouzeid/nvim-lspinstall'
+  Plug 'nvim-lua/completion-nvim'
+  Plug 'tjdevries/nlua.nvim'
+  Plug 'tjdevries/lsp_extensions.nvim'
 
   "Auto comment
   Plug 'tpope/vim-commentary'
@@ -66,7 +72,18 @@ colorscheme tender
 :let  mapleader=" "
 let g:indentLine_char = '|'
 
+" LSP & Completion
+set completeopt=menuone,noinsert,noselect
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
+lua require('lspconfig').solargraph.setup{ on_attach=require'completion'.on_attach }
+lua require('lspconfig').tsserver.setup{ on_attach=require'completion'.on_attach }
 
+nnoremap <leader>cd :lua vim.lsp.buf.definition()<CR>
+nnoremap <leader>qr :lua vim.lsp.buf.references()<CR>
+nnoremap <leader>cr :lua vim.lsp.buf.rename()<CR>
+nnoremap <leader>k :lua vim.lsp.buf.hover()<CR>
+nnoremap <leader>ce :lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
+nnoremap <leader>cl :lua vim.lsp.diagnostic.set_loclist()<CR>
 
 " Floaterm custom commands
 let g:floaterm_width = 0.9
