@@ -20,7 +20,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
-  " lsp plugins
+  " LSP, Linting, and Completion plugins
   Plug 'neovim/nvim-lspconfig'
   Plug 'kabouzeid/nvim-lspinstall'
   Plug 'nvim-lua/completion-nvim'
@@ -47,6 +47,9 @@ call plug#begin("~/.vim/plugged")
   Plug 'tpope/vim-repeat'
   " Git Client
   Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
+  " Asyncronous tasks
+  Plug 'tpope/vim-dispatch'
   " Toggles maximising splits
   Plug 'szw/vim-maximizer'
 call plug#end()
