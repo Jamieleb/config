@@ -95,6 +95,13 @@ nnoremap <Leader>wv <C-w>v
 nnoremap <Leader>ws <C-w>s
 nnoremap <Leader>w= <C-w>=
 
+" Cut/Copy/Paste Remaps
+vnoremap <Leader>p "_dP
+nnoremap <Leader>y "*y
+vnoremap <Leader>y "*y
+nnoremap <Leader>d "_d
+vnoremap <Leader>d "_d
+
 " Quickfix and Location List
 " Open/close
 nnoremap <Leader>qo :copen<CR>
