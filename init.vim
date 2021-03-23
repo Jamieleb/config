@@ -66,21 +66,23 @@ let g:indentLine_char = '|'
 
 
 " Floaterm custom commands
-nnoremap <silent> <F7> :FloatermNew<CR>
-tnoremap   <silent>   <F7>    <C-\><C-n>:FloatermNew<CR>
-nnoremap   <silent>   <F8>    :FloatermPrev<CR>
-tnoremap   <silent>   <F8>    <C-\><C-n>:FloatermPrev<CR>
-nnoremap   <silent>   <F9>    :FloatermNext<CR>
-tnoremap   <silent>   <F9>    <C-\><C-n>:FloatermNext<CR>
-nnoremap   <silent>   <F10>   :FloatermToggle<CR>
-tnoremap   <silent>   <F10>   <C-\><C-n>:FloatermToggle<CR>
 let g:floaterm_width = 0.9
 let g:floaterm_height = 0.7
 let g:floaterm_autohide = v:false
 
-nnoremap <Leader>or :FloatermNew ranger<CR>
-nnoremap <Leader>og :FloatermNew lazygit<CR>
-nnoremap <Leader>oc :FloatermNew rails console<CR>
+nnoremap <silent> <Leader>to :FloatermNew<CR>
+nnoremap <silent> <Leader>tn :FloatermNew<CR>
+nnoremap <silent> <Leader>tt :FloatermToggle<CR>
+nnoremap <silent> <Leader>tc :FloatermKill<CR>
+tnoremap <silent> <C-n> <C-\><C-n>:FloatermNew<CR>
+tnoremap <silent> <C-l> <C-\><C-n>:FloatermNext<CR>
+tnoremap <silent> <C-h> <C-\><C-n>:FloatermPrev<CR>
+tnoremap <silent> <C-j> <C-\><C-n>:FloatermToggle<CR>
+tnoremap <silent> <C-k> <C-\><C-n>:FloatermKill<CR>
+
+nnoremap <Leader>ro :FloatermNew ranger<CR>
+nnoremap <Leader>go :FloatermNew lazygit<CR>
+nnoremap <Leader>co :FloatermNew rails console<CR>
 
 " General Remaps
 " map keys for changing splits.
