@@ -1,24 +1,15 @@
 # Configuration Files README
 
+Run install script to clear config files and replace with symlinks to the files in this directory.
+
 ## Neovim
 
-Neovim configuration files should be sourced into the file ~/.config/nvim/init.vim
-Once sourced, run 'nvim +PlugInstall' to install plugins
+Requires NeoVim 0.5
+Run :PlugInstall to install various plugins
 
 ### Dependencies:
 
-- FZF for file searching (brew install fzf)
-- SilverSearcher for file searching (brew install the_silver_searcher)
-- lazygit for Git CLI (brew install lazygit)
-- Ranger for file exploration (brew install ranger)
-
-## ZSH
-
-zshrc should be sourced into ~/.zshrc
-
-Should install Powerlevel10k first
-
-## TMUX
-
-tmux.conf should be sourced into ~/.tmux.conf
-
+- lazygit for Git CLI
+- Ranger for file exploration
+- Solargraph
+- Typescript-language-server
