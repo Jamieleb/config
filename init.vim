@@ -51,6 +51,8 @@ call plug#begin("~/.vim/plugged")
   Plug 'tpope/vim-rails'
   " Repeat plugin commands with .
   Plug 'tpope/vim-repeat'
+  " Toggles maximising splits
+  Plug 'szw/vim-maximizer'
 call plug#end()
 
 " Config
@@ -84,6 +86,9 @@ tnoremap <silent> <C-k> <C-\><C-n>:FloatermKill<CR>
 nnoremap <Leader>ro :FloatermNew ranger<CR>
 nnoremap <Leader>go :FloatermNew lazygit<CR>
 nnoremap <Leader>co :FloatermNew rails console<CR>
+
+" Other Plugin Remaps
+nnoremap <silent><Leader>wf :MaximizerToggle<CR>
 
 " General Remaps
 " map keys for changing splits.
