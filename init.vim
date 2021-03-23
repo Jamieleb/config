@@ -93,6 +93,8 @@ nnoremap <Leader>wh <C-w>h
 nnoremap <Leader>wc <C-w>c
 nnoremap <Leader>wv <C-w>v
 nnoremap <Leader>ws <C-w>s
+nnoremap <Leader>w= <C-w>=
+
 " Quickfix and Location List
 " Open/close
 nnoremap <Leader>qo :copen<CR>
