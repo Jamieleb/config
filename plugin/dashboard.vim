@@ -28,11 +28,13 @@ let g:dashboard_custom_shortcut={
 \ 'last_session'       : 'SPC s l',
 \ 'find_history'       : 'SPC p h',
 \ 'find_file'          : 'SPC p f',
-\ 'new_file'           : 'SPC c n',
+\ 'new_file'           : 'SPC b n',
 \ 'change_colorscheme' : 'SPC p t',
 \ 'find_word'          : 'SPC p s',
 \ 'book_marks'         : 'SPC p m',
 \ }
 
-nnoremap <Leader>cn :DashboardNewFile<CR>
+nnoremap <Leader>h :Dashboard<CR>
+nnoremap <Leader>ss :SessionSave<CR>
+nnoremap <Leader>sl :SessionLoad<CR>
 
