@@ -5,6 +5,11 @@ call plug#begin("~/.vim/plugged")
   Plug 'arcticicestudio/nord-vim'
   Plug 'jacoborus/tender.vim'
   Plug 'pgdouyon/vim-yin-yang'
+  Plug 'ayu-theme/ayu-vim'
+
+  " Status Line
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
 
   "Floating window buffers
   Plug 'voldikss/vim-floaterm'
@@ -40,6 +45,8 @@ call plug#begin("~/.vim/plugged")
   Plug 'tpope/vim-rails'
   " Repeat plugin commands with .
   Plug 'tpope/vim-repeat'
+  " Git Client
+  Plug 'tpope/vim-fugitive'
   " Toggles maximising splits
   Plug 'szw/vim-maximizer'
 call plug#end()
@@ -51,8 +58,12 @@ if (has("termguicolors"))
 endif
 
 " Theme
-colorscheme tender
-:let  mapleader=" "
+colorscheme dracula
+let g:airline_powerline_fonts = 1
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
+
+let  mapleader=" "
 let g:indentLine_char = '|'
 
 augroup CUSTOM
