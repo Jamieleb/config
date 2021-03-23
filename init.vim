@@ -7,6 +7,13 @@ set shiftwidth=2
 set expandtab
 set spell
 set spelllang=en_gb
+set nowrap
+set splitright
+set splitbelow
+set smartindent
+set shiftround
+set noerrorbells
+set signcolumn=yes
 
 " Plugins
 call plug#begin("~/.vim/plugged")
