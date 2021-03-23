@@ -6,9 +6,9 @@ mkdir -p ~/.config/nvim/after/plugin
 mkdir -p ~/.config/nvim/lua
 
 # link wholesale
-for f in `find . -regex ".*\.vim$\|.*\.lua$"`; do
-    rm -rf ~/.config/nvim/$f
-    ln -s ~/config/$f ~/.config/nvim/$f
+for f in `find -E . -regex ".*\.(vim|lua)$"`; do
+  rm -rf ~/.config/nvim/$f
+  ln -s ~/config/$f ~/.config/nvim/$f
 done
 
 # Other setup
