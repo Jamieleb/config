@@ -22,9 +22,10 @@ call plug#begin("~/.vim/plugged")
   Plug 'tjdevries/nlua.nvim'
   Plug 'tjdevries/lsp_extensions.nvim'
 
+  Plug 'glepnir/dashboard-nvim'
+
   "Auto comment
   Plug 'tpope/vim-commentary'
-
   " Auto Pairs
   Plug 'jiangmiao/auto-pairs'
   " Auto end in ruby
