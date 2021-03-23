@@ -6,6 +6,7 @@ mkdir -p ~/.config/nvim/after/plugin
 mkdir -p ~/.config/nvim/lua
 
 # link wholesale
+# @note this probably only works on MacOS - it seems like there are some differences in find between MacOS and Linux
 for f in `find -E . -regex ".*\.(vim|lua)$"`; do
   rm -rf ~/.config/nvim/$f
   ln -s ~/config/$f ~/.config/nvim/$f
