@@ -106,3 +106,10 @@ nnoremap <Leader>qk :cprevious<CR>
 nnoremap <Leader>lj :lnext<CR>
 nnoremap <Leader>lk :lprevious<CR>
 
+augroup CUSTOM
+    autocmd!
+    " Trim whitespace on save
+    autocmd BufWritePre * %s/\s\+$//e
+augroup END
+
+
