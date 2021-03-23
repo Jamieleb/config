@@ -93,4 +93,16 @@ nnoremap <Leader>wh <C-w>h
 nnoremap <Leader>wc <C-w>c
 nnoremap <Leader>wv <C-w>v
 nnoremap <Leader>ws <C-w>s
+" Quickfix and Location List
+" Open/close
+nnoremap <Leader>qo :copen<CR>
+nnoremap <Leader>qc :cclose<CR>
+nnoremap <Leader>lo :lopen<CR>
+nnoremap <Leader>lc :lclose<CR>
+
+" Navigate
+nnoremap <Leader>qj :cnext<CR>
+nnoremap <Leader>qk :cprevious<CR>
+nnoremap <Leader>lj :lnext<CR>
+nnoremap <Leader>lk :lprevious<CR>
 
