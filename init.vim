@@ -6,6 +6,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'jacoborus/tender.vim'
   Plug 'pgdouyon/vim-yin-yang'
   Plug 'ayu-theme/ayu-vim'
+  Plug 'colepeters/spacemacs-theme.vim'
 
   " Status Line
   Plug 'vim-airline/vim-airline'
@@ -52,6 +53,8 @@ call plug#begin("~/.vim/plugged")
   Plug 'tpope/vim-dispatch'
   " Toggles maximising splits
   Plug 'szw/vim-maximizer'
+  " Todos
+  Plug 'vuciv/vim-bujo'
 call plug#end()
 
 " Config
@@ -61,7 +64,8 @@ if (has("termguicolors"))
 endif
 
 " Theme
-colorscheme dracula
+set background=dark
+colorscheme spacemacs-theme
 let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
