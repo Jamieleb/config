@@ -4,6 +4,10 @@ nnoremap <Leader>y "*y
 vnoremap <Leader>y "*y
 nnoremap <Leader>d "_d
 vnoremap <Leader>d "_d
+nnoremap <Leader>c "_c
+vnoremap <Leader>c "_c
+nnoremap <Leader>x "_x
+vnoremap <Leader>x "_x
 
 " Buffer commands
 
