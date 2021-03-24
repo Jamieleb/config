@@ -9,3 +9,10 @@ nnoremap <Leader>wc <C-w>c
 nnoremap <Leader>wv <C-w>v
 nnoremap <Leader>ws <C-w>s
 nnoremap <Leader>w= <C-w>=
+nnoremap <Leader>wfs <C-w>f
+nnoremap <silent><Leader>wfv :vertical wincmd f<CR>
+
+" Tab remaps
+nnoremap <silent><Leader>wtn :tabnew<CR>
+nnoremap <Leader>wft <C-w>gf
+nnoremap <silent><Leader>wtc :tabc<CR>
