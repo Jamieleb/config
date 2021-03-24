@@ -34,6 +34,8 @@ call plug#begin("~/.vim/plugged")
   Plug 'tjdevries/nlua.nvim'
   Plug 'tjdevries/lsp_extensions.nvim'
 
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
   Plug 'glepnir/dashboard-nvim'
 
   "Auto comment
@@ -68,6 +70,8 @@ call plug#end()
 if (has("termguicolors"))
   set termguicolors
 endif
+
+lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
 " Theme
 set background=dark
