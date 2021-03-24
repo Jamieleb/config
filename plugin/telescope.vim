@@ -9,7 +9,7 @@ nnoremap <Leader>st :Telescope colorscheme<CR>
 nnoremap <Leader>sq :lua require('telescope.builtin').quickfix()<CR>
 nnoremap <Leader>sl :lua require('telescope.builtin').loclist()<CR>
 nnoremap <Leader>s" :lua require('telescope.builtin').registers()<CR>
-nnoremap <Leader>s: :lua require('telescope.builtin').commands()<CR>
+nnoremap <Leader>s: :lua require('telescope.builtin').command_history()<CR>
 nnoremap <Leader>ss :lua require('telescope.builtin').lsp_document_symbols()<CR>
 nnoremap <Leader>sw :lua require('telescope.builtin').grep_string { search = vim.fn.expand("<cword>") }<CR>
 nnoremap <Leader>sb :lua require('telescope.builtin').buffers()<CR>
