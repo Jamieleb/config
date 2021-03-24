@@ -9,6 +9,7 @@ vnoremap <Leader>d "_d
 
 nnoremap <silent><Leader>bn :DashboardNewFile<CR>
 nnoremap <silent><Leader>bk :bdelete<CR>
+nnoremap <silent><Leader>bo :%bd\|e#\|bd#<CR>
 
 " Other Plugin Remaps
 nnoremap <silent><Leader>wf :MaximizerToggle<CR>
