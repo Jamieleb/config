@@ -9,7 +9,7 @@ Run :PlugInstall to install various plugins
 
 ### Dependencies:
 
-- lazygit for Git CLI
-- Ranger for file exploration
-- Solargraph
-- Typescript-language-server
+- lazygit for Git CLI https://github.com/jesseduffield/lazygit
+- Ranger for file exploration https://wiki.archlinux.org/index.php/ranger
+- Solargraph https://solargraph.org/
+- Typescript-language-server https://github.com/theia-ide/typescript-language-server
