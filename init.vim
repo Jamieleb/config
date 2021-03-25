@@ -7,6 +7,8 @@ call plug#begin("~/.vim/plugged")
   Plug 'pgdouyon/vim-yin-yang'
   Plug 'ayu-theme/ayu-vim'
   Plug 'colepeters/spacemacs-theme.vim'
+  Plug 'altercation/vim-colors-solarized'
+  Plug 'windwp/wind-colors'
 
   " Status Line
   Plug 'vim-airline/vim-airline'
