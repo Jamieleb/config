@@ -9,6 +9,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'colepeters/spacemacs-theme.vim'
   Plug 'altercation/vim-colors-solarized'
   Plug 'windwp/wind-colors'
+  Plug 'tanvirtin/monokai.nvim'
 
   " Status Line
   Plug 'vim-airline/vim-airline'
@@ -16,7 +17,7 @@ call plug#begin("~/.vim/plugged")
 
   " Tab bar
   Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
-  Plug 'ryanoasis/vim-devicons' " Icons without colours
+  " Plug 'ryanoasis/vim-devicons' " Icons without colours
   Plug 'akinsho/nvim-bufferline.lua'
 
   "Floating window buffers
@@ -59,6 +60,7 @@ call plug#begin("~/.vim/plugged")
   " Git Client
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
+  Plug 'pwntester/octo.nvim'
   " Asyncronous tasks
   Plug 'tpope/vim-dispatch'
   " Toggles maximising splits
@@ -77,7 +79,7 @@ lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
 " Theme
 set background=dark
-colorscheme spacemacs-theme
+colorscheme wind
 let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
