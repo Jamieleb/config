@@ -42,6 +42,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
   Plug 'glepnir/dashboard-nvim'
+  Plug 'liuchengxu/vim-which-key'
 
   "Auto comment
   Plug 'tpope/vim-commentary'
@@ -87,6 +88,10 @@ let g:airline_theme='ayu'
 let g:airline_solarized_bg='dark'
 
 let  mapleader=" "
+call which_key#register('<Space>', "g:which_key_map")
+
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+
 let g:indentLine_char = '|'
 
 augroup CUSTOM

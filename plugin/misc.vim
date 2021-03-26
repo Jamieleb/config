@@ -20,10 +20,6 @@ nnoremap <silent><Leader>bo :%bd\|e#\|bd#<CR>
 
 " Other remaps
 " Source init.vim
-nnoremap <silent><Leader>src :so ~/config/init.vim<CR>
+nnoremap <silent><Leader>vrc :so ~/config/init.vim<CR>
 " clear search highlighting
 nnoremap <silent><Leader>n :noh<CR>
-
-
-" Other Plugin Remaps
-nnoremap <silent><Leader>wf :MaximizerToggle<CR>

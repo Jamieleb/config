@@ -16,12 +16,12 @@ lua require('lspconfig').tsserver.setup{ on_attach=require'completion'.on_attach
 " Use completion-nvim in every buffer
 autocmd BufEnter * lua require'completion'.on_attach()
 
-nnoremap <leader>cd :lua vim.lsp.buf.definition()<CR>
-nnoremap <leader>qr :lua vim.lsp.buf.references()<CR>
-nnoremap <leader>cr :lua vim.lsp.buf.rename()<CR>
+nnoremap <leader>ad :lua vim.lsp.buf.definition()<CR>
+nnoremap <leader>ar :lua vim.lsp.buf.rename()<CR>
 nnoremap <leader>k :lua vim.lsp.buf.hover()<CR>
-nnoremap <leader>ce :lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
-nnoremap <leader>cl :lua vim.lsp.diagnostic.set_loclist()<CR>
+nnoremap <leader>ak :lua vim.lsp.buf.hover()<CR>
+nnoremap <leader>ae :lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
+nnoremap <leader>al :lua vim.lsp.diagnostic.set_loclist()<CR>
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"

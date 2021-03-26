@@ -16,3 +16,6 @@ nnoremap <silent><Leader>wfv :vertical wincmd f<CR>
 nnoremap <silent><Leader>wtn :tabnew<CR>
 nnoremap <Leader>wft <C-w>gf
 nnoremap <silent><Leader>wtc :tabc<CR>
+
+" Other Plugin Remaps
+nnoremap <silent><Leader>wm :MaximizerToggle<CR>
