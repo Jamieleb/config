@@ -10,6 +10,8 @@ call plug#begin("~/.vim/plugged")
   Plug 'altercation/vim-colors-solarized'
   Plug 'windwp/wind-colors'
   Plug 'tanvirtin/monokai.nvim'
+  Plug 'ackyshake/Spacegray.vim'
+  Plug 'zabanaa/neuromancer.vim'
 
   " Status Line
   Plug 'vim-airline/vim-airline'
@@ -81,7 +83,7 @@ lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 set background=dark
 colorscheme wind
 let g:airline_powerline_fonts = 1
-let g:airline_theme='solarized'
+let g:airline_theme='ayu'
 let g:airline_solarized_bg='dark'
 
 let  mapleader=" "
