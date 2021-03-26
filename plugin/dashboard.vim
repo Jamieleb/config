@@ -31,7 +31,7 @@ let g:dashboard_custom_shortcut={
 \ 'new_file'           : 'SPC b n',
 \ 'change_colorscheme' : 'SPC s t',
 \ 'find_word'          : 'SPC s /',
-\ 'book_marks'         : 'SPC p m',
+\ 'book_marks'         : 'SPC s m',
 \ }
 
 nnoremap <Leader>h :Dashboard<CR>
