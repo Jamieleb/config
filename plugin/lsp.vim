@@ -11,8 +11,6 @@ let g:completion_chain_complete_list = [
 
 let g:completion_auto_change_source = 1
 
-lua require('lspconfig').solargraph.setup{ on_attach=require'completion'.on_attach }
-lua require('lspconfig').tsserver.setup{ on_attach=require'completion'.on_attach }
 " Use completion-nvim in every buffer
 autocmd BufEnter * lua require'completion'.on_attach()
 
