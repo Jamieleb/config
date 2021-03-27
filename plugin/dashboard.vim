@@ -35,6 +35,6 @@ let g:dashboard_custom_shortcut={
 \ }
 
 nnoremap <Leader>h :Dashboard<CR>
-nnoremap <Leader>ww :SessionSave<CR>
+nnoremap <Leader>wp :SessionSave<CR>
 nnoremap <Leader>wr :SessionLoad<CR>
 
