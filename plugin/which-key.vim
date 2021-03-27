@@ -3,7 +3,10 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
 " Define prefix dictionary
-let g:which_key_map =  {}
+let g:which_key_map = {
+  \'<Space>' : 'search for file',
+  \'<CR>' : 'clear search highlighting',
+\}
 
 " Second level dictionaries:
 let g:which_key_map.w = {
@@ -22,13 +25,28 @@ let g:which_key_map.w = {
     \'v' : 'open file in vertical split',
   \},
   \'m' : 'toggle maximise split',
-  \'w' : 'save workspace',
+  \'p' : 'persist workspace',
   \'r' : 'restore workspace',
   \'t' : {
     \'name' : '+tabs',
     \'n' : 'open new tab',
     \'t' : 'open file in new tab',
     \'c' : 'close tab',
+  \},
+\}
+
+let g:which_key_map.n = {
+  \'name' : '+notes',
+  \'i' : 'open wiki index',
+  \'t' : 'open wiki index in new tab',
+  \'s' : 'open wiki select',
+  \'d' : {
+    \'name' : '+diary',
+    \'i' : 'open diary index',
+    \'c' : 'create diary note for today',
+    \'t' : 'create diary note for today in new tab',
+    \'h' : 'create diary note for yesterday',
+    \'l' : 'create diary note for tomorrow',
   \},
 \}
 
@@ -98,8 +116,6 @@ let g:which_key_map.a = {
   \'e' : 'show line diagnostics',
   \'l' : 'set line diagnostics in location list',
 \}
-
-let g:which_key_map.n = 'clear search highlighting'
 
 " Ignored keymaps
 let g:which_key_map.p = 'which_key_ignore'
