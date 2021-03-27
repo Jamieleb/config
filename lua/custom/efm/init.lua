@@ -2,26 +2,26 @@ local lsp_config = require('lspconfig')
 local eslint = require('custom.efm.eslint')
 local prettier = require('custom.efm.prettier')
 
-local efm_config = os.getenv('HOME') .. '/.config/nvim/lua/custom/lsp/config.yaml'
+local efm_config = os.getenv('HOME') .. '/.config/nvim/lua/custom/efm/config.yaml'
 local efm_log_dir = '/tmp/'
 local efm_root_markers = { 'package.json', '.git/', '.zshrc' }
 local efm_languages = {
-  yaml = { prettier },
-  json = { prettier },
-  markdown = { prettier },
-  javascript = { eslint, prettier },
-  javascriptreact = { eslint, prettier },
-  ["javascript.jsx"] = { eslint, prettier },
+  -- yaml = { prettier },
+  -- json = { prettier },
+  -- markdown = { prettier },
+  -- javascript = { eslint, prettier },
+  -- javascriptreact = { eslint, prettier },
+  -- ["javascript.jsx"] = { eslint, prettier },
   typescript = { eslint, prettier },
   typescriptreact = { eslint, prettier },
   ["typescript.tsx"] = { eslint, prettier },
-  css = { prettier },
-  scss = { prettier },
-  sass = { prettier },
-  less = { prettier },
-  graphql = { prettier },
-  vue = { prettier },
-  html = { prettier }
+  -- css = { prettier },
+  -- scss = { prettier },
+  -- sass = { prettier },
+  -- less = { prettier },
+  -- graphql = { prettier },
+  -- vue = { prettier },
+  -- html = { prettier }
 }
 
 lsp_config.efm.setup({
@@ -40,7 +40,7 @@ lsp_config.efm.setup({
     'typescriptreact',
     'typescript.tsx'
   },
-  on_attach = on_attach,
+  on_attach = require'completion'.on_attach,
   root_dir = lsp_config.util.root_pattern(unpack(efm_root_markers)),
   init_options = {
     documentFormatting = true
