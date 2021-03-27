@@ -111,7 +111,7 @@ alias ssh_prod="cx lease -s 'Mosaic' -e production -p 22 -t 10 -f 0.0.0.0/0 && c
 alias ssh_stag="cx lease -s 'Mosaic Staging' -e staging -p 22 -t 10 -f 0.0.0.0/0 && cx ssh -s 'Mosaic Staging' -e staging lynx"
 alias ssh_demo="cx lease -s 'Mosaic Demo' -e staging -p 22 -t 20 -f 0.0.0.0/0 && cx ssh -s 'Mosaic Demo' -e staging orca"
 alias webpack="bin/webpack-dev-server"
-alias vp='nvim $(fzf)'
+alias dotfiles="cd ~/config"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
