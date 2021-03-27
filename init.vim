@@ -69,8 +69,6 @@ call plug#begin("~/.vim/plugged")
   Plug 'tpope/vim-dispatch'
   " Toggles maximising splits
   Plug 'szw/vim-maximizer'
-  " Todos
-  Plug 'vuciv/vim-bujo'
 call plug#end()
 
 " Config
