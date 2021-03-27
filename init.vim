@@ -88,6 +88,7 @@ let g:airline_theme='ayu'
 let g:airline_solarized_bg='dark'
 
 let  mapleader=" "
+let maplocalleader="\\"
 call which_key#register('<Space>', "g:which_key_map")
 
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
