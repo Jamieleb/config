@@ -22,4 +22,4 @@ nnoremap <silent><Leader>bo :%bd\|e#\|bd#<CR>
 " Source init.vim
 nnoremap <silent><Leader>vrc :so ~/config/init.vim<CR>
 " clear search highlighting
-nnoremap <silent><Leader>n :noh<CR>
+nnoremap <silent><Leader><CR> :noh<CR>
