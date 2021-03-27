@@ -12,6 +12,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'tanvirtin/monokai.nvim'
   Plug 'ackyshake/Spacegray.vim'
   Plug 'zabanaa/neuromancer.vim'
+  Plug 'bluz71/vim-nightfly-guicolors'
 
   " Status Line
   Plug 'vim-airline/vim-airline'
@@ -99,5 +100,3 @@ augroup CUSTOM
     " Trim whitespace on save
     autocmd BufWritePre * %s/\s\+$//e
 augroup END
-
-
