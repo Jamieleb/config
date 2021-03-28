@@ -12,6 +12,7 @@ tnoremap <silent> <C-h> <C-\><C-n>:FloatermPrev<CR>
 tnoremap <silent> <C-j> <C-\><C-n>:FloatermToggle<CR>
 tnoremap <silent> <C-k> <C-\><C-n>:FloatermKill<CR>
 
+tnoremap <silent> <C-Esc> <C-\><C-n>
 
 nnoremap <Leader>or :FloatermNew ranger<CR>
 nnoremap <Leader>og :FloatermNew lazygit<CR>
