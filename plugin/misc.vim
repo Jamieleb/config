@@ -17,6 +17,11 @@ vnoremap K :m '<-2<CR>gv=gv
 nnoremap <silent><Leader>bn :DashboardNewFile<CR>
 nnoremap <silent><Leader>bk :bdelete<CR>
 nnoremap <silent><Leader>bo :%bd\|e#\|bd#<CR>
+" Terminal Remaps
+" Map Ctrl-n to enter normal mode in terminal buffer
+tnoremap <C-n> <C-\><C-N>
+nnoremap <silent><Leader>tv :vs terminal<CR>
+nnoremap <silent><Leader>ts :split terminal<CR>
 
 " Other remaps
 " Source init.vim

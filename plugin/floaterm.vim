@@ -6,13 +6,11 @@ nnoremap <silent> <Leader>tn :FloatermNew<CR>
 nnoremap <silent> <Leader>tt :FloatermToggle<CR>
 nnoremap <silent> <Leader>tc :FloatermKill<CR>
 
-tnoremap <silent> <C-n> <C-\><C-n>:FloatermNew<CR>
 tnoremap <silent> <C-l> <C-\><C-n>:FloatermNext<CR>
 tnoremap <silent> <C-h> <C-\><C-n>:FloatermPrev<CR>
-tnoremap <silent> <C-j> <C-\><C-n>:FloatermToggle<CR>
+tnoremap <silent> <C-j> <C-\><C-n>:FloatermNew<CR>
 tnoremap <silent> <C-k> <C-\><C-n>:FloatermKill<CR>
-
-tnoremap <silent> <C-Esc> <C-\><C-n>
+tnoremap <silent> <C-t> <C-\><C-n>:FloatermToggle<CR>
 
 nnoremap <Leader>or :FloatermNew ranger<CR>
 nnoremap <Leader>og :FloatermNew lazygit<CR>
