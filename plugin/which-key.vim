@@ -9,6 +9,12 @@ let g:which_key_map = {
 \}
 
 " Second level dictionaries:
+let g:which_key_map.o = {
+  \'name' : '+open',
+  \'r' : 'ranger',
+  \'g' : 'lazygit',
+\}
+
 let g:which_key_map.w = {
   \'name' : '+windows',
   \'j' : 'navigate downwards to split',
@@ -65,9 +71,6 @@ let g:which_key_map.t = {
   \'t' : 'toggle floating terminal',
   \'c' : 'close floating terminal',
 \}
-
-let g:which_key_map.ro = 'open file explorer'
-let g:which_key_map.go = 'open lazygit'
 
 let g:which_key_map.q = {
   \'name' : '+quickfix-list',
