@@ -71,6 +71,10 @@ call plug#begin("~/.vim/plugged")
   " Toggles maximising splits
   Plug 'szw/vim-maximizer'
   Plug 'vimwiki/vimwiki'
+  " Markdown previewer
+  Plug 'npxbr/glow.nvim', {'do': ':GlowInstall'}
+  " Show colours in buffer
+  Plug 'norcalli/nvim-colorizer.lua'
 call plug#end()
 
 " Config
