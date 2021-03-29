@@ -14,3 +14,5 @@ tnoremap <silent> <C-t> <C-\><C-n>:FloatermToggle<CR>
 
 nnoremap <Leader>or :FloatermNew ranger<CR>
 nnoremap <Leader>og :FloatermNew lazygit<CR>
+
+autocmd FileType ruby nnoremap <Leader>ot :FloatermNew bundle exec rspec %<CR>
