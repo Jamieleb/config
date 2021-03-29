@@ -20,12 +20,6 @@ nnoremap <silent><Leader>bo :%bd\|e#\|bd#<CR>
 nnoremap <silent><Leader><Tab> :bnext<CR>
 nnoremap <silent><Leader><S-Tab> :bprevious<CR>
 
-" Terminal Remaps
-" Map Ctrl-n to enter normal mode in terminal buffer
-tnoremap <C-n> <C-\><C-N>
-nnoremap <silent><Leader>tv :vs terminal<CR>
-nnoremap <silent><Leader>ts :split terminal<CR>
-
 " Other remaps
 " Source init.vim
 nnoremap <silent><Leader>% :so ~/config/init.vim<CR>
