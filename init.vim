@@ -45,6 +45,9 @@ call plug#begin("~/.vim/plugged")
   Plug 'glepnir/dashboard-nvim'
   Plug 'liuchengxu/vim-which-key'
 
+  " Async tasks
+  Plug 'skywind3000/asyncrun.vim'
+
   "Auto comment
   Plug 'tpope/vim-commentary'
   " Auto Pairs
@@ -65,8 +68,6 @@ call plug#begin("~/.vim/plugged")
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
   Plug 'pwntester/octo.nvim'
-  " Asyncronous tasks
-  Plug 'tpope/vim-dispatch'
   " Toggles maximising splits
   Plug 'szw/vim-maximizer'
   Plug 'vimwiki/vimwiki'
