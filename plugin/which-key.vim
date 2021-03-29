@@ -6,6 +6,8 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 let g:which_key_map = {
   \'<Space>' : 'search for file',
   \'<CR>' : 'clear search highlighting',
+  \'<Tab>' : 'next buffer',
+  \'<S-Tab>' : 'previous buffer',
 \}
 
 " Second level dictionaries:
@@ -13,6 +15,13 @@ let g:which_key_map.o = {
   \'name' : '+open',
   \'r' : 'ranger',
   \'g' : 'lazygit',
+  \'t' : 'open & run relevant unit test',
+\}
+
+let g:which_key_map.r = {
+  \'name' : '+AsyncRun',
+  \'n' : 'new aync command',
+  \'t' : 'run relevant unit test',
 \}
 
 let g:which_key_map.w = {
@@ -129,5 +138,3 @@ let g:which_key_map.x = 'which_key_ignore'
 let g:which_key_map.hp = 'which_key_ignore'
 let g:which_key_map.h = { 'name' : 'which_key_ignore' }
 let g:which_key_map.v = { 'name' : 'which_key_ignore' }
-let g:which_key_map.g = { 'name' : 'which_key_ignore' }
-let g:which_key_map.r = { 'name' : 'which_key_ignore' }
