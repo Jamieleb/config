@@ -16,6 +16,7 @@ let g:which_key_map.o = {
   \'r' : 'ranger',
   \'g' : 'lazygit',
   \'t' : 'open & run relevant unit test',
+  \'c' : 'open config lazygit',
 \}
 
 let g:which_key_map.r = {
