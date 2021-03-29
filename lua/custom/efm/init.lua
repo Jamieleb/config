@@ -6,22 +6,20 @@ local efm_config = os.getenv('HOME') .. '/.config/nvim/lua/custom/efm/config.yam
 local efm_log_dir = '/tmp/'
 local efm_root_markers = { 'package.json', '.git/', '.zshrc' }
 local efm_languages = {
-  -- yaml = { prettier },
-  -- json = { prettier },
-  -- markdown = { prettier },
-  -- javascript = { eslint, prettier },
-  -- javascriptreact = { eslint, prettier },
-  -- ["javascript.jsx"] = { eslint, prettier },
+  yaml = { prettier },
+  json = { prettier },
+  markdown = { prettier },
+  javascript = { eslint, prettier },
+  javascriptreact = { eslint, prettier },
+  ["javascript.jsx"] = { eslint, prettier },
   typescript = { eslint, prettier },
   typescriptreact = { eslint, prettier },
   ["typescript.tsx"] = { eslint, prettier },
-  -- css = { prettier },
-  -- scss = { prettier },
-  -- sass = { prettier },
-  -- less = { prettier },
-  -- graphql = { prettier },
-  -- vue = { prettier },
-  -- html = { prettier }
+  css = { prettier },
+  scss = { prettier },
+  sass = { prettier },
+  less = { prettier },
+  html = { prettier }
 }
 
 lsp_config.efm.setup({
@@ -38,7 +36,14 @@ lsp_config.efm.setup({
     'javascript.jsx',
     'typescript',
     'typescriptreact',
-    'typescript.tsx'
+    'typescript.tsx',
+    'scss',
+    'css',
+    'sass',
+    'html',
+    'yaml',
+    'json',
+    'markdown',
   },
   on_attach = require'completion'.on_attach,
   root_dir = lsp_config.util.root_pattern(unpack(efm_root_markers)),
