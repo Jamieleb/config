@@ -84,6 +84,7 @@ if (has("termguicolors"))
 endif
 
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
+lua require'colorizer'.setup()
 
 " Theme
 set background=dark
