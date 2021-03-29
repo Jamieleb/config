@@ -1,5 +1,6 @@
 " Quickfix and Location List
 " Open/close
+noremap <silent><Leader>qq :call asyncrun#quickfix_toggle(8)<CR>
 nnoremap <Leader>qo :copen<CR>
 nnoremap <Leader>qc :cclose<CR>
 nnoremap <Leader>lo :lopen<CR>
