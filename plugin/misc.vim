@@ -28,6 +28,6 @@ nnoremap <silent><Leader>ts :split terminal<CR>
 
 " Other remaps
 " Source init.vim
-nnoremap <silent><Leader>vrc :so ~/config/init.vim<CR>
+nnoremap <silent><Leader>% :so ~/config/init.vim<CR>
 " clear search highlighting
 nnoremap <silent><Leader><CR> :noh<CR>
