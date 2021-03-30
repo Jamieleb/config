@@ -13,6 +13,10 @@ call plug#begin("~/.vim/plugged")
   Plug 'ackyshake/Spacegray.vim'
   Plug 'zabanaa/neuromancer.vim'
   Plug 'bluz71/vim-nightfly-guicolors'
+  Plug 'mhartington/oceanic-next'
+  Plug 'bluz71/vim-moonfly-colors'
+  Plug 'glepnir/zephyr-nvim'
+  Plug 'yonlu/omni.vim'
 
   " Status Line
   Plug 'vim-airline/vim-airline'
@@ -25,6 +29,7 @@ call plug#begin("~/.vim/plugged")
 
   "Floating window buffers
   Plug 'voldikss/vim-floaterm'
+  Plug 'kassio/neoterm'
 
   " Telescope dependencies
   Plug 'nvim-lua/popup.nvim'
