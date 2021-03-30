@@ -6,6 +6,7 @@ mkdir -p ~/.config/nvim/after/plugin
 mkdir -p ~/.config/nvim/lua
 mkdir -p ~/.config/nvim/lua/custom
 mkdir -p ~/.config/nvim/lua/custom/efm
+mkdir -p ~/.config/nvim/ftplugin
 
 # link wholesale
 # @note this probably only works on MacOS - it seems like there are some differences in find between MacOS and Linux
