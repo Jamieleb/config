@@ -17,3 +17,17 @@ require('custom/efm')
 -- Ruby
 -- brew install solargraph
 require('lspconfig').solargraph.setup{ on_attach=on_attach }
+
+-- Golang
+require'lspconfig'.gopls.setup{
+  cmd = {os.getenv('HOME') .. "/go/bin/gopls", "serve"},
+    settings = {
+      gopls = {
+        analyses = {
+          unusedparams = true,
+        },
+        staticcheck = true,
+      },
+    },
+  on_attach=on_attach
+}
