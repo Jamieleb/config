@@ -1,4 +1,4 @@
 setlocal spell spelllang=en_gb
 setlocal linebreak
-setlocal nowrap
+setlocal wrap
 setlocal colorcolumn=0
