@@ -73,11 +73,9 @@ let g:which_key_map.b = {
   \'o' : 'kill other buffer',
 \}
 
-let g:which_key_map.vrc = 'source init.vim'
-
 let g:which_key_map.t = {
   \'name' : '+terminal',
-  \'o' : 'new floating terminal',
+  \'n' : 'new floating terminal',
   \'t' : 'toggle floating terminal',
   \'c' : 'close floating terminal',
 \}
