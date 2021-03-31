@@ -1,16 +1,21 @@
-vimwiki nmap <localleader>nhc <Plug>Vimwiki2HTML
-vimwiki nmap <localleader>nhb <Plug>Vimwiki2HTMLBrowse
-vimwiki nmap <localleader>ndu <Plug>VimWikiDiaryGenerateLinks
-vimwiki nmap <CR> <Plug>VimwikiFollowLink
-vimwiki nmap <CR> <Plug>VimwikiSplitLink
-vimwiki nmap <localleader><CR> <Plug>VimwikiSplitLink
-vimwiki nmap <localleader>v<CR> <Plug>VimwikiVSplitLink
-vimwiki nmap <localleader>t<CR> <Plug>VimwikiTabnewLink
-vimwiki nmap <Backspace> <Plug>VimwikiGoBackLink
-vimwiki nmap <Tab> <Plug>VimwikiNextLink
-vimwiki nmap <S-Tab> <Plug>VimwikiPrevLink
-vimwiki nmap <localleader>nn <Plug>VimwikiGoto
-vimwiki nmap <localleader>nd <Plug>VimwikiDeleteFile
-vimwiki nmap <localleader>nr <Plug>VimwikiRenameFile
-vimwiki nmap <localleader><Space> <Plug>VimwikiToggleListItem
-vimwiki nmap <localleader><Space> <Plug>VimwikiToggleListItem
+setlocal spell spelllang=en_gb
+setlocal linebreak
+setlocal wrap
+setlocal colorcolumn=0
+
+nmap <localleader>nhc <Plug>Vimwiki2HTML
+nmap <localleader>nhb <Plug>Vimwiki2HTMLBrowse
+nmap <localleader>ndu <Plug>VimWikiDiaryGenerateLinks
+nmap <CR> <Plug>VimwikiFollowLink
+nmap <CR> <Plug>VimwikiSplitLink
+nmap <localleader><CR> <Plug>VimwikiSplitLink
+nmap <localleader>v<CR> <Plug>VimwikiVSplitLink
+nmap <localleader>t<CR> <Plug>VimwikiTabnewLink
+nmap <Backspace> <Plug>VimwikiGoBackLink
+nmap <Tab> <Plug>VimwikiNextLink
+nmap <S-Tab> <Plug>VimwikiPrevLink
+nmap <localleader>nn <Plug>VimwikiGoto
+nmap <localleader>nd <Plug>VimwikiDeleteFile
+nmap <localleader>nr <Plug>VimwikiRenameFile
+nmap <localleader><Space> <Plug>VimwikiToggleListItem
+nmap <localleader><Space> <Plug>VimwikiToggleListItem
