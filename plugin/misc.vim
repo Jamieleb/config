@@ -13,13 +13,6 @@ vnoremap <Leader>x "_x
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-" Buffer commands
-nnoremap <silent><Leader>bn :DashboardNewFile<CR>
-nnoremap <silent><Leader>bk :bdelete<CR>
-nnoremap <silent><Leader>bo :%bd\|e#\|bd#<CR>
-nnoremap <silent><Leader><Tab> :bnext<CR>
-nnoremap <silent><Leader><S-Tab> :bprevious<CR>
-
 " Other remaps
 " Source init.vim
 nnoremap <silent><Leader>% :so ~/config/init.vim<CR>
