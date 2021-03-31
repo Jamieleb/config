@@ -19,6 +19,11 @@ let g:which_key_map.o = {
   \'c' : 'open config lazygit',
 \}
 
+let g:which_key_map.f = {
+  \'name' : '+file',
+  \'p' : 'preview in floating buffer (.md only)',
+\}
+
 let g:which_key_map.r = {
   \'name' : '+AsyncRun',
   \'n' : 'new aync command',
