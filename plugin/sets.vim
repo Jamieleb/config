@@ -4,8 +4,6 @@ set colorcolumn=120
 set tabstop=2
 set shiftwidth=2
 set expandtab
-set spell
-set spelllang=en_gb
 set nowrap
 set splitright
 set splitbelow
