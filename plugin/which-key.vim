@@ -8,6 +8,9 @@ let g:which_key_map = {
   \'<CR>' : 'clear search highlighting',
   \'<Tab>' : 'next buffer',
   \'<S-Tab>' : 'previous buffer',
+  \';' : 'enter command mode',
+  \'j' : 'page down',
+  \'k' : 'page up',
 \}
 
 " Second level dictionaries:
@@ -22,6 +25,13 @@ let g:which_key_map.o = {
 let g:which_key_map.f = {
   \'name' : '+file',
   \'p' : 'preview in floating buffer (.md only)',
+\}
+
+let g:which_key_map.e = {
+  \'name' : '+execute-common-commands',
+  \'w' : 'write',
+  \'q' : 'quit',
+  \'d' : 'discard unsaved changes',
 \}
 
 let g:which_key_map.r = {
@@ -121,8 +131,6 @@ let g:which_key_map.s = {
   \'e' : 'search document errors',
   \'.' : 'search config files',
 \}
-
-let g:which_key_map.k = 'display hover indentation'
 
 let g:which_key_map.a = {
   \'name' : '+code-actions',
