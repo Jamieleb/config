@@ -8,9 +8,15 @@ let g:which_key_map = {
   \'<CR>' : 'clear search highlighting',
   \'<Tab>' : 'next buffer',
   \'<S-Tab>' : 'previous buffer',
-  \';' : 'enter command mode',
   \'j' : 'page down',
   \'k' : 'page up',
+  \';' : {
+    \'name' : '+commands',
+    \'w' : 'write',
+    \'q' : 'quit',
+    \'d' : 'discard unsaved changes',
+    \';' : 'command mode',
+  \},
 \}
 
 " Second level dictionaries:
@@ -123,13 +129,14 @@ let g:which_key_map.s = {
   \'q' : 'search quickfix list',
   \'l' : 'search location list',
   \'"' : 'search registers',
-  \':' : 'search command history',
+  \';' : 'search command history',
   \'s' : 'search document symbols',
   \'S' : 'search workspace symbols',
   \'w' : 'search workspace for word under cursor',
   \'b' : 'search buffers',
   \'e' : 'search document errors',
   \'.' : 'search config files',
+  \'a' : 'search code actions',
 \}
 
 let g:which_key_map.a = {
