@@ -46,4 +46,10 @@ M.git_branches = function()
     })
 end
 
+M.search_word = function()
+  require("telescope.builtin").grep_string({
+    prompt_prefix = vim.fn.expand("<cword>") .. " > ",
+  })
+end
+
 return M
