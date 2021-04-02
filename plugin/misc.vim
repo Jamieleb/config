@@ -8,6 +8,7 @@ nnoremap <Leader>c "_c
 vnoremap <Leader>c "_c
 nnoremap <Leader>x "_x
 vnoremap <Leader>x "_x
+nnoremap Y y$
 
 " Move lines up and down in visual mode
 vnoremap J :m '>+1<CR>gv=gv
