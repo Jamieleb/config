@@ -107,7 +107,7 @@ nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 let g:indentLine_char = '|'
 
 augroup CUSTOM
-    autocmd!
-    " Trim whitespace on save
-    autocmd BufWritePre * %s/\s\+$//e
+  autocmd!
+  " Trim whitespace on save
+  autocmd BufWritePre * %s/\s\+$//e
 augroup END
