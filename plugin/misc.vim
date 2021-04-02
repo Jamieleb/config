@@ -19,8 +19,6 @@ vnoremap K :m '<-2<CR>gv=gv
 nnoremap <silent><Leader>% :so ~/config/init.vim<CR>
 " clear search highlighting
 nnoremap <silent><Leader><CR> :noh<CR>
-" Non-chord command mode
-nnoremap <Leader>; :
 
 augroup highlight_yank
   autocmd!
