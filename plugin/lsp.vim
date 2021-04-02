@@ -16,7 +16,6 @@ autocmd BufEnter * lua require'completion'.on_attach()
 
 nnoremap <leader>ad :lua vim.lsp.buf.definition()<CR>
 nnoremap <leader>ar :lua vim.lsp.buf.rename()<CR>
-nnoremap <leader>k :lua vim.lsp.buf.hover()<CR>
 nnoremap <leader>ak :lua vim.lsp.buf.hover()<CR>
 nnoremap <leader>ae :lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
 nnoremap <leader>al :lua vim.lsp.diagnostic.set_loclist()<CR>
