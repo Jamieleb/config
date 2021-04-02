@@ -20,3 +20,8 @@ nnoremap <silent><Leader>% :so ~/config/init.vim<CR>
 nnoremap <silent><Leader><CR> :noh<CR>
 " Non-chord command mode
 nnoremap <Leader>; :
+
+augroup highlight_yank
+  autocmd!
+  autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank{higroup='IncSearch', timeout=700}
+augroup END
