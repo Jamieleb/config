@@ -17,15 +17,15 @@ call plug#begin("~/.vim/plugged")
   Plug 'bluz71/vim-moonfly-colors'
   Plug 'glepnir/zephyr-nvim'
   Plug 'yonlu/omni.vim'
+  Plug 'romgrk/doom-one.vim'
 
   " Status Line
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
 
-  " Tab bar
-  Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
-  " Plug 'ryanoasis/vim-devicons' " Icons without colours
-  Plug 'akinsho/nvim-bufferline.lua'
+  " Tab Line
+  Plug 'kyazdani42/nvim-web-devicons'
+  Plug 'romgrk/barbar.nvim'
 
   "Floating window buffers
   Plug 'voldikss/vim-floaterm'
