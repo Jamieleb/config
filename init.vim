@@ -23,10 +23,6 @@ call plug#begin("~/.vim/plugged")
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
 
-  " Tab Line
-  Plug 'kyazdani42/nvim-web-devicons'
-  Plug 'romgrk/barbar.nvim'
-
   "Floating window buffers
   Plug 'voldikss/vim-floaterm'
   Plug 'kassio/neoterm'
@@ -95,6 +91,7 @@ lua require'colorizer'.setup()
 set background=dark
 colorscheme wind
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='ayu'
 let g:airline_solarized_bg='dark'
 

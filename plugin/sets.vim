@@ -12,5 +12,6 @@ set shiftround
 set noerrorbells
 set signcolumn=yes
 set cursorline
+set hidden
 set showtabline=1
 set switchbuf=usetab
