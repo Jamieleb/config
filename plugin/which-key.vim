@@ -44,6 +44,8 @@ let g:which_key_map.r = {
   \'name' : '+AsyncRun',
   \'n' : 'new aync command',
   \'t' : 'run relevant unit test',
+  \'r' : 'compile and run current directory',
+  \'c' : 'compile current directory into executable',
 \}
 
 let g:which_key_map.w = {
