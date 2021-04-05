@@ -139,8 +139,8 @@ let g:which_key_map.s = {
   \'a' : 'search code actions',
 \}
 
-let g:which_key_map.a = {
-  \'name' : '+code-actions',
+let g:which_key_map.L = {
+  \'name' : '+LSP',
   \'d' : 'jump to definition',
   \'r' : 'rename symbol under cursor',
   \'k' : 'display hover information',

@@ -15,11 +15,12 @@ let g:completion_auto_change_source = 1
 " Use completion-nvim in every buffer
 autocmd BufEnter * lua require'completion'.on_attach()
 
-nnoremap <leader>ad :lua vim.lsp.buf.definition()<CR>
-nnoremap <leader>ar :lua vim.lsp.buf.rename()<CR>
-nnoremap <leader>ak :lua vim.lsp.buf.hover()<CR>
-nnoremap <leader>ae :lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
-nnoremap <leader>al :lua vim.lsp.diagnostic.set_loclist()<CR>
+nnoremap <leader>Ld :lua vim.lsp.buf.definition()<CR>
+nnoremap <leader>Lr :lua vim.lsp.buf.rename()<CR>
+nnoremap <leader>Lk :lua vim.lsp.buf.hover()<CR>
+nnoremap <leader>Le :lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
+nnoremap <leader>Ll :lua vim.lsp.diagnostic.set_loclist()<CR>
+nnoremap <leader>La :lua vim.lsp.buf.code_action()<CR>
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
