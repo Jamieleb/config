@@ -4,12 +4,14 @@ Run install script to clear config files and replace with symlinks to the files 
 
 ## Neovim
 
-Requires NeoVim 0.5
+Requires NeoVim 0.5 - [install here](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 Run :PlugInstall to install various plugins
 
 ### Dependencies:
 
-- lazygit for Git CLI https://github.com/jesseduffield/lazygit
-- Ranger for file exploration https://wiki.archlinux.org/index.php/ranger
-- Solargraph https://solargraph.org/
-- Typescript-language-server https://github.com/theia-ide/typescript-language-server
+- lazygit for Git CLI [github page](https://github.com/jesseduffield/lazygit)
+- Ranger for file exploration [github page](https://wiki.archlinux.org/index.php/ranger)
+- [Solargraph](https://solargraph.org/)
+- [Typescript-language-server](https://github.com/theia-ide/typescript-language-server)
+- [gopls](https://github.com/theia-ide/typescript-language-server)
+- [efm-langserver](https://github.com/mattn/efm-langserver)
