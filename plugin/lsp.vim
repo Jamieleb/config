@@ -21,6 +21,7 @@ nnoremap <leader>Lk :lua vim.lsp.buf.hover()<CR>
 nnoremap <leader>Le :lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
 nnoremap <leader>Ll :lua vim.lsp.diagnostic.set_loclist()<CR>
 nnoremap <leader>La :lua vim.lsp.buf.code_action()<CR>
+nnoremap <leader>Lc :lua vim.lsp.stop_client(vim.lsp.get_active_clients())
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
