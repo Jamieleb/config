@@ -101,6 +101,8 @@ let g:which_key_map.t = {
   \'n' : 'new floating terminal',
   \'t' : 'toggle floating terminal',
   \'c' : 'close floating terminal',
+  \'v' : 'new terminal in vertical split',
+  \'s' : 'new terminal in horizontal split',
 \}
 
 let g:which_key_map.q = {
