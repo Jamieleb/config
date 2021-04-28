@@ -148,6 +148,7 @@ let g:which_key_map.L = {
   \'k' : 'display hover information',
   \'e' : 'show line diagnostics',
   \'l' : 'set line diagnostics in location list',
+  \'c' : 'stop currently running clients',
 \}
 
 " Ignored keymaps
