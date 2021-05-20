@@ -19,6 +19,8 @@ vnoremap K :m '<-2<CR>gv=gv
 nnoremap <silent><Leader>% :so ~/config/init.vim<CR>
 " clear search highlighting
 nnoremap <silent><Leader><CR> :noh<CR>
+" better keymap for going to last file
+nnoremap <leader><BS> <C-^>
 
 augroup highlight_yank
   autocmd!
