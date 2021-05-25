@@ -17,6 +17,11 @@ let g:which_key_map = {
     \'d' : 'discard unsaved changes',
     \';' : 'command mode',
   \},
+  \'.' : {
+    \'name' : '+config',
+    \'%' : 'source init.vim',
+    \'g' : 'open dotfiles git',
+  \},
 \}
 
 " Second level dictionaries:
@@ -25,7 +30,6 @@ let g:which_key_map.o = {
   \'r' : 'ranger',
   \'g' : 'lazygit',
   \'t' : 'open & run relevant unit test',
-  \'c' : 'open config lazygit',
 \}
 
 let g:which_key_map.f = {
@@ -46,6 +50,10 @@ let g:which_key_map.r = {
   \'t' : 'run relevant unit test',
   \'r' : 'compile and run current directory',
   \'c' : 'compile current directory into executable',
+  \'g' : {
+    \'name' : '+git',
+    \'c' : 'checkout pull request',
+  \},
 \}
 
 let g:which_key_map.w = {
@@ -103,6 +111,7 @@ let g:which_key_map.t = {
   \'c' : 'close floating terminal',
   \'v' : 'new terminal in vertical split',
   \'s' : 'new terminal in horizontal split',
+  \'T' : 'new terminal in new tab',
 \}
 
 let g:which_key_map.q = {
