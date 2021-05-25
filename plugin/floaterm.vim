@@ -14,4 +14,4 @@ tnoremap <silent> <C-t> <C-\><C-n>:FloatermToggle<CR>
 
 nnoremap <Leader>or :FloatermNew ranger<CR>
 nnoremap <Leader>og :FloatermNew lazygit<CR>
-nnoremap <Leader>oc :FloatermNew cd ~/config && lazygit<CR>
+nnoremap <Leader>.g :FloatermNew cd ~/config && lazygit<CR>
