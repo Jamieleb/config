@@ -52,7 +52,10 @@ let g:which_key_map.r = {
   \'c' : 'compile current directory into executable',
   \'g' : {
     \'name' : '+git',
-    \'c' : 'checkout pull request',
+    \'p' : 'checkout pull request',
+    \'m' : 'checkout master',
+    \'d' : 'checkout develop',
+    \'c' : 'git add all and commit',
   \},
 \}
 
