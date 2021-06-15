@@ -133,8 +133,6 @@ let g:which_key_map.l = {
   \'k' : 'previous location list item',
 \}
 
-let g:which_key_map.h = 'show dashboard'
-
 let g:which_key_map.s = {
   \'name' : '+search',
   \'f' : 'search for file',
