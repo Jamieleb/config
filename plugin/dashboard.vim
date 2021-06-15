@@ -34,7 +34,6 @@ let g:dashboard_custom_shortcut={
 \ 'book_marks'         : 'SPC s m',
 \ }
 
-nnoremap <Leader>h :Dashboard<CR>
 nnoremap <Leader>wp :SessionSave<CR>
 nnoremap <Leader>wr :SessionLoad<CR>
 
