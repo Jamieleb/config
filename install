@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/zsh
 
 # NeoVim setup - src: ThePrimeagen
 mkdir -p ~/.config/nvim/plugin
