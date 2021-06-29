@@ -20,6 +20,8 @@ done
 rm ~/.tmux.conf
 rm ~/.zshrc
 rm ~/.config/fish
+rm ~/.config/starship.toml
 ln -s ~/config/tmux.conf ~/.tmux.conf
 ln -s ~/config/zshrc ~/.zshrc
 ln -s ~/config/fish ~/.config/fish
+ln -s ~/config/starship.toml ~/.config/starship.toml
