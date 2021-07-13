@@ -39,6 +39,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'kabouzeid/nvim-lspinstall'
   Plug 'nvim-lua/completion-nvim'
   Plug 'steelsojka/completion-buffers'
+  Plug 'ray-x/lsp_signature.nvim'
 
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
