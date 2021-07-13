@@ -15,4 +15,4 @@ Run :PlugInstall to install various plugins
 - [Typescript-language-server](https://github.com/theia-ide/typescript-language-server)
 - [gopls](https://github.com/theia-ide/typescript-language-server)
 - [efm-langserver](https://github.com/mattn/efm-langserver)
-- ripgreg for Neovim Telescope
+- ripgreg, bat, fd for Neovim Telescope
