@@ -4,9 +4,6 @@ fish_vi_key_bindings
 # No greeting message
 set -g fish_greeting
 
-# Run neofetch on open
-neofetch
-
 # Abbreviations
 abbr -a rc rails console
 abbr -a rs rails server
