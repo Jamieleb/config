@@ -18,6 +18,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'glepnir/zephyr-nvim'
   Plug 'yonlu/omni.vim'
   Plug 'romgrk/doom-one.vim'
+  Plug 'Th3Whit3Wolf/one-nvim'
 
   " Status Line
   Plug 'vim-airline/vim-airline'
@@ -89,14 +90,14 @@ lua require'colorizer'.setup()
 
 " Theme
 set background=dark
-colorscheme wind
+colorscheme one-nvim
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='ayu'
+let g:airline_theme='atomic'
 let g:airline_solarized_bg='dark'
 
 let  mapleader=" "
-let maplocalleader="\\"
+let maplocalleader=" m"
 call which_key#register('<Space>', "g:which_key_map")
 
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
