@@ -6,8 +6,6 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 let g:which_key_map = {
   \'<Space>' : 'search for file',
   \'<CR>' : 'clear search highlighting',
-  \'<Tab>' : 'next buffer',
-  \'<S-Tab>' : 'previous buffer',
   \'j' : 'page down',
   \'k' : 'page up',
   \';' : {
@@ -25,6 +23,15 @@ let g:which_key_map = {
 \}
 
 " Second level dictionaries:
+let g:which_key_map.b = {
+  \'name' : '+buffers',
+  \'n' : 'next buffer',
+  \'p' : 'previous buffer',
+  \'N' : 'new buffer',
+  \'k' : 'kill buffer',
+  \'o' : 'kill other buffer',
+\}
+
 let g:which_key_map.o = {
   \'name' : '+open',
   \'r' : 'ranger',
@@ -100,13 +107,6 @@ let g:which_key_map.n = {
   \},
 \}
 
-let g:which_key_map.b = {
-  \'name' : '+buffers',
-  \'n' : 'new buffer',
-  \'k' : 'kill buffer',
-  \'o' : 'kill other buffer',
-\}
-
 let g:which_key_map.t = {
   \'name' : '+terminal',
   \'n' : 'new floating terminal',
@@ -153,7 +153,7 @@ let g:which_key_map.s = {
   \'a' : 'search code actions',
 \}
 
-let g:which_key_map.L = {
+let g:which_key_map.c = {
   \'name' : '+LSP',
   \'d' : 'jump to definition',
   \'r' : 'rename symbol under cursor',
