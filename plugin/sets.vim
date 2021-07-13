@@ -14,3 +14,4 @@ set signcolumn=yes
 set cursorline
 set showtabline=1
 set switchbuf=usetab
+set hidden
