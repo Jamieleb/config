@@ -98,7 +98,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='atomic'
 let g:airline_solarized_bg='dark'
 
-let  mapleader=" "
+let mapleader=" "
 let maplocalleader=" m"
 call which_key#register('<Space>', "g:which_key_map")
 
