@@ -53,7 +53,7 @@ let g:which_key_map.g = {
   \'m' : 'checkout master',
   \'d' : 'checkout develop',
   \'c' : 'git add all and commit',
-  \'.' : 'lazygit .dotfiles'
+  \'.' : 'lazygit .dotfiles',
   \'h' : {
     \'name' : '+github',
     \'c' : 'checkout PR by number',
@@ -62,10 +62,7 @@ let g:which_key_map.g = {
 
 let g:which_key_map.r = {
   \'name' : '+AsyncRun',
-  \'r' : 'new aync command',
-  \'t' : 'run relevant unit test',
-  \'r' : 'compile and run current directory',
-  \'c' : 'compile current directory into executable',
+    \'r' : 'new aync command',
   \},
 \}
 
