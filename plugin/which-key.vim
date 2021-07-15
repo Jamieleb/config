@@ -5,9 +5,11 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 " Define prefix dictionary
 let g:which_key_map = {
   \'<Space>' : 'search for file',
+  \'<BS>' : 'Go to last buffer',
   \'<CR>' : 'clear search highlighting',
   \'j' : 'page down',
   \'k' : 'page up',
+  \'%' : 'source init.vim',
   \';' : {
     \'name' : '+commands',
     \'w' : 'write',
@@ -17,7 +19,6 @@ let g:which_key_map = {
   \},
   \'.' : {
     \'name' : '+config',
-    \'%' : 'source init.vim',
     \'g' : 'open dotfiles git',
   \},
 \}
@@ -25,6 +26,7 @@ let g:which_key_map = {
 " Second level dictionaries:
 let g:which_key_map.b = {
   \'name' : '+buffers',
+  \'b' : 'Switch Buffers',
   \'n' : 'next buffer',
   \'p' : 'previous buffer',
   \'N' : 'new buffer',
@@ -35,7 +37,6 @@ let g:which_key_map.b = {
 let g:which_key_map.o = {
   \'name' : '+open',
   \'r' : 'ranger',
-  \'g' : 'lazygit',
   \'t' : 'open & run relevant unit test',
 \}
 
@@ -44,25 +45,27 @@ let g:which_key_map.f = {
   \'p' : 'preview in floating buffer (.md only)',
 \}
 
-let g:which_key_map.e = {
-  \'name' : '+execute-common-commands',
-  \'w' : 'write',
-  \'q' : 'quit',
-  \'d' : 'discard unsaved changes',
+let g:which_key_map.g = {
+  \'name' : 'git',
+  \'g' : 'lazygit',
+  \'p' : 'git pull',
+  \'P' : 'git push',
+  \'m' : 'checkout master',
+  \'d' : 'checkout develop',
+  \'c' : 'git add all and commit',
+  \'.' : 'lazygit .dotfiles'
+  \'h' : {
+    \'name' : '+github',
+    \'c' : 'checkout PR by number',
+  \},
 \}
 
 let g:which_key_map.r = {
   \'name' : '+AsyncRun',
-  \'n' : 'new aync command',
+  \'r' : 'new aync command',
   \'t' : 'run relevant unit test',
   \'r' : 'compile and run current directory',
   \'c' : 'compile current directory into executable',
-  \'g' : {
-    \'name' : '+git',
-    \'p' : 'checkout pull request',
-    \'m' : 'checkout master',
-    \'d' : 'checkout develop',
-    \'c' : 'git add all and commit',
   \},
 \}
 
