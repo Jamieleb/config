@@ -1,32 +1,33 @@
 call plug#begin("~/.vim/plugged")
   " Themes
-  Plug 'dracula/vim'
-  Plug 'morhetz/gruvbox'
-  Plug 'arcticicestudio/nord-vim'
-  Plug 'jacoborus/tender.vim'
-  Plug 'pgdouyon/vim-yin-yang'
-  Plug 'ayu-theme/ayu-vim'
-  Plug 'colepeters/spacemacs-theme.vim'
-  Plug 'altercation/vim-colors-solarized'
-  Plug 'windwp/wind-colors'
-  Plug 'tanvirtin/monokai.nvim'
-  Plug 'ackyshake/Spacegray.vim'
-  Plug 'zabanaa/neuromancer.vim'
-  Plug 'bluz71/vim-nightfly-guicolors'
-  Plug 'mhartington/oceanic-next'
-  Plug 'bluz71/vim-moonfly-colors'
-  Plug 'glepnir/zephyr-nvim'
-  Plug 'yonlu/omni.vim'
-  Plug 'romgrk/doom-one.vim'
+  " Plug 'dracula/vim'
+  " Plug 'morhetz/gruvbox'
+  " Plug 'arcticicestudio/nord-vim'
+  " Plug 'jacoborus/tender.vim'
+  " Plug 'pgdouyon/vim-yin-yang'
+  " Plug 'ayu-theme/ayu-vim'
+  " Plug 'colepeters/spacemacs-theme.vim'
+  " Plug 'altercation/vim-colors-solarized'
+  " Plug 'windwp/wind-colors'
+  " Plug 'tanvirtin/monokai.nvim'
+  " Plug 'ackyshake/Spacegray.vim'
+  " Plug 'zabanaa/neuromancer.vim'
+  " Plug 'bluz71/vim-nightfly-guicolors'
+  " Plug 'mhartington/oceanic-next'
+  " Plug 'bluz71/vim-moonfly-colors'
+  " Plug 'glepnir/zephyr-nvim'
+  " Plug 'yonlu/omni.vim'
+  " Plug 'romgrk/doom-one.vim'
   Plug 'Th3Whit3Wolf/one-nvim'
 
   " Status Line
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
 
-  "Floating window buffers
+  "Floating window buffers and Terminals
   Plug 'voldikss/vim-floaterm'
   Plug 'kassio/neoterm'
+  Plug 'akinsho/nvim-toggleterm.lua'
 
   " Telescope dependencies
   Plug 'nvim-lua/popup.nvim'
@@ -69,12 +70,9 @@ call plug#begin("~/.vim/plugged")
   " Repeat plugin commands with .
   Plug 'tpope/vim-repeat'
   " Git Client
-  Plug 'tpope/vim-fugitive'
-  Plug 'airblade/vim-gitgutter'
   Plug 'pwntester/octo.nvim'
   " Toggles maximising splits
   Plug 'szw/vim-maximizer'
-  Plug 'vimwiki/vimwiki'
   " Markdown previewer
   Plug 'npxbr/glow.nvim', {'do': ':GlowInstall'}
   " Show colours in buffer
