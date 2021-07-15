@@ -62,8 +62,7 @@ let g:which_key_map.g = {
 
 let g:which_key_map.r = {
   \'name' : '+AsyncRun',
-    \'r' : 'new aync command',
-  \},
+  \'r' : 'new aync command',
 \}
 
 let g:which_key_map.w = {
@@ -125,7 +124,7 @@ let g:which_key_map.q = {
   \'k' : 'previous quickfix list item',
 \}
 
-let g:which_key_map.l = {
+let g:which_key_map.Q = {
   \'name' : '+location-list',
   \'o' : 'open location list',
   \'c' : 'close location list',
@@ -153,14 +152,22 @@ let g:which_key_map.s = {
   \'a' : 'search code actions',
 \}
 
-let g:which_key_map.c = {
+let g:which_key_map.l = {
   \'name' : '+LSP',
-  \'d' : 'jump to definition',
+  \'d' : 'preview definition',
+  \'D' : 'jump to definition',
+  \'a' : 'code actions',
   \'r' : 'rename symbol under cursor',
   \'k' : 'display hover information',
   \'e' : 'show line diagnostics',
   \'l' : 'set line diagnostics in location list',
   \'c' : 'stop currently running clients',
+  \'f' : 'lsp finder',
+  \'n' : 'next error',
+  \'p' : 'previous error',
+  \'s' : 'search document symbols',
+  \'S' : 'search workplace symbols',
+  \'i' : 'find implementations',
 \}
 
 " Ignored keymaps
