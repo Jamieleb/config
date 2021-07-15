@@ -27,7 +27,6 @@ call plug#begin("~/.vim/plugged")
   "Floating window buffers and Terminals
   Plug 'voldikss/vim-floaterm'
   Plug 'kassio/neoterm'
-  Plug 'akinsho/nvim-toggleterm.lua'
 
   " Telescope dependencies
   Plug 'nvim-lua/popup.nvim'
