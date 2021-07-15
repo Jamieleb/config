@@ -41,6 +41,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'nvim-lua/completion-nvim'
   Plug 'steelsojka/completion-buffers'
   Plug 'ray-x/lsp_signature.nvim'
+  Plug 'glepnir/lspsaga.nvim'
 
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
@@ -69,6 +70,7 @@ call plug#begin("~/.vim/plugged")
   " Repeat plugin commands with .
   Plug 'tpope/vim-repeat'
   " Git Client
+  Plug 'lewis6991/gitsigns.nvim'
   Plug 'pwntester/octo.nvim'
   " Toggles maximising splits
   Plug 'szw/vim-maximizer'
@@ -76,6 +78,8 @@ call plug#begin("~/.vim/plugged")
   Plug 'npxbr/glow.nvim', {'do': ':GlowInstall'}
   " Show colours in buffer
   Plug 'norcalli/nvim-colorizer.lua'
+  " Navigation Plugins
+  Plug 'justinmk/vim-sneak'
 call plug#end()
 
 " Config
@@ -86,6 +90,7 @@ endif
 
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 lua require'colorizer'.setup()
+lua require'gitsigns'.setup()
 
 " Theme
 set background=dark
