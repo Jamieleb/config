@@ -13,7 +13,7 @@ let g:completion_chain_complete_list = [
 let g:completion_auto_change_source = 1
 
 " Enable completion in every buffer
-autocmd BufEnter * lua require'completion'.on_attach()
+" autocmd BufEnter * lua require'completion'.on_attach()
 
 lua << EOF
 local saga = require 'lspsaga'
