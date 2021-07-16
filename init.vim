@@ -28,6 +28,10 @@ call plug#begin("~/.vim/plugged")
   Plug 'voldikss/vim-floaterm'
   Plug 'kassio/neoterm'
 
+  " Tab line
+  Plug 'kyazdani42/nvim-web-devicons'
+  Plug 'romgrk/barbar.nvim'
+
   " Telescope dependencies
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
