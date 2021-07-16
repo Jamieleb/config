@@ -8,6 +8,7 @@ end
 require'lspconfig'.tsserver.setup({
   on_attach = function(client)
     client.resolved_capabilities.document_formatting = false
+    require "lsp_signature".on_attach()
     on_attach=on_attach
   end
 })
@@ -16,7 +17,12 @@ require('custom/efm')
 
 -- Ruby
 -- brew install solargraph
-require('lspconfig').solargraph.setup{ on_attach=on_attach }
+require('lspconfig').solargraph.setup({
+  on_attach = function(client)
+    require "lsp_signature".on_attach()
+    on_attach=on_attach
+  end
+})
 
 -- Golang
 require'lspconfig'.gopls.setup{

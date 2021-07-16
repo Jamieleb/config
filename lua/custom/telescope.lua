@@ -17,6 +17,21 @@ require('telescope').setup {
             },
         }
     },
+    pickers = {
+      buffers = {
+        sort_lastused = true,
+        mappings = {
+          i = {
+            ["<c-d>"] = require("telescope.actions").delete_buffer,
+            -- Right hand side can also be the name of the action as a string
+            ["<c-d>"] = "delete_buffer",
+          },
+          n = {
+            ["<c-d>"] = require("telescope.actions").delete_buffer,
+          }
+        }
+      }
+    },
     extensions = {
         fzy_native = {
             override_generic_sorter = false,
@@ -27,6 +42,7 @@ require('telescope').setup {
 
 require('telescope').load_extension('fzy_native')
 require('telescope').load_extension('octo')
+require('telescope').load_extension('gh')
 
 local M = {}
 M.search_dotfiles = function()

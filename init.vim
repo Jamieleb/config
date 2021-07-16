@@ -1,29 +1,30 @@
 call plug#begin("~/.vim/plugged")
   " Themes
-  Plug 'dracula/vim'
-  Plug 'morhetz/gruvbox'
-  Plug 'arcticicestudio/nord-vim'
-  Plug 'jacoborus/tender.vim'
-  Plug 'pgdouyon/vim-yin-yang'
-  Plug 'ayu-theme/ayu-vim'
-  Plug 'colepeters/spacemacs-theme.vim'
-  Plug 'altercation/vim-colors-solarized'
-  Plug 'windwp/wind-colors'
-  Plug 'tanvirtin/monokai.nvim'
-  Plug 'ackyshake/Spacegray.vim'
-  Plug 'zabanaa/neuromancer.vim'
-  Plug 'bluz71/vim-nightfly-guicolors'
-  Plug 'mhartington/oceanic-next'
-  Plug 'bluz71/vim-moonfly-colors'
-  Plug 'glepnir/zephyr-nvim'
-  Plug 'yonlu/omni.vim'
-  Plug 'romgrk/doom-one.vim'
+  " Plug 'dracula/vim'
+  " Plug 'morhetz/gruvbox'
+  " Plug 'arcticicestudio/nord-vim'
+  " Plug 'jacoborus/tender.vim'
+  " Plug 'pgdouyon/vim-yin-yang'
+  " Plug 'ayu-theme/ayu-vim'
+  " Plug 'colepeters/spacemacs-theme.vim'
+  " Plug 'altercation/vim-colors-solarized'
+  " Plug 'windwp/wind-colors'
+  " Plug 'tanvirtin/monokai.nvim'
+  " Plug 'ackyshake/Spacegray.vim'
+  " Plug 'zabanaa/neuromancer.vim'
+  " Plug 'bluz71/vim-nightfly-guicolors'
+  " Plug 'mhartington/oceanic-next'
+  " Plug 'bluz71/vim-moonfly-colors'
+  " Plug 'glepnir/zephyr-nvim'
+  " Plug 'yonlu/omni.vim'
+  " Plug 'romgrk/doom-one.vim'
+  Plug 'Th3Whit3Wolf/one-nvim'
 
   " Status Line
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
 
-  "Floating window buffers
+  "Floating window buffers and Terminals
   Plug 'voldikss/vim-floaterm'
   Plug 'kassio/neoterm'
 
@@ -32,12 +33,15 @@ call plug#begin("~/.vim/plugged")
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-fzy-native.nvim'
+  Plug 'nvim-telescope/telescope-github.nvim'
 
   " LSP, Linting, and Completion plugins
   Plug 'neovim/nvim-lspconfig'
   Plug 'kabouzeid/nvim-lspinstall'
   Plug 'nvim-lua/completion-nvim'
   Plug 'steelsojka/completion-buffers'
+  Plug 'ray-x/lsp_signature.nvim'
+  Plug 'glepnir/lspsaga.nvim'
 
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
@@ -66,16 +70,16 @@ call plug#begin("~/.vim/plugged")
   " Repeat plugin commands with .
   Plug 'tpope/vim-repeat'
   " Git Client
-  Plug 'tpope/vim-fugitive'
-  Plug 'airblade/vim-gitgutter'
+  Plug 'lewis6991/gitsigns.nvim'
   Plug 'pwntester/octo.nvim'
   " Toggles maximising splits
   Plug 'szw/vim-maximizer'
-  Plug 'vimwiki/vimwiki'
   " Markdown previewer
   Plug 'npxbr/glow.nvim', {'do': ':GlowInstall'}
   " Show colours in buffer
   Plug 'norcalli/nvim-colorizer.lua'
+  " Navigation Plugins
+  Plug 'justinmk/vim-sneak'
 call plug#end()
 
 " Config
@@ -86,17 +90,18 @@ endif
 
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 lua require'colorizer'.setup()
+lua require'gitsigns'.setup()
 
 " Theme
 set background=dark
-colorscheme wind
+colorscheme one-nvim
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='ayu'
+let g:airline_theme='atomic'
 let g:airline_solarized_bg='dark'
 
-let  mapleader=" "
-let maplocalleader="\\"
+let mapleader=" "
+let maplocalleader=" m"
 call which_key#register('<Space>', "g:which_key_map")
 
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
