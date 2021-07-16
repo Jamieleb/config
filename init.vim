@@ -15,7 +15,7 @@ call plug#begin("~/.vim/plugged")
   " Plug 'bluz71/vim-nightfly-guicolors'
   " Plug 'mhartington/oceanic-next'
   " Plug 'bluz71/vim-moonfly-colors'
-  " Plug 'glepnir/zephyr-nvim'
+  Plug 'glepnir/zephyr-nvim'
   " Plug 'yonlu/omni.vim'
   " Plug 'romgrk/doom-one.vim'
   Plug 'Th3Whit3Wolf/one-nvim'
@@ -46,8 +46,10 @@ call plug#begin("~/.vim/plugged")
   Plug 'steelsojka/completion-buffers'
   Plug 'ray-x/lsp_signature.nvim'
   Plug 'glepnir/lspsaga.nvim'
+  Plug 'folke/trouble.nvim'
 
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  Plug 'lewis6991/spellsitter.nvim'
 
   Plug 'pangloss/vim-javascript'
 
@@ -79,11 +81,13 @@ call plug#begin("~/.vim/plugged")
   " Toggles maximising splits
   Plug 'szw/vim-maximizer'
   " Markdown previewer
-  Plug 'npxbr/glow.nvim', {'do': ':GlowInstall'}
+  " Plug 'npxbr/glow.nvim', {'do': ':GlowInstall'}
   " Show colours in buffer
   Plug 'norcalli/nvim-colorizer.lua'
   " Navigation Plugins
   Plug 'justinmk/vim-sneak'
+  " Buffer navigation
+  Plug 'matbme/JABS.nvim'
 call plug#end()
 
 " Config
@@ -95,6 +99,8 @@ endif
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 lua require'colorizer'.setup()
 lua require'gitsigns'.setup()
+lua require'spellsitter'.setup()
+lua require'trouble'.setup()
 
 " Theme
 set background=dark
