@@ -32,6 +32,7 @@ let g:which_key_map.b = {
   \'N' : 'new buffer',
   \'k' : 'kill buffer',
   \'o' : 'kill other buffer',
+  \'g' : 'Pick Buffer',
 \}
 
 let g:which_key_map.o = {
