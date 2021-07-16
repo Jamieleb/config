@@ -5,11 +5,11 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 " Define prefix dictionary
 let g:which_key_map = {
   \'<Space>' : 'search for file',
+  \'<BS>' : 'Go to last buffer',
   \'<CR>' : 'clear search highlighting',
-  \'<Tab>' : 'next buffer',
-  \'<S-Tab>' : 'previous buffer',
   \'j' : 'page down',
   \'k' : 'page up',
+  \'%' : 'source init.vim',
   \';' : {
     \'name' : '+commands',
     \'w' : 'write',
@@ -19,16 +19,24 @@ let g:which_key_map = {
   \},
   \'.' : {
     \'name' : '+config',
-    \'%' : 'source init.vim',
     \'g' : 'open dotfiles git',
   \},
 \}
 
 " Second level dictionaries:
+let g:which_key_map.b = {
+  \'name' : '+buffers',
+  \'b' : 'Switch Buffers',
+  \'n' : 'next buffer',
+  \'p' : 'previous buffer',
+  \'N' : 'new buffer',
+  \'k' : 'kill buffer',
+  \'o' : 'kill other buffer',
+\}
+
 let g:which_key_map.o = {
   \'name' : '+open',
   \'r' : 'ranger',
-  \'g' : 'lazygit',
   \'t' : 'open & run relevant unit test',
 \}
 
@@ -37,26 +45,24 @@ let g:which_key_map.f = {
   \'p' : 'preview in floating buffer (.md only)',
 \}
 
-let g:which_key_map.e = {
-  \'name' : '+execute-common-commands',
-  \'w' : 'write',
-  \'q' : 'quit',
-  \'d' : 'discard unsaved changes',
+let g:which_key_map.g = {
+  \'name' : 'git',
+  \'g' : 'lazygit',
+  \'p' : 'git pull',
+  \'P' : 'git push',
+  \'m' : 'checkout master',
+  \'d' : 'checkout develop',
+  \'c' : 'git add all and commit',
+  \'.' : 'lazygit .dotfiles',
+  \'h' : {
+    \'name' : '+github',
+    \'c' : 'checkout PR by number',
+  \},
 \}
 
 let g:which_key_map.r = {
   \'name' : '+AsyncRun',
-  \'n' : 'new aync command',
-  \'t' : 'run relevant unit test',
-  \'r' : 'compile and run current directory',
-  \'c' : 'compile current directory into executable',
-  \'g' : {
-    \'name' : '+git',
-    \'p' : 'checkout pull request',
-    \'m' : 'checkout master',
-    \'d' : 'checkout develop',
-    \'c' : 'git add all and commit',
-  \},
+  \'r' : 'new aync command',
 \}
 
 let g:which_key_map.w = {
@@ -100,13 +106,6 @@ let g:which_key_map.n = {
   \},
 \}
 
-let g:which_key_map.b = {
-  \'name' : '+buffers',
-  \'n' : 'new buffer',
-  \'k' : 'kill buffer',
-  \'o' : 'kill other buffer',
-\}
-
 let g:which_key_map.t = {
   \'name' : '+terminal',
   \'n' : 'new floating terminal',
@@ -125,7 +124,7 @@ let g:which_key_map.q = {
   \'k' : 'previous quickfix list item',
 \}
 
-let g:which_key_map.l = {
+let g:which_key_map.Q = {
   \'name' : '+location-list',
   \'o' : 'open location list',
   \'c' : 'close location list',
@@ -153,14 +152,22 @@ let g:which_key_map.s = {
   \'a' : 'search code actions',
 \}
 
-let g:which_key_map.L = {
+let g:which_key_map.l = {
   \'name' : '+LSP',
-  \'d' : 'jump to definition',
+  \'d' : 'preview definition',
+  \'D' : 'jump to definition',
+  \'a' : 'code actions',
   \'r' : 'rename symbol under cursor',
   \'k' : 'display hover information',
   \'e' : 'show line diagnostics',
   \'l' : 'set line diagnostics in location list',
   \'c' : 'stop currently running clients',
+  \'f' : 'lsp finder',
+  \'n' : 'next error',
+  \'p' : 'previous error',
+  \'s' : 'search document symbols',
+  \'S' : 'search workplace symbols',
+  \'i' : 'find implementations',
 \}
 
 " Ignored keymaps

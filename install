@@ -9,7 +9,6 @@ mkdir -p ~/.config/nvim/lua/custom/efm
 mkdir -p ~/.config/nvim/ftplugin
 
 # link wholesale
-# @note this probably only works on MacOS - it seems like there are some differences in find between MacOS and Linux
 for f in `find -E . -regex ".*\.(vim|lua|yaml)$"`; do
   rm -rf ~/.config/nvim/$f
   ln -s ~/config/$f ~/.config/nvim/$f
@@ -18,6 +17,6 @@ done
 # Other setup
 
 ln -sf ~/config/tmux.conf ~/.tmux.conf
-ln -sf ~/config/zshrc ~/.zshrc
+ln -sf ~/private_config/zshrc ~/.zshrc
 ln -sf ~/config/fish ~/.config/fish
 ln -sf ~/config/starship.toml ~/.config/starship.toml

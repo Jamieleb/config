@@ -6,6 +6,8 @@ nnoremap <Leader><Leader> :lua require('telescope.builtin').find_files()<CR>
 nnoremap <Leader>sh :Telescope oldfiles<CR>
 nnoremap <Leader>sm :Telescope marks<CR>
 nnoremap <Leader>st :Telescope colorscheme<CR>
+nnoremap <Leader>sb :Telescope current_buffer_fuzzy_find<CR>
+nnoremap <Leader>sg :Telescope gh pull_requests<CR>
 nnoremap <Leader>sq :lua require('telescope.builtin').quickfix()<CR>
 nnoremap <Leader>sl :lua require('telescope.builtin').loclist()<CR>
 nnoremap <Leader>s" :lua require('telescope.builtin').registers()<CR>

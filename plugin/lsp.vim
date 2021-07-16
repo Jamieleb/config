@@ -12,16 +12,34 @@ let g:completion_chain_complete_list = [
 
 let g:completion_auto_change_source = 1
 
-" Use completion-nvim in every buffer
-autocmd BufEnter * lua require'completion'.on_attach()
+" Enable completion in every buffer
+" autocmd BufEnter * lua require'completion'.on_attach()
 
-nnoremap <leader>Ld :lua vim.lsp.buf.definition()<CR>
-nnoremap <leader>Lr :lua vim.lsp.buf.rename()<CR>
-nnoremap <leader>Lk :lua vim.lsp.buf.hover()<CR>
-nnoremap <leader>Le :lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
-nnoremap <leader>Ll :lua vim.lsp.diagnostic.set_loclist()<CR>
-nnoremap <leader>La :lua vim.lsp.buf.code_action()<CR>
-nnoremap <leader>Lc :lua vim.lsp.stop_client(vim.lsp.get_active_clients())
+lua << EOF
+local saga = require 'lspsaga'
+
+saga.init_lsp_saga()
+EOF
+
+nnoremap <silent><leader>ld :Lspsaga preview_definition<CR>
+nnoremap <silent><leader>lD :lua vim.lsp.buf.definition()<CR>
+nnoremap <silent><leader>lr :Lspsaga rename<CR>
+nnoremap <silent><leader>lk :Lspsaga hover_doc<CR>
+nnoremap <silent><leader>le :Lspsaga show_line_diagnostics<CR>
+nnoremap <silent><leader>ln :Lspsaga diagnostic_jump_next<CR>
+nnoremap <silent><leader>lp :Lspsaga diagnostic_jump_previous<CR>
+nnoremap <silent><leader>ll :lua vim.lsp.diagnostic.set_loclist()<CR>
+nnoremap <silent><leader>la :Lspsaga code_action<CR>
+vnoremap <silent><leader>la :<C-U>Lspsaga range_code_action<CR>
+nnoremap <silent><leader>lc :lua vim.lsp.stop_client(vim.lsp.get_active_clients())
+nnoremap <silent><leader>ls :Telescope lsp_document_symbols<CR>
+nnoremap <silent><leader>lS :Telescope lsp_workspace_symbols<CR>
+nnoremap <silent><leader>li :Telescope lsp_implementations<CR>
+nnoremap <silent><leader>lf :Lspsaga lsp_finder<CR>
+
+" Scroll hover docs
+nnoremap <silent><C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>
+nnoremap <silent><C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
