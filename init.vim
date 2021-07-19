@@ -19,6 +19,7 @@ call plug#begin("~/.vim/plugged")
   " Plug 'yonlu/omni.vim'
   " Plug 'romgrk/doom-one.vim'
   Plug 'Th3Whit3Wolf/one-nvim'
+  Plug 'folke/tokyonight.nvim'
 
   " Status Line
   Plug 'vim-airline/vim-airline'
@@ -104,7 +105,7 @@ lua require'trouble'.setup()
 
 " Theme
 set background=dark
-colorscheme one-nvim
+colorscheme tokyonight
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='atomic'
