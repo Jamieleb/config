@@ -29,6 +29,10 @@ call plug#begin("~/.vim/plugged")
   Plug 'voldikss/vim-floaterm'
   Plug 'kassio/neoterm'
 
+  " Git Clients
+  Plug 'kdheepak/lazygit.nvim'
+  Plug 'TimUntersberger/neogit'
+
   " Tab line
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'romgrk/barbar.nvim'
@@ -102,6 +106,7 @@ lua require'colorizer'.setup()
 lua require'gitsigns'.setup()
 lua require'spellsitter'.setup()
 lua require'trouble'.setup()
+lua require'neogit'.setup()
 
 " Theme
 set background=dark
