@@ -28,6 +28,7 @@ call plug#begin("~/.vim/plugged")
   "Floating window buffers and Terminals
   Plug 'voldikss/vim-floaterm'
   Plug 'kassio/neoterm'
+  Plug 'kdheepak/lazygit.nvim'
 
   " Tab line
   Plug 'kyazdani42/nvim-web-devicons'
