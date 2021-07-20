@@ -1,16 +1,15 @@
 " Quickfix and Location List
 " Open/close
-noremap <silent><Leader>qq :call asyncrun#quickfix_toggle(8)<CR>
-nnoremap <Leader>qo :copen<CR>
-nnoremap <Leader>qc :cclose<CR>
-nnoremap <Leader>Qo :lopen<CR>
-nnoremap <Leader>Qc :lclose<CR>
+noremap <silent><Leader>qq :TroubleToggle<CR>
+nnoremap <Leader>qo :Trouble quickfix<CR>
+nnoremap <Leader>qc :TroubleClose quickfix<CR>
+nnoremap <Leader>Qo :Trouble loclist<CR>
+nnoremap <Leader>Qc :TroubleClose loclist<CR>
+nnoremap <Leader>QQ :TroubleToggle loclist<CR>
 
 " Navigate lists
-nnoremap <Leader>qj :cnext<CR>
-nnoremap <Leader>qk :cprevious<CR>
-nnoremap <Leader>Qj :lnext<CR>
-nnoremap <Leader>Qk :lprevious<CR>
+nnoremap <Leader>qn :lua require'trouble'.next({skip_groups = true, jump = true})
+nnoremap <Leader>qp :lua require'trouble'.previous({skip_groups = true, jump = true})
 
 " Vertical Navigation
 nnoremap <Leader>j <C-f>

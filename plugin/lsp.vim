@@ -23,12 +23,14 @@ EOF
 
 nnoremap <silent><leader>ld :Lspsaga preview_definition<CR>
 nnoremap <silent><leader>lD :lua vim.lsp.buf.definition()<CR>
-nnoremap <silent><leader>lr :Lspsaga rename<CR>
+nnoremap <silent><leader>lr :Trouble lsp_references<CR>
+nnoremap <silent><leader>lR :Lspsaga rename<CR>
 nnoremap <silent><leader>lk :Lspsaga hover_doc<CR>
 nnoremap <silent><leader>le :Lspsaga show_line_diagnostics<CR>
 nnoremap <silent><leader>ln :Lspsaga diagnostic_jump_next<CR>
 nnoremap <silent><leader>lp :Lspsaga diagnostic_jump_previous<CR>
-nnoremap <silent><leader>ll :lua vim.lsp.diagnostic.set_loclist()<CR>
+nnoremap <silent><leader>ll :Trouble lsp_document_diagnostics<CR>
+nnoremap <silent><leader>lL :Trouble lsp_workspace_diagnostics<CR>
 nnoremap <silent><leader>la :Lspsaga code_action<CR>
 vnoremap <silent><leader>la :<C-U>Lspsaga range_code_action<CR>
 nnoremap <silent><leader>lc :lua vim.lsp.stop_client(vim.lsp.get_active_clients())

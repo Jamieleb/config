@@ -1,4 +1,6 @@
 local actions = require('telescope.actions')
+local trouble = require('trouble.providers.telescope')
+
 require('telescope').setup {
     defaults = {
         file_sorter = require('telescope.sorters').get_fzy_sorter,
@@ -11,10 +13,8 @@ require('telescope').setup {
         qflist_previewer = require('telescope.previewers').vim_buffer_qflist.new,
 
         mappings = {
-            i = {
-                ["<C-x>"] = false,
-                ["<C-q>"] = actions.send_to_qflist,
-            },
+            i = { ["<C-t>"] = trouble.open_with_trouble },
+            n = { ["<C-t>"] = trouble.open_with_trouble },
         }
     },
     pickers = {
