@@ -93,6 +93,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'justinmk/vim-sneak'
   " Buffer navigation
   Plug 'matbme/JABS.nvim'
+  Plug 'kevinhwang91/rnvimr'
 call plug#end()
 
 " Config

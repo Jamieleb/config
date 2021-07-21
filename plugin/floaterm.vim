@@ -13,7 +13,6 @@ tnoremap <silent> <C-j> <C-\><C-n>:FloatermNew<CR>
 tnoremap <silent> <C-k> <C-\><C-n>:FloatermKill<CR>
 tnoremap <silent> <C-t> <C-\><C-n>:FloatermToggle<CR>
 
-nnoremap <Leader>or :FloatermNew ranger<CR>
 nnoremap <Leader>gg :Neogit<CR>
 nnoremap <Leader>gl :LazyGit<CR>
 nnoremap <Leader>gc :Neogit commit<CR>

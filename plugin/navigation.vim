@@ -14,3 +14,5 @@ nnoremap <Leader>qp :lua require'trouble'.previous({skip_groups = true, jump = t
 " Vertical Navigation
 nnoremap <Leader>j <C-f>
 nnoremap <Leader>k <C-b>
+
+nnoremap <Leader>or :RnvimrToggle<CR>
