@@ -9,6 +9,8 @@ Run :PlugInstall to install various plugins
 
 ### Dependencies:
 
+- TMUX and tpm `brew install tmux` [tpm](https://github.com/tmux-plugins/tpm)
+- Fish Shell
 - lazygit for Git CLI [github page](https://github.com/jesseduffield/lazygit)
 - Ranger for file exploration [github page](https://wiki.archlinux.org/index.php/ranger)
 - [Solargraph](https://solargraph.org/)
