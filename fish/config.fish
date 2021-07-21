@@ -14,7 +14,12 @@ function doom -d "Start the Emacs daemon and opens the Emacs Client"
     command emacsclient --no-wait --create-frame
 end
 
-set PATH /usr/local/opt/mysql@5.7/bin $PATH
+fish_add_path /opt/homebrew/opt/mysql@5.7/bin
+
+status --is-interactive; and source (rbenv init -|psub)
+status --is-interactive; and pyenv init --path | source
+pyenv init - | source
 
 # Use Starship as prompt
 starship init fish | source
+fish_add_path /opt/homebrew/opt/openssl@1.1/bin
