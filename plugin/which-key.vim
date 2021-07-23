@@ -78,6 +78,13 @@ let g:which_key_map.w = {
   \'c' : 'close window',
   \'v' : 'split window vertically',
   \'s' : 'split window horizontally',
+  \'H' : 'move split to the left',
+  \'J' : 'move split downwards',
+  \'K' : 'move split upwards',
+  \'L' : 'move split to the right',
+  \'T' : 'break split into new tab',
+  \'r' : 'rotate splits to the right/downwards',
+  \'R' : 'rotate splits to the left/upwards',
   \'=' : 'balance splits',
   \'f' : {
     \'name' : '+files',
