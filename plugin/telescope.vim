@@ -2,7 +2,8 @@ lua require("custom")
 
 nnoremap <Leader>s/ :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
 nnoremap <Leader>sf :lua require('telescope.builtin').find_files()<CR>
-nnoremap <Leader><Leader> :lua require('telescope.builtin').find_files()<CR>
+nnoremap <Leader>/ :lua require('telescope.builtin').live_grep()<CR>
+nnoremap <Leader><Leader> :lua require('telescope.builtin').git_files()<CR>
 nnoremap <Leader>sh :Telescope oldfiles<CR>
 nnoremap <Leader>sm :Telescope marks<CR>
 nnoremap <Leader>st :Telescope colorscheme<CR>

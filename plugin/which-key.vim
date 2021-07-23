@@ -4,12 +4,13 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 
 " Define prefix dictionary
 let g:which_key_map = {
-  \'<Space>' : 'search for file',
+  \'<Space>' : 'search for git file',
   \'<BS>' : 'Go to last buffer',
   \'<CR>' : 'clear search highlighting',
   \'j' : 'page down',
   \'k' : 'page up',
   \'%' : 'source init.vim',
+  \'/' : 'live grep',
   \';' : {
     \'name' : '+commands',
     \'w' : 'write',
