@@ -159,6 +159,13 @@ let g:which_key_map.s = {
   \'e' : 'search document errors',
   \'.' : 'search config files',
   \'a' : 'search code actions',
+  \'r' : {
+    \'name' : 'rails',
+    \'m' : 'search models'
+    \'c' : 'search controllers'
+    \'r' : 'search react components'
+    \'v' : 'search views'
+  }
 \}
 
 let g:which_key_map.l = {

@@ -62,10 +62,22 @@ M.git_branches = function()
     })
 end
 
+local search_path = function(path, title)
+  require("telescope.builtin").find_files({
+    prompt_title = title,
+    cwd = path,
+  })
+end
+
 M.search_word = function()
   require("telescope.builtin").grep_string({
     prompt_prefix = vim.fn.expand("<cword>") .. " > ",
   })
 end
+
+M.search_rails_models = function() return search_path('./app/models/', '~~Models~~') end
+M.search_rails_controllers = function() return search_path('./app/controllers/', '~~Controllers~~') end
+M.search_rails_views = function() return search_path('./app/views/', '~~Views~~') end
+M.search_rails_components = function() return search_path('./app/webpacker/components/', '~~Components~~') end
 
 return M
