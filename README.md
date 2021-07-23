@@ -10,11 +10,11 @@ Run :PlugInstall to install various plugins
 ### Dependencies:
 
 - TMUX and tpm `brew install tmux` [tpm](https://github.com/tmux-plugins/tpm)
-- Fish Shell
+- Fish Shell, Starship prompt, oh my fish.
 - lazygit for Git CLI [github page](https://github.com/jesseduffield/lazygit)
-- Ranger for file exploration [github page](https://wiki.archlinux.org/index.php/ranger)
-- [Solargraph](https://solargraph.org/)
-- [Typescript-language-server](https://github.com/theia-ide/typescript-language-server)
-- [gopls](https://github.com/theia-ide/typescript-language-server)
+- Python, Pip, ranger-fm, pynvim for [Rnvimr](https://github.com/kevinhwang91/rnvimr)
+- Ruby && [Solargraph](https://solargraph.org/)
+- Node && [Typescript-language-server](https://github.com/theia-ide/typescript-language-server)
+- Go && [gopls](https://github.com/theia-ide/typescript-language-server)
 - [efm-langserver](https://github.com/mattn/efm-langserver)
 - ripgreg, bat, fd for Neovim Telescope
