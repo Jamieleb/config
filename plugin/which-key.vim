@@ -30,7 +30,7 @@ let g:which_key_map.b = {
   \'b' : 'Switch Buffers',
   \'n' : 'next buffer',
   \'p' : 'previous buffer',
-  \'n' : 'new buffer',
+  \'N' : 'new buffer',
   \'H' : 'kill buffers to left',
   \'L' : 'kill buffers to right',
   \'k' : 'kill buffer',
@@ -92,8 +92,6 @@ let g:which_key_map.w = {
     \'v' : 'open file in vertical split',
   \},
   \'m' : 'toggle maximise split',
-  \'p' : 'persist workspace',
-  \'r' : 'restore workspace',
   \'t' : {
     \'name' : '+tabs',
     \'n' : 'open new tab',
