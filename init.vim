@@ -32,6 +32,8 @@ call plug#begin("~/.vim/plugged")
   " Git Clients
   Plug 'kdheepak/lazygit.nvim'
   Plug 'TimUntersberger/neogit'
+  Plug 'lewis6991/gitsigns.nvim'
+  Plug 'pwntester/octo.nvim'
 
   " Tab line
   Plug 'kyazdani42/nvim-web-devicons'
@@ -80,9 +82,6 @@ call plug#begin("~/.vim/plugged")
   Plug 'tpope/vim-rails'
   " Repeat plugin commands with .
   Plug 'tpope/vim-repeat'
-  " Git Client
-  Plug 'lewis6991/gitsigns.nvim'
-  Plug 'pwntester/octo.nvim'
   " Toggles maximising splits
   Plug 'szw/vim-maximizer'
   " Markdown previewer
@@ -94,6 +93,10 @@ call plug#begin("~/.vim/plugged")
   " Buffer navigation
   Plug 'matbme/JABS.nvim'
   Plug 'kevinhwang91/rnvimr'
+  " NVIM in the browser
+  Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+  " Smooth Scrolling
+  Plug 'karb94/neoscroll.nvim'
 call plug#end()
 
 " Config
@@ -108,6 +111,7 @@ lua require'gitsigns'.setup()
 lua require'spellsitter'.setup()
 lua require'trouble'.setup()
 lua require'neogit'.setup()
+lua require'neoscroll'.setup()
 
 " Theme
 set background=dark
