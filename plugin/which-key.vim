@@ -145,7 +145,7 @@ let g:which_key_map.s = {
   \'name' : '+search',
   \'f' : 'search for file',
   \'/' : 'search for pattern in project',
-  \'h' : 'search recently opened files',
+  \'R' : 'search recently opened files',
   \'m' : 'search marks',
   \'t' : 'search for colorschemes',
   \'q' : 'search quickfix list',
@@ -159,13 +159,18 @@ let g:which_key_map.s = {
   \'e' : 'search document errors',
   \'.' : 'search config files',
   \'a' : 'search code actions',
+  \'h' : 'search man pages',
+  \'c' : 'search buffer commits',
+  \'T' : 'search Telescope builtins',
+  \'z' : 'search spelling suggestions',
+  \'%' : 'reload lua modules by search',
   \'r' : {
     \'name' : 'rails',
-    \'m' : 'search models'
-    \'c' : 'search controllers'
-    \'r' : 'search react components'
-    \'v' : 'search views'
-  }
+    \'m' : 'search models',
+    \'c' : 'search controllers',
+    \'r' : 'search react components',
+    \'v' : 'search views',
+  \},
 \}
 
 let g:which_key_map.l = {
