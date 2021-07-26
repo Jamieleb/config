@@ -19,7 +19,7 @@ nnoremap <Leader>sa :lua require('telescope.builtin').lsp_code_actions(require('
 nnoremap <Leader>sk :lua require('telescope.builtin').lsp_definitions()<CR>
 nnoremap <Leader>sb :lua require('telescope.builtin').buffers()<CR>
 nnoremap <Leader>se :lua require('telescope.builtin').lsp_document_diagnostics()<CR>
-nnoremap <Leader>sh :lua require('telescope.builtin').man_pages()<CR>
+nnoremap <Leader>sh :lua require('telescope.builtin').help_tags()<CR>
 nnoremap <Leader>sc :lua require('telescope.builtin').git_bcommits()<CR>
 nnoremap <Leader>sT :lua require('telescope.builtin').builtin()<CR>
 nnoremap <Leader>sz :lua require('telescope.builtin').spell_suggest()<CR>
