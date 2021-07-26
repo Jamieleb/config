@@ -12,9 +12,3 @@ tnoremap <silent> <C-h> <C-\><C-n>:FloatermPrev<CR>
 tnoremap <silent> <C-j> <C-\><C-n>:FloatermNew<CR>
 tnoremap <silent> <C-k> <C-\><C-n>:FloatermKill<CR>
 tnoremap <silent> <C-t> <C-\><C-n>:FloatermToggle<CR>
-
-nnoremap <Leader>gg :Neogit<CR>
-nnoremap <Leader>gl :LazyGit<CR>
-nnoremap <Leader>gc :Neogit commit<CR>
-nnoremap <Leader>g. :FloatermNew cd ~/config && lazygit<CR>
-nnoremap <Leader>gs :FloatermNew gh pr status<CR>

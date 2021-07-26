@@ -51,16 +51,25 @@ let g:which_key_map.f = {
 
 let g:which_key_map.g = {
   \'name' : 'git',
-  \'g' : 'lazygit',
+  \'g' : 'neogit',
+  \'l' : 'lazygit',
   \'p' : 'git pull',
   \'P' : 'git push',
   \'m' : 'checkout master',
   \'d' : 'checkout develop',
-  \'c' : 'git add all and commit',
+  \'c' : 'neogit commit',
   \'.' : 'lazygit .dotfiles',
+  \'s' : 'stage hunk',
+  \'u' : 'unstage hunk',
+  \'r' : 'reset hunk',
+  \'R' : 'reset buffer',
+  \'v' : 'preview hunk',
+  \'b' : 'blame line',
+  \'B' : 'toggle blame line',
   \'h' : {
     \'name' : '+github',
     \'c' : 'checkout PR by number',
+    \'s' : 'github status',
   \},
 \}
 
@@ -159,7 +168,7 @@ let g:which_key_map.s = {
   \'e' : 'search document errors',
   \'.' : 'search config files',
   \'a' : 'search code actions',
-  \'h' : 'search man pages',
+  \'h' : 'search help tags',
   \'c' : 'search buffer commits',
   \'T' : 'search Telescope builtins',
   \'z' : 'search spelling suggestions',
