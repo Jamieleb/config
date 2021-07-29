@@ -9,7 +9,7 @@ require'lspconfig'.tsserver.setup({
   on_attach = function(client)
     client.resolved_capabilities.document_formatting = false
     require "lsp_signature".on_attach()
-    on_attach=on_attach
+    require 'completion'.on_attach()
   end
 })
 
@@ -20,7 +20,7 @@ require('custom/efm')
 require('lspconfig').solargraph.setup({
   on_attach = function(client)
     require "lsp_signature".on_attach()
-    on_attach=on_attach
+    require 'completion'.on_attach()
   end
 })
 
