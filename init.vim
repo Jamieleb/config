@@ -107,7 +107,6 @@ endif
 
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 lua require'colorizer'.setup()
-lua require'gitsigns'.setup()
 lua require'spellsitter'.setup()
 lua require'trouble'.setup()
 lua require'neogit'.setup()
