@@ -27,8 +27,3 @@ nnoremap <Leader>sz :lua require('telescope.builtin').spell_suggest()<CR>
 nnoremap <Leader>sw :lua require('custom.telescope').search_word()<CR>
 nnoremap <Leader>s. :lua require('custom.telescope').search_dotfiles()<CR>
 nnoremap <Leader>s% :lua require('telescope.builtin').reloader()<Cr>
-
-nnoremap <Leader>srm :lua require('custom.telescope').search_rails_models()<CR>
-nnoremap <Leader>src :lua require('custom.telescope').search_rails_controllers()<CR>
-nnoremap <Leader>srr :lua require('custom.telescope').search_rails_components()<CR>
-nnoremap <Leader>srv :lua require('custom.telescope').search_rails_views()<CR>
