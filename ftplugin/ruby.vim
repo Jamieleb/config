@@ -1,8 +1,8 @@
 " Console
 nnoremap <localleader>cf :FloatermNew rails c<CR>
-nnoremap <localleader>cs :sp | terminal rails c<CR>
-nnoremap <localleader>cv :vsp | terminal rails c<CR>
-nnoremap <localleader>ct :terminal rails c<CR>
+nnoremap <localleader>cs :sp term://rails c<CR>
+nnoremap <localleader>cv :vsp term://rails c<CR>
+nnoremap <localleader>C :terminal rails c<CR>
 
 " Server
 nnoremap <localleader>S :terminal rails s<CR>
