@@ -8,8 +8,8 @@ nnoremap <Leader>Qc :TroubleClose loclist<CR>
 nnoremap <Leader>QQ :TroubleToggle loclist<CR>
 
 " Navigate lists
-nnoremap <Leader>qn :lua require'trouble'.next({skip_groups = true, jump = true})
-nnoremap <Leader>qp :lua require'trouble'.previous({skip_groups = true, jump = true})
+nnoremap <Leader>qn :lua require'trouble'.next({skip_groups = true, jump = true})<CR>
+nnoremap <Leader>qp :lua require'trouble'.previous({skip_groups = true, jump = true})<CR>
 
 " Vertical Navigation
 nnoremap <Leader>j <C-f>
