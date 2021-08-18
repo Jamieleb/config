@@ -80,6 +80,10 @@ call plug#begin("~/.vim/plugged")
   Plug 'karb94/neoscroll.nvim'
   " Improved increment/decrement
   Plug 'monaqa/dial.nvim'
+  " Do the opposite of J
+  Plug 'kana/vim-textobj-user'
+  Plug 'sgur/vim-textobj-parameter'
+  Plug 'AckslD/nvim-revJ.lua'
   " scratch buffers
   Plug 'mtth/scratch.vim'
 call plug#end()
@@ -118,6 +122,15 @@ lua require'trouble'.setup()
 lua require'neogit'.setup()
 lua require'neoscroll'.setup()
 lua require('nvim-ts-autotag').setup()
+lua << EOF
+require("revj").setup{
+  keymaps = {
+    operator = '<leader>K', -- for operator (+motion)
+    line = 'K', -- for formatting current line
+    visual = '<Leader>K', -- for formatting visual selection
+  },
+}
+EOF
 
 " Theme
 set background=dark
