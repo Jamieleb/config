@@ -73,7 +73,6 @@ call plug#begin("~/.vim/plugged")
   " Navigation Plugins
   Plug 'ggandor/lightspeed.nvim'
   " Buffer navigation
-  Plug 'matbme/JABS.nvim'
   Plug 'kevinhwang91/rnvimr'
   " NVIM in the browser
   Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
