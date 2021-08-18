@@ -41,8 +41,6 @@ call plug#begin("~/.vim/plugged")
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'lewis6991/spellsitter.nvim'
 
-  Plug 'pangloss/vim-javascript'
-
   Plug 'glepnir/dashboard-nvim'
   Plug 'liuchengxu/vim-which-key'
 
