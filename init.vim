@@ -79,6 +79,8 @@ call plug#begin("~/.vim/plugged")
   Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
   " Smooth Scrolling
   Plug 'karb94/neoscroll.nvim'
+  " Improved increment/decrement
+  Plug 'monaqa/dial.nvim'
 call plug#end()
 
 " Config

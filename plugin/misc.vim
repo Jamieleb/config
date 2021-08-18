@@ -27,3 +27,6 @@ augroup highlight_yank
   autocmd!
   autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank{higroup='IncSearch', timeout=700}
 augroup END
+
+nmap <Leader>+ <Plug>(dial-increment)
+nmap <Leader>- <Plug>(dial-decrement)
