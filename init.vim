@@ -46,7 +46,6 @@ call plug#begin("~/.vim/plugged")
 
   " Async tasks
   Plug 'skywind3000/asyncrun.vim'
-
   "Auto comment
   Plug 'tpope/vim-commentary'
   " Auto Pairs
@@ -55,6 +54,8 @@ call plug#begin("~/.vim/plugged")
   Plug 'tpope/vim-endwise'
   " Vim-surround
   Plug 'tpope/vim-surround'
+  " Auto tags
+  Plug 'windwp/nvim-ts-autotag'
   " Visual display of registers
   Plug 'junegunn/vim-peekaboo'
   " Display lines to show indentation
@@ -86,12 +87,34 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  },
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "gnn",
+      node_incremental = "grn",
+      scope_incremental = "grc",
+      node_decremental = "grm",
+    },
+  },
+  indent = {
+    enable = true
+  }
+}
+EOF
+
 lua require'colorizer'.setup()
 lua require'spellsitter'.setup()
 lua require'trouble'.setup()
 lua require'neogit'.setup()
 lua require'neoscroll'.setup()
+lua require('nvim-ts-autotag').setup()
 
 " Theme
 set background=dark
