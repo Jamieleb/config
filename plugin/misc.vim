@@ -30,3 +30,21 @@ augroup END
 
 nmap <Leader>+ <Plug>(dial-increment)
 nmap <Leader>- <Plug>(dial-decrement)
+
+" keep cursor centered when jumping and line concatenating
+"   src ThePrimagen https://www.youtube.com/watch?v=hSHATqh8svM&t=450s
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
+" Undo break points
+"   src ThePrimagen https://www.youtube.com/watch?v=hSHATqh8svM&t=450s
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+
+" jumplist mutations
+"   src ThePrimagen https://www.youtube.com/watch?v=hSHATqh8svM&t=450s
+nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
+nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
