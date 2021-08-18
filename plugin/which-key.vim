@@ -46,7 +46,16 @@ let g:which_key_map.o = {
 
 let g:which_key_map.f = {
   \'name' : '+file',
-  \'p' : 'preview in floating buffer (.md only)',
+  \'s' : 'preview in floating buffer (.md only)',
+\}
+
+let g:which_key_map.x = {
+  \'name' : '+scratch',
+  \'x' : 'open scratch buffer',
+  \'X' : 'open scratch buffer and clear content',
+  \'i' : 'open scratch buffer in insert mode',
+  \'I' : 'open scratch buffer in insert mode and clear content',
+  \'p' : 'preview scratch buffer',
 \}
 
 let g:which_key_map.g = {
