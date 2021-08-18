@@ -1,6 +1,6 @@
 " Terminal Remaps
 " Map Ctrl-n to enter normal mode in terminal buffer
-tnoremap <C-Space> <C-\><C-N>
+tnoremap <C-n> <C-\><C-N>
 
 nnoremap <silent><leader>tv :vert Tnew<cr>
 nnoremap <silent><leader>ts :bel Tnew<cr>
