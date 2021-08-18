@@ -80,6 +80,8 @@ call plug#begin("~/.vim/plugged")
   Plug 'karb94/neoscroll.nvim'
   " Improved increment/decrement
   Plug 'monaqa/dial.nvim'
+  " scratch buffers
+  Plug 'mtth/scratch.vim'
 call plug#end()
 
 " Config
@@ -132,6 +134,9 @@ call which_key#register('<Space>', "g:which_key_map")
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 let g:indentLine_char = '|'
+
+let g:scratch_persistence_file = "~/notes/.scratch.vim"
+let g:scratch_no_mappings = 1
 
 augroup CUSTOM
   autocmd!
