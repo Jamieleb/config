@@ -1,23 +1,6 @@
 call plug#begin("~/.vim/plugged")
   " Themes
-  " Plug 'dracula/vim'
-  " Plug 'morhetz/gruvbox'
-  " Plug 'arcticicestudio/nord-vim'
-  " Plug 'jacoborus/tender.vim'
-  " Plug 'pgdouyon/vim-yin-yang'
-  " Plug 'ayu-theme/ayu-vim'
-  " Plug 'colepeters/spacemacs-theme.vim'
-  " Plug 'altercation/vim-colors-solarized'
-  " Plug 'windwp/wind-colors'
-  " Plug 'tanvirtin/monokai.nvim'
-  " Plug 'ackyshake/Spacegray.vim'
-  " Plug 'zabanaa/neuromancer.vim'
-  " Plug 'bluz71/vim-nightfly-guicolors'
-  " Plug 'mhartington/oceanic-next'
-  " Plug 'bluz71/vim-moonfly-colors'
   Plug 'glepnir/zephyr-nvim'
-  " Plug 'yonlu/omni.vim'
-  " Plug 'romgrk/doom-one.vim'
   Plug 'Th3Whit3Wolf/one-nvim'
   Plug 'folke/tokyonight.nvim'
 
