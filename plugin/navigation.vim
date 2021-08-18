@@ -16,3 +16,11 @@ nnoremap <Leader>j <C-f>
 nnoremap <Leader>k <C-b>
 
 nnoremap <Leader>or :RnvimrToggle<CR>
+
+lua << EOF
+require'lightspeed'.setup {
+  jump_to_first_match = true,
+  highlight_unique_chars = true,
+  grey_out_search_area = true,
+}
+EOF

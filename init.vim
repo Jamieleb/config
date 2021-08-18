@@ -70,7 +70,7 @@ call plug#begin("~/.vim/plugged")
   " Show colours in buffer
   Plug 'norcalli/nvim-colorizer.lua'
   " Navigation Plugins
-  Plug 'justinmk/vim-sneak'
+  Plug 'ggandor/lightspeed.nvim'
   " Buffer navigation
   Plug 'matbme/JABS.nvim'
   Plug 'kevinhwang91/rnvimr'
