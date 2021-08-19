@@ -4,8 +4,8 @@ let g:completion_enable_auto_popup = 1
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 
 let g:completion_chain_complete_list = [
-  \{'complete_items': ['lsp', 'path']},
-  \{'complete_items': ['buffers']},
+  \{'complete_items': ['lsp']},
+  \{'complete_items': ['buffers', 'path']},
   \{'mode': '<c-p>'},
   \{'mode': '<c-n>'}
 \]
@@ -46,8 +46,38 @@ nnoremap <silent><C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga
 nnoremap <silent><C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 imap <c-j> <Plug>(completion_next_source)
 imap <c-k> <Plug>(completion_prev_source)
+
+lua << EOF
+require('tabout').setup({
+  tabkey = "",
+  backwards_tabkey = "",
+})
+
+local function replace_keycodes(str)
+  return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
+
+function _G.tab_binding()
+  if vim.fn.pumvisible() ~= 0 then
+    return replace_keycodes("<C-n")
+  else
+    return replace_keycodes("<Plug>(Tabout)")
+  end
+end
+
+function _G.s_tab_binding()
+  if vim.fn.pumvisible() ~= 0 then
+    return replace_keycodes("<C-p")
+  else
+    return replace_keycodes("<Plug>(TaboutBack)")
+  end
+end
+
+vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_binding()", {expr = true})
+vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_binding()", {expr = true})
+EOF

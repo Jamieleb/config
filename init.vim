@@ -88,6 +88,8 @@ call plug#begin("~/.vim/plugged")
   Plug 'mtth/scratch.vim'
   " swap args
   Plug 'mizlan/iswap.nvim'
+  " tab out
+  Plug 'abecodes/tabout.nvim'
 call plug#end()
 
 " Config
