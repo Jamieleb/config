@@ -127,9 +127,9 @@ lua require('nvim-ts-autotag').setup()
 lua << EOF
 require("revj").setup{
   keymaps = {
-    operator = 'K', -- for operator (+motion)
-    line = '<leader>K', -- for formatting current line
-    visual = '<Leader>K', -- for formatting visual selection
+    operator = 'K',
+    line = '<leader>K',
+    visual = '<Leader>K',
   },
 }
 EOF
