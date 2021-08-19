@@ -207,6 +207,8 @@ let g:which_key_map.l = {
   \'s' : 'search document symbols',
   \'S' : 'search workplace symbols',
   \'i' : 'find implementations',
+  \'x' : 'ISwap',
+  \'X' : 'ISwap under cursor',
 \}
 
 " Ignored keymaps

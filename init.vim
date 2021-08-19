@@ -86,6 +86,8 @@ call plug#begin("~/.vim/plugged")
   Plug 'AckslD/nvim-revJ.lua'
   " scratch buffers
   Plug 'mtth/scratch.vim'
+  " swap args
+  Plug 'mizlan/iswap.nvim'
 call plug#end()
 
 " Config
@@ -125,8 +127,8 @@ lua require('nvim-ts-autotag').setup()
 lua << EOF
 require("revj").setup{
   keymaps = {
-    operator = '<leader>K', -- for operator (+motion)
-    line = 'K', -- for formatting current line
+    operator = 'K', -- for operator (+motion)
+    line = '<leader>K', -- for formatting current line
     visual = '<Leader>K', -- for formatting visual selection
   },
 }

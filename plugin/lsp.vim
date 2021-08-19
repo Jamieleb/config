@@ -38,6 +38,8 @@ nnoremap <silent><leader>ls :Telescope lsp_document_symbols<CR>
 nnoremap <silent><leader>lS :Telescope lsp_workspace_symbols<CR>
 nnoremap <silent><leader>li :Telescope lsp_implementations<CR>
 nnoremap <silent><leader>lf :Lspsaga lsp_finder<CR>
+nnoremap <silent><Leader>lx :ISwap<CR>
+nnoremap <silent><Leader>lX :ISwapWith<CR>
 
 " Scroll hover docs
 nnoremap <silent><C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>
