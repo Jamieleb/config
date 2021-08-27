@@ -23,7 +23,7 @@ nnoremap <silent><leader>tV <Cmd>exe v:count1 . "TermExec size=200 direction=ver
 nnoremap <silent><leader>tF <Cmd>exe v:count1 . "TermExec direction=float cmd=\"" . input('$ ') . "\""<CR>
 nnoremap <silent><leader>tW <Cmd>exe v:count1 . "TermExec direction=window cmd=\"" . input('$ ') . "\""<CR>
 
-nnoremap <silent><leader>thS <Cmd>exe v:count1 . "TermExec open=0 size=30 direction=horizontal cmd=\"" . input('$ ') . "\""<CR>
-nnoremap <silent><leader>thV <Cmd>exe v:count1 . "TermExec open=0 size=200 direction=vertical cmd=\"" . input('$ ') . "\""<CR>
-nnoremap <silent><leader>thF <Cmd>exe v:count1 . "TermExec open=0 direction=float cmd=\"" . input('$ ') . "\""<CR>
-nnoremap <silent><leader>thW <Cmd>exe v:count1 . "TermExec open=0 direction=window cmd=\"" . input('$ ') . "\""<CR>
+nnoremap <silent><leader>ths <Cmd>exe v:count1 . "TermExec open=0 size=30 direction=horizontal cmd=\"" . input('$ ') . "\""<CR>
+nnoremap <silent><leader>thv <Cmd>exe v:count1 . "TermExec open=0 size=200 direction=vertical cmd=\"" . input('$ ') . "\""<CR>
+nnoremap <silent><leader>thf <Cmd>exe v:count1 . "TermExec open=0 direction=float cmd=\"" . input('$ ') . "\""<CR>
+nnoremap <silent><leader>thw <Cmd>exe v:count1 . "TermExec open=0 direction=window cmd=\"" . input('$ ') . "\""<CR>
