@@ -1,3 +1,8 @@
+" Toggleterm
+
+lua << EOF
+require("toggleterm").setup{}
+EOF
 " Terminal Remaps
 " Map Ctrl-n to enter normal mode in terminal buffer
 tnoremap <C-n> <C-\><C-N>
