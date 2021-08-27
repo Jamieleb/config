@@ -216,7 +216,6 @@ let g:which_key_map.p = 'which_key_ignore'
 let g:which_key_map.y = 'which_key_ignore'
 let g:which_key_map.d = 'which_key_ignore'
 let g:which_key_map.c = 'which_key_ignore'
-let g:which_key_map.x = 'which_key_ignore'
 let g:which_key_map.hp = 'which_key_ignore'
 let g:which_key_map.h = { 'name' : 'which_key_ignore' }
 let g:which_key_map.v = { 'name' : 'which_key_ignore' }

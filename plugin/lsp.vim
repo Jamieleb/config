@@ -4,8 +4,8 @@ let g:completion_enable_auto_popup = 1
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 
 let g:completion_chain_complete_list = [
-  \{'complete_items': ['lsp', 'path']},
-  \{'complete_items': ['buffers']},
+  \{'complete_items': ['lsp']},
+  \{'complete_items': ['buffers', 'path']},
   \{'mode': '<c-p>'},
   \{'mode': '<c-n>'}
 \]

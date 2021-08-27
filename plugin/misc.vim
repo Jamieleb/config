@@ -6,8 +6,6 @@ nnoremap <Leader>d "_d
 vnoremap <Leader>d "_d
 nnoremap <Leader>c "_c
 vnoremap <Leader>c "_c
-nnoremap <Leader>x "_x
-vnoremap <Leader>x "_x
 nnoremap Y y$
 nnoremap <Leader>Y "*y$
 
@@ -28,7 +26,7 @@ augroup highlight_yank
   autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank{higroup='IncSearch', timeout=700}
 augroup END
 
-nmap <Leader>+ <Plug>(dial-increment)
+nmap <Leader>= <Plug>(dial-increment)
 nmap <Leader>- <Plug>(dial-decrement)
 
 " keep cursor centered when jumping and line concatenating

@@ -2,9 +2,9 @@
 " Open/close
 noremap <silent><Leader>qq :TroubleToggle<CR>
 nnoremap <Leader>qo :Trouble quickfix<CR>
-nnoremap <Leader>qc :TroubleClose quickfix<CR>
+nnoremap <Leader>qc :cclose<CR>
 nnoremap <Leader>Qo :Trouble loclist<CR>
-nnoremap <Leader>Qc :TroubleClose loclist<CR>
+nnoremap <Leader>Qc :lclose<CR>
 nnoremap <Leader>QQ :TroubleToggle loclist<CR>
 
 " Navigate lists

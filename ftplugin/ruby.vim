@@ -16,3 +16,7 @@ nnoremap <localleader>sm :lua require('custom.telescope').search_rails_models()<
 nnoremap <localleader>sc :lua require('custom.telescope').search_rails_controllers()<CR>
 nnoremap <localleader>sr :lua require('custom.telescope').search_rails_components()<CR>
 nnoremap <localleader>sv :lua require('custom.telescope').search_rails_views()<CR>
+
+" vim-rails
+nnoremap <silent><localleader>R :R<CR>
+nnoremap <silent><localleader>A :A<CR>
