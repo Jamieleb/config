@@ -4,6 +4,15 @@ nnoremap <localleader>cs :sp term://rails c<CR>
 nnoremap <localleader>cv :vsp term://rails c<CR>
 nnoremap <localleader>C :terminal rails c<CR>
 
+lua << EOF
+  local Terminal = require('toggleterm.terminal').Terminal
+  function console(direction, size)
+    Terminal:new({ cmd = "rails console", hidden = true, direction = direction, size = size })
+  end
+
+
+EOF
+
 " Server
 nnoremap <localleader>S :terminal rails s<CR>
 
