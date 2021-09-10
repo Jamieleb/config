@@ -27,3 +27,5 @@ nnoremap <Leader>sz :lua require('telescope.builtin').spell_suggest()<CR>
 nnoremap <Leader>sw :lua require('custom.telescope').search_word()<CR>
 nnoremap <Leader>s. :lua require('custom.telescope').search_dotfiles()<CR>
 nnoremap <Leader>s% :lua require('telescope.builtin').reloader()<Cr>
+
+nnoremap <leader>; :lua require('telescope.builtin').commands()<CR>
