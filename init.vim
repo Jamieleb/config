@@ -27,7 +27,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
-  Plug 'nvim-telescope/telescope-fzy-native.nvim'
+  Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
   Plug 'nvim-telescope/telescope-github.nvim'
 
   " LSP, Linting, and Completion plugins
@@ -89,6 +89,8 @@ call plug#begin("~/.vim/plugged")
   Plug 'mtth/scratch.vim'
   " swap args
   Plug 'mizlan/iswap.nvim'
+  " Project specific consig
+  Plug 'windwp/nvim-projectconfig'
 call plug#end()
 
 " Config
@@ -96,6 +98,10 @@ call plug#end()
 if (has("termguicolors"))
   set termguicolors
 endif
+
+let mapleader=" "
+let maplocalleader=" m"
+call which_key#register('<Space>', "g:which_key_map")
 
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
@@ -135,6 +141,10 @@ require("revj").setup{
 }
 EOF
 
+" project specific configs
+lua require'nvim-projectconfig'.load_project_config({ project_dir = "~/config/projects/" })
+nnoremap <silent><leader>.. :EditProjectConfig<CR>
+
 " Theme
 set background=dark
 colorscheme tokyonight
@@ -143,9 +153,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='atomic'
 let g:airline_solarized_bg='dark'
 
-let mapleader=" "
-let maplocalleader=" m"
-call which_key#register('<Space>', "g:which_key_map")
 
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
