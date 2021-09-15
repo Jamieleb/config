@@ -27,4 +27,4 @@ wk.register({
     R = { '<cmd>lua require("custom.telescope").search_rails_components()<CR>', 'search React components' },
     V = { '<cmd>lua require("custom.telescope").search_rails_views()<CR>', 'search views' },
   }
-})
+}, { prefix = '<leader>' })
