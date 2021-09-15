@@ -101,7 +101,6 @@ endif
 
 let mapleader=" "
 let maplocalleader=" m"
-" call which_key#register('<Space>', "g:which_key_map")
 
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
@@ -150,7 +149,7 @@ require('git')
 EOF
 
 " project specific configs
-lua require'nvim-projectconfig'.load_project_config({ project_dir = "~/config/projects/" })
+lua require'nvim-projectconfig'.load_project_config({ project_dir = "~/config/nvim/projects/" })
 nnoremap <silent><leader>.. :EditProjectConfig<CR>
 
 " Theme
