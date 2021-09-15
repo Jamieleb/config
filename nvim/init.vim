@@ -9,7 +9,6 @@ call plug#begin("~/.vim/plugged")
   Plug 'vim-airline/vim-airline-themes'
 
   "Floating window buffers and Terminals
-  Plug 'voldikss/vim-floaterm'
   Plug 'kassio/neoterm'
   Plug 'akinsho/toggleterm.nvim'
 
