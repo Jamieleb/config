@@ -1,18 +1,30 @@
-nnoremap <silent><Leader>bN :enew<CR>
-nnoremap <silent><Leader>bk :BufferClose<CR>
-nnoremap <silent><Leader>bn :BufferNext<CR>
-nnoremap <silent><Leader>bL :BufferCloseBuffersRight<CR>
-nnoremap <silent><Leader>bH :BufferCloseBuffersLeft<CR>
-nnoremap <silent><Leader>bp :BufferPrevious<CR>
-nnoremap <silent><Leader>bg :BufferPick<CR>
-nnoremap <silent><Leader>bo :BufferCloseAllButCurrent<CR>
-nnoremap <silent><Leader>bb :Telescope buffers<CR>
-
-" Scratch buffer maps
-
-nnoremap <silent><Leader>xx :Scratch<CR>
-nnoremap <silent><Leader>xX :Scratch!<CR>
-nnoremap <silent><Leader>xi :ScratchInsert<CR>
-nnoremap <silent><Leader>xI :ScratchInsert!<CR>
-nnoremap <silent><Leader>xp :ScratchPreview<CR>
+lua << EOF
+local wk = require("which-key")
+wk.register({
+  b = {
+      name = "buffer",
+      N = { "<cmd>enew<CR>", "new buffer" },
+      k = { "<cmd>BufferClose<CR>", "kill current buffer" },
+      n = { "<cmd>BufferNext<CR>", "next buffer" },
+      L = { "<cmd>BufferCloseBuffersRight<CR>", 'close buffers to right' },
+      H = { "<cmd>BufferCloseBuffersLeft<CR>", 'close buffers to left' },
+      p = { "<cmd>BufferPrevious<CR>", 'close buffers to left' },
+      g = { "<cmd>BufferPick<CR>", 'Buffer Pick' },
+      o = { "<cmd>BufferCloseAllButCurrent<CR>", 'close other buffers' },
+      b = { "<cmd>Telescope buffers<CR>", 'Telescope buffers' },
+    },
+  }, { prefix = "<leader>" }
+)
+wk.register({
+  x = {
+      name = 'scratch',
+      x = { '<cmd>Scratch<CR>', 'open scratch buffer' },
+      X = { '<cmd>Scratch!<CR>', 'clear and open scratch buffer' },
+      i = { '<cmd>ScratchInsert<CR>', 'open scratch buffer in insert mode' },
+      I = { '<cmd>ScratchInsert!<CR>', 'clear and open scratch buffer in insert mode' },
+      p = { '<cmd>ScratchPreview<CR>', 'preview scratch buffer' },
+    }
+  }, { prefix = "<leader>" }
+)
+EOF
 
