@@ -147,6 +147,7 @@ lua << EOF
 require('buffers')
 require('git')
 require('search')
+require('navigation')
 EOF
 
 " project specific configs
