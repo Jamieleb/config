@@ -43,7 +43,8 @@ call plug#begin("~/.vim/plugged")
   Plug 'lewis6991/spellsitter.nvim'
 
   Plug 'glepnir/dashboard-nvim'
-  Plug 'liuchengxu/vim-which-key'
+  " Plug 'liuchengxu/vim-which-key'
+  Plug 'folke/which-key.nvim'
 
   " Async tasks
   Plug 'skywind3000/asyncrun.vim'
@@ -101,7 +102,7 @@ endif
 
 let mapleader=" "
 let maplocalleader=" m"
-call which_key#register('<Space>', "g:which_key_map")
+" call which_key#register('<Space>', "g:which_key_map")
 
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
@@ -131,6 +132,7 @@ lua require'trouble'.setup()
 lua require'neogit'.setup()
 lua require'neoscroll'.setup()
 lua require('nvim-ts-autotag').setup()
+lua require'which-key'.setup()
 lua << EOF
 require("revj").setup{
   keymaps = {
@@ -154,7 +156,7 @@ let g:airline_theme='atomic'
 let g:airline_solarized_bg='dark'
 
 
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+" nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 let g:indentLine_char = '|'
 
