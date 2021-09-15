@@ -15,11 +15,16 @@ function _webpack_toggle()
   webpack:toggle()
 end
 
-vim.api.nvim_set_keymap('n', '<Space>.c', "<cmd>lua _console_toggle()<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Space>.s', "<cmd>lua _server_toggle()<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Space>.w', "<cmd>lua _webpack_toggle()<CR>", { noremap = true, silent = true })
-
-vim.api.nvim_set_keymap('n', '<Space>.M', "<cmd>lua require('custom.telescope').search_rails_models()<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Space>.C', "<cmd>lua require('custom.telescope').search_rails_controllers()<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Space>.R', "<cmd>lua require('custom.telescope').search_rails_components()<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Space>.V', "<cmd>lua require('custom.telescope').search_rails_views()<CR>", { noremap = true, silent = true })
+local wk = require('which-key')
+wk.register({
+  ['.'] = {
+    name = 'project',
+    c = { '<cmd>lua _console_toggle()<CR>', 'toggle rails console' },
+    s = { '<cmd>lua _server_toggle()<CR>', 'toggle rails server' },
+    w = { '<cmd>lua _webpack_toggle()<CR>', 'toggle wepback-dev-server' },
+    M = { '<cmd>lua require("custom.telescope").search_rails_models()<CR>', 'search models' },
+    C = { '<cmd>lua require("custom.telescope").search_rails_controllers()<CR>', 'search controllers' },
+    R = { '<cmd>lua require("custom.telescope").search_rails_components()<CR>', 'search React components' },
+    V = { '<cmd>lua require("custom.telescope").search_rails_views()<CR>', 'search views' },
+  }
+})
