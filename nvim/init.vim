@@ -148,6 +148,7 @@ require('buffers')
 require('git')
 require('search')
 require('navigation')
+require('windows')
 EOF
 
 " project specific configs
