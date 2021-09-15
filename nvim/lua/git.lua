@@ -26,7 +26,7 @@ wk.register({
   g = {
     name = 'git',
     g = { '<cmd>Neogit<CR>', 'Neogit' },
-    l = { '<cmd>Lazygit<CR>', 'Lazygit' },
+    l = { '<cmd>LazyGit<CR>', 'LazyGit' },
     c = { '<cmd>Neogit commit<CR>', 'Commit' },
     m = { '<cmd>AsyncRun git checkout master && git pull<CR>', 'checkout master' },
     d = { '<cmd>AsyncRun git checkout develop && git pull<CR>', 'checkout develop' },
