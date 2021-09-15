@@ -126,6 +126,7 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 
+"Plugins
 lua require'colorizer'.setup()
 lua require'spellsitter'.setup()
 lua require'trouble'.setup()
@@ -141,6 +142,12 @@ require("revj").setup{
     visual = '<Leader>K',
   },
 }
+EOF
+
+" local lua config
+lua << EOF
+require('buffers')
+require('git')
 EOF
 
 " project specific configs

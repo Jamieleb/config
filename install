@@ -1,22 +1,7 @@
 #!/usr/zsh
 
-# NeoVim setup - src: ThePrimeagen
-mkdir -p ~/.config/nvim/plugin
-mkdir -p ~/.config/nvim/after/plugin
-mkdir -p ~/.config/nvim/lua
-mkdir -p ~/.config/nvim/lua/custom
-mkdir -p ~/.config/nvim/lua/custom/efm
-mkdir -p ~/.config/nvim/ftplugin
-
-# link wholesale
-for f in `find -E . -regex ".*\.(vim|lua|yaml)$"`; do
-  rm -rf ~/.config/nvim/$f
-  ln -s ~/config/$f ~/.config/nvim/$f
-done
-
-# Other setup
-
 ln -sf ~/config/tmux.conf ~/.tmux.conf
 ln -sf ~/private_config/zshrc ~/.zshrc
 ln -sf ~/config/fish ~/.config/fish
 ln -sf ~/config/starship.toml ~/.config/starship.toml
+ln -sf ~/config/nvim ~/.config/nvim

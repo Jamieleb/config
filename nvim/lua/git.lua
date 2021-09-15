@@ -1,21 +1,3 @@
-nnoremap <Leader>gg :Neogit<CR>
-nnoremap <Leader>gl :LazyGit<CR>
-nnoremap <Leader>gc :Neogit commit<CR>
-nnoremap <Leader>g. :FloatermNew cd ~/config && lazygit<CR>
-
-" Git and Github actions
-nnoremap <Leader>ghs :FloatermNew gh pr status<CR>
-nnoremap <Leader>ghc :execute 'AsyncRun gh pr checkout '.input('checkout PR > ')<CR>
-nnoremap <Leader>gm :AsyncRun git checkout master && git pull<CR>
-nnoremap <Leader>gd :AsyncRun git checkout develop && git pull<CR>
-nnoremap <Leader>gp :AsyncRun git pull<CR>
-nnoremap <Leader>gP :AsyncRun git push<CR>
-
-" Run dotfiles install script
-nnoremap <Leader>g. :AsyncRun cd ~/config && lazygit<CR>
-
-" Gitsigns
-lua << EOF
 require('gitsigns').setup {
   keymaps = {
     -- Default keymap options
@@ -38,5 +20,27 @@ require('gitsigns').setup {
     ['x ih'] = ':<C-U>lua require"gitsigns".select_hunk()<CR>'
   }
 }
-EOF
-nnoremap <silent><Leader>gB :Gitsigns toggle_current_line_blame<CR>
+
+local wk = require('which-key')
+wk.register({
+  g = {
+    name = 'git',
+    g = { '<cmd>Neogit<CR>', 'Neogit' },
+    l = { '<cmd>Lazygit<CR>', 'Lazygit' },
+    c = { '<cmd>Neogit commit<CR>', 'Commit' },
+    m = { '<cmd>AsyncRun git checkout master && git pull<CR>', 'checkout master' },
+    d = { '<cmd>AsyncRun git checkout develop && git pull<CR>', 'checkout develop' },
+    p = { '<cmd>AsyncRun git pull<CR>', 'pull' },
+    P = { '<cmd>AsyncRun git push<CR>', 'push' },
+    h = {
+      name = 'github',
+      c = { "<cmd>execute 'AsyncRun gh pr checkout '.input('checkout PR > ')<CR>", 'checkout PR by number' },
+    },
+    s = { 'stage hunk' },
+    u = { 'unstage hunk' },
+    r = { 'reset hunk' },
+    R = { 'reset buffer' },
+    v = { 'preview hunk' },
+    b = { 'blame line' },
+  },
+}, { prefix = '<leader>' })

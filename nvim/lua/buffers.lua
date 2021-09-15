@@ -1,4 +1,3 @@
-lua << EOF
 local wk = require("which-key")
 wk.register({
   b = {
@@ -26,5 +25,3 @@ wk.register({
     }
   }, { prefix = "<leader>" }
 )
-EOF
-
