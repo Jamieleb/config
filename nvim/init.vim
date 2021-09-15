@@ -149,6 +149,7 @@ require('git')
 require('search')
 require('navigation')
 require('windows')
+require('terminal')
 EOF
 
 " project specific configs
