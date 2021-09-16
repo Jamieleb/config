@@ -9,7 +9,6 @@ call plug#begin("~/.vim/plugged")
   Plug 'vim-airline/vim-airline-themes'
 
   "Floating window buffers and Terminals
-  Plug 'kassio/neoterm'
   Plug 'akinsho/toggleterm.nvim'
 
   " Git Clients
@@ -42,7 +41,6 @@ call plug#begin("~/.vim/plugged")
   Plug 'lewis6991/spellsitter.nvim'
 
   Plug 'glepnir/dashboard-nvim'
-  " Plug 'liuchengxu/vim-which-key'
   Plug 'folke/which-key.nvim'
 
   " Async tasks
@@ -51,14 +49,10 @@ call plug#begin("~/.vim/plugged")
   Plug 'tpope/vim-commentary'
   " Auto Pairs
   Plug 'jiangmiao/auto-pairs'
-  " Auto end in ruby
-  Plug 'tpope/vim-endwise'
   " Vim-surround
   Plug 'tpope/vim-surround'
   " Auto tags
   Plug 'windwp/nvim-ts-autotag'
-  " Visual display of registers
-  Plug 'junegunn/vim-peekaboo'
   " Display lines to show indentation
   Plug 'Yggdroot/indentLine'
   " Rails Support
@@ -128,7 +122,6 @@ EOF
 lua require'colorizer'.setup()
 lua require'spellsitter'.setup()
 lua require'trouble'.setup()
-lua require'neogit'.setup()
 lua require'neoscroll'.setup()
 lua require('nvim-ts-autotag').setup()
 lua require'which-key'.setup()
@@ -150,11 +143,10 @@ require('search')
 require('navigation')
 require('windows')
 require('terminal')
+require('project')
 EOF
 
 " project specific configs
-lua require'nvim-projectconfig'.load_project_config({ project_dir = "~/config/nvim/projects/" })
-nnoremap <silent><leader>.. :EditProjectConfig<CR>
 
 " Theme
 set background=dark
@@ -163,9 +155,6 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='atomic'
 let g:airline_solarized_bg='dark'
-
-
-" nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 let g:indentLine_char = '|'
 

@@ -11,10 +11,9 @@ wk.register({
       g = { "<cmd>BufferPick<CR>", 'Buffer Pick' },
       o = { "<cmd>BufferCloseAllButCurrent<CR>", 'close other buffers' },
       b = { "<cmd>Telescope buffers<CR>", 'Telescope buffers' },
+      l = { '<C-^>', 'last buffer' },
+
     },
-  }, { prefix = "<leader>" }
-)
-wk.register({
   x = {
       name = 'scratch',
       x = { '<cmd>Scratch<CR>', 'open scratch buffer' },

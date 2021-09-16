@@ -1,3 +1,4 @@
+require'neogit'.setup()
 require('gitsigns').setup {
   keymaps = {
     -- Default keymap options

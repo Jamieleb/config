@@ -17,14 +17,11 @@ end
 
 local wk = require('which-key')
 wk.register({
-  ['.'] = {
-    name = 'project',
-    c = { '<cmd>lua _console_toggle()<CR>', 'toggle rails console' },
-    s = { '<cmd>lua _server_toggle()<CR>', 'toggle rails server' },
-    w = { '<cmd>lua _webpack_toggle()<CR>', 'toggle wepback-dev-server' },
-    M = { '<cmd>lua require("custom.telescope").search_rails_models()<CR>', 'search models' },
-    C = { '<cmd>lua require("custom.telescope").search_rails_controllers()<CR>', 'search controllers' },
-    R = { '<cmd>lua require("custom.telescope").search_rails_components()<CR>', 'search React components' },
-    V = { '<cmd>lua require("custom.telescope").search_rails_views()<CR>', 'search views' },
-  }
-}, { prefix = '<leader>' })
+  c = { '<cmd>lua _console_toggle()<CR>', 'toggle rails console' },
+  s = { '<cmd>lua _server_toggle()<CR>', 'toggle rails server' },
+  w = { '<cmd>lua _webpack_toggle()<CR>', 'toggle wepback-dev-server' },
+  M = { '<cmd>lua require("custom.telescope").search_rails_models()<CR>', 'search models' },
+  C = { '<cmd>lua require("custom.telescope").search_rails_controllers()<CR>', 'search controllers' },
+  R = { '<cmd>lua require("custom.telescope").search_rails_components()<CR>', 'search React components' },
+  V = { '<cmd>lua require("custom.telescope").search_rails_views()<CR>', 'search views' },
+}, { prefix = '<leader>.' })
