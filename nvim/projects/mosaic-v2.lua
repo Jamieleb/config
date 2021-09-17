@@ -1,6 +1,6 @@
 local Terminal = require('toggleterm.terminal').Terminal
 local console = Terminal:new({ cmd = 'rails c', hidden = true, close_on_exit = true })
-local server = Terminal:new({ cmd = 'rails s', hidden = true, close_on_exit = false })
+local server = Terminal:new({ cmd = 'rails s', hidden = true, close_on_exit = true })
 local webpack = Terminal:new({ cmd = 'nvm use && yarn && ./bin/webpack-dev-server', hidden = true, close_on_exit = true })
 
 function _console_toggle()
