@@ -9,7 +9,7 @@ function _rails_controllers() custom_tele.search_path('./app/controllers/', 'Con
 function _rails_views() custom_tele.search_path('./app/views/', 'Views') end
 function _rails_services() custom_tele.search_path('./app/services/', 'Services') end
 function _rails_resources() custom_tele.search_path('./app/resources/', 'Resourcees') end
-function _rails_components() custom_tele.search_path('./app/webpackers/components/', 'Services') end
+function _rails_components() custom_tele.search_path('./app/webpacker/components/', 'Services') end
 
 function _console_toggle()
   console:toggle()
