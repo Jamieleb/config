@@ -40,6 +40,8 @@ call plug#begin("~/.vim/plugged")
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'lewis6991/spellsitter.nvim'
 
+  Plug 'mhartington/formatter.nvim'
+
   Plug 'glepnir/dashboard-nvim'
   Plug 'folke/which-key.nvim'
 
@@ -144,6 +146,7 @@ require('navigation')
 require('windows')
 require('terminal')
 require('project')
+require('file')
 EOF
 
 " project specific configs
