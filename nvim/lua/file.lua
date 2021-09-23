@@ -52,11 +52,14 @@ wk.register({
 	name = "file",
 	s = { "<cmd>lua _format_and_write()<CR>", "format and save" },
 	w = { "<cmd>write<CR>", "save" },
+	W = { "<cmd>wq<CR>", "save and exit" },
 	f = { "<cmd>Format<CR>", "format" },
 	r = { "<cmd>edit!<CR>", "clear unsaved changes" },
   y = { "mcggyG'c", 'yank file' },
   Y = { [[mcgg"*yG'c]], 'yank file to clipboard' },
   n = { '<cmd>enew<CR>', 'new' },
+  x = { '<cmd>q<CR>', 'exit' },
+  X = { '<cmd>q!<CR>', 'exit (lose unsaved)' },
 }, {
 	prefix = "<leader>f",
 })
