@@ -63,8 +63,6 @@ call plug#begin("~/.vim/plugged")
   Plug 'tpope/vim-repeat'
   " Toggles maximising splits
   Plug 'szw/vim-maximizer'
-  " Markdown previewer
-  " Plug 'npxbr/glow.nvim', {'do': ':GlowInstall'}
   " Show colours in buffer
   Plug 'norcalli/nvim-colorizer.lua'
   " Navigation Plugins
@@ -73,8 +71,6 @@ call plug#begin("~/.vim/plugged")
   Plug 'kevinhwang91/rnvimr'
   " NVIM in the browser
   Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
-  " Smooth Scrolling
-  Plug 'karb94/neoscroll.nvim'
   " Improved increment/decrement
   Plug 'monaqa/dial.nvim'
   " Do the opposite of J
@@ -87,6 +83,10 @@ call plug#begin("~/.vim/plugged")
   Plug 'mizlan/iswap.nvim'
   " Project specific consig
   Plug 'windwp/nvim-projectconfig'
+  " See where cursor jumps to
+  Plug 'edluffy/specs.nvim'
+  " Todo comment highlighting
+  Plug 'folke/todo-comments.nvim'
 call plug#end()
 
 " Config
@@ -141,15 +141,13 @@ EOF
 lua << EOF
 require('buffers')
 require('git')
-require('search')
 require('navigation')
+require('search')
 require('windows')
 require('terminal')
 require('project')
 require('file')
 EOF
-
-" project specific configs
 
 " Theme
 set background=dark
