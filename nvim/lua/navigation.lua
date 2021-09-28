@@ -22,6 +22,8 @@ require("specs").setup({
 	},
 })
 
+require("nvim-tree").setup()
+
 require("todo-comments").setup()
 
 local wk = require("which-key")
@@ -42,6 +44,7 @@ wk.register({
 	o = {
 		name = "open",
 		r = { "<cmd>RnvimrToggle<CR>", "ranger" },
+		e = { "<cmd>NvimTreeToggle<CR>", "file explorer" },
 	},
 }, {
 	prefix = "<leader>",
