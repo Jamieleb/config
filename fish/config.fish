@@ -8,6 +8,7 @@ set -g fish_greeting
 abbr -a rc rails console
 abbr -a rs rails server
 abbr -a wp ./bin/webpack-dev-server
+abbr -a nv nvim
 
 function doom -d "Start the Emacs daemon and opens the Emacs Client"
     command emacs --daemon
