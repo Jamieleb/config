@@ -9,7 +9,10 @@ wk.register({
 			"Grep code base",
 		},
 		f = { '<cmd>lua require("telescope.builtin").find_files()<CR>', "files" },
-		F = { '<cmd>lua require("telescope.builtin").file_browser()<CR>', "file browser" },
+		F = {
+			'<cmd>lua require("telescope.builtin").file_browser({ cwd = require("telescope.utils").buffer_dir() })<CR>',
+			"file browser",
+		},
 		R = { "<cmd>Telescope oldfiles<CR>", "recent files" },
 		m = { '<cmd>lua require("telescope.builtin").marks()<CR>', "marks" },
 		t = { '<cmd>lua require("telescope.builtin").colorscheme()<CR>', "themes" },

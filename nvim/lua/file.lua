@@ -55,11 +55,15 @@ wk.register({
 	W = { "<cmd>wq<CR>", "save and exit" },
 	f = { "<cmd>Format<CR>", "format" },
 	r = { "<cmd>edit!<CR>", "clear unsaved changes" },
-  y = { "mcggyG'c", 'yank file' },
-  Y = { [[mcgg"*yG'c]], 'yank file to clipboard' },
-  n = { '<cmd>enew<CR>', 'new' },
-  x = { '<cmd>q<CR>', 'exit' },
-  X = { '<cmd>q!<CR>', 'exit (lose unsaved)' },
+	y = { "mcggyG'c", "yank file" },
+	Y = { [[mcgg"*yG'c]], "yank file to clipboard" },
+	n = { "<cmd>enew<CR>", "new" },
+	x = { "<cmd>q<CR>", "exit" },
+	X = { "<cmd>q!<CR>", "exit (lose unsaved)" },
+	e = {
+		'<cmd>lua require("telescope.builtin").file_browser({ cwd = require("telescope.utils").buffer_dir() })<CR>',
+		"explorer",
+	},
 }, {
 	prefix = "<leader>f",
 })
