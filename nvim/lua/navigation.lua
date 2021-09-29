@@ -22,7 +22,11 @@ require("specs").setup({
 	},
 })
 
-require("nvim-tree").setup()
+require("nvim-tree").setup({
+	update_focused_file = {
+		enable = true,
+	},
+})
 
 require("todo-comments").setup()
 

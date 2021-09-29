@@ -42,6 +42,7 @@ Plug 'lewis6991/spellsitter.nvim'
 
 Plug 'mhartington/formatter.nvim'
 
+" UI Plugins
 Plug 'glepnir/dashboard-nvim'
 Plug 'folke/which-key.nvim'
 
