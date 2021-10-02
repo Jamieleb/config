@@ -104,53 +104,45 @@ let maplocalleader=" m"
 
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
-ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-highlight = {
-enable = true,
-additional_vim_regex_highlighting = false,
-},
-  incremental_selection = {
+  ensure_installed = "maintained",
+  highlight = {
   enable = true,
-  keymaps = {
-    init_selection = "gnn",
-    node_incremental = "grn",
-    scope_incremental = "grc",
-    node_decremental = "grm",
-    },
+  additional_vim_regex_highlighting = false,
   },
-indent = {
-enable = true
-}
+    incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "gnn",
+      node_incremental = "grn",
+      scope_incremental = "grc",
+      node_decremental = "grm",
+      },
+    },
+  indent = {
+  enable = true
+  }
 }
 EOF
 
 "Plugins
 lua << EOF
-require('colorizer').setup()
-require('spellsitter').setup()
 require('trouble').setup()
 require('nvim-ts-autotag').setup()
-require('which-key').setup()
-require("revj").setup{
-keymaps = {
-  operator = 'K',
-  line = '<leader>K',
-  visual = '<Leader>K',
+require('which-key').setup({
+  plugins = {
+    spelling = { enabled = true },
   },
-}
-
-require("indent_blankline").setup {
-  char = "|",
-  buftype_exclude = {"terminal"},
-  filetype_exclude = {"dashboard", "help"},
-  show_current_context = true,
-  use_treesitter = true,
-  show_first_indent_level = false,
-}
+  key_labels = {
+    ["<space>"] = "SPC",
+    ["<CR>"] = "RET",
+    ["<tab>"] = "TAB",
+  }
+})
 EOF
 
 " local lua config
 lua << EOF
+require('misc')
 require('buffers')
 require('git')
 require('navigation')
