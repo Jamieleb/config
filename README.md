@@ -18,3 +18,4 @@ Run :PlugInstall to install various plugins
 - Go && [gopls](https://github.com/theia-ide/typescript-language-server)
 - [efm-langserver](https://github.com/mattn/efm-langserver)
 - ripgreg, bat, fd for Neovim Telescope
+- gobang `brew install tako8ki/tap/gobang` [link](https://github.com/TaKO8Ki/gobang)

@@ -30,6 +30,22 @@ require("nvim-tree").setup({
 
 require("todo-comments").setup()
 
+local Terminal = require("toggleterm.terminal").Terminal
+local gobang = Terminal:new({
+	cmd = "gobang",
+	direction = "float",
+	float_opts = {
+		border = "double",
+	},
+	on_open = function(term)
+		vim.cmd("startinsert!")
+	end,
+})
+
+function _gobang_toggle()
+	gobang:toggle()
+end
+
 local wk = require("which-key")
 wk.register({
 	q = {
@@ -49,6 +65,7 @@ wk.register({
 		name = "open",
 		r = { "<cmd>RnvimrToggle<CR>", "ranger" },
 		e = { "<cmd>NvimTreeToggle<CR>", "file explorer" },
+		d = { "<cmd>lua _gobang_toggle()<CR>", "database explorer" },
 	},
 }, {
 	prefix = "<leader>",
