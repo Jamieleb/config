@@ -39,6 +39,15 @@ require("formatter").setup({
 				}
 			end,
 		},
+		go = {
+			function()
+				return {
+					exe = "gofmt",
+					args = {},
+					stdin = true,
+				}
+			end,
+		},
 	},
 })
 
