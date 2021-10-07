@@ -26,7 +26,7 @@ require('lspconfig').solargraph.setup({
 
 -- Golang
 require'lspconfig'.gopls.setup{
-  cmd = {os.getenv('HOME') .. "/go/bin/gopls", "serve"},
+  cmd = {"gopls", "serve"},
     settings = {
       gopls = {
         analyses = {
