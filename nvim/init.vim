@@ -100,7 +100,7 @@ if (has("termguicolors"))
 endif
 
 let mapleader=" "
-let maplocalleader=" m"
+let maplocalleader="\\"
 
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
