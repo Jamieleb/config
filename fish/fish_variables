@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export EDITOR:nvim
 SETUVAR --export GOBIN:/Users/jamesclebrun/projects/goworkspace/bin/
 SETUVAR --export --path GOPATH:/Users/jamesclebrun/projects/goworkspace/
 SETUVAR --export PYENV_ROOT:/Users/jamesclebrun/\x2epyenv
