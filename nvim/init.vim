@@ -61,8 +61,9 @@ Plug 'windwp/nvim-ts-autotag'
 Plug 'lukas-reineke/indent-blankline.nvim'
 " Rails Support
 Plug 'tpope/vim-rails'
-" Go tools
+" Language Specific Tools
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'simrat39/rust-tools.nvim'
 " Repeat plugin commands with .
 Plug 'tpope/vim-repeat'
 " Toggles maximising splits
