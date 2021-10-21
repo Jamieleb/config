@@ -45,7 +45,6 @@ lsp_config.efm.setup({
     'json',
     'markdown',
   },
-  on_attach = require'completion'.on_attach,
   root_dir = lsp_config.util.root_pattern(unpack(efm_root_markers)),
   init_options = {
     documentFormatting = true,

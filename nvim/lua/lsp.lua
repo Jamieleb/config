@@ -1,13 +1,4 @@
 vim.opt.completeopt = { "menuone", "noinsert", "noselect" }
-vim.api.nvim_set_var("completion_enable_auto_popup", 1)
-vim.api.nvim_set_var("completion_matching_strategy_list", { "exact", "substring", "fuzzy" })
-vim.api.nvim_set_var("completion_chain_complete_list", {
-	{ complete_items = { "lsp" } },
-	{ complete_items = { "buffers", "path" } },
-	{ mode = "<c-p>" },
-	{ mode = "<c-n>" },
-})
-vim.api.nvim_set_var("completion_auto_change_source", 1)
 
 local saga = require("lspsaga")
 saga.init_lsp_saga()
