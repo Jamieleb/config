@@ -14,10 +14,13 @@ cmp.setup({
 	sources = {
 		{ name = "nvim_lsp" },
 		{ name = "path" },
-		{ name = "buffer" },
+		{ name = "buffer", keyword_length = 5 },
 	},
 	formatting = {
 		format = lspkind.cmp_format({ with_text = true, maxwidth = 50 }),
+	},
+	experimental = {
+		ghost_text = true,
 	},
 })
 
