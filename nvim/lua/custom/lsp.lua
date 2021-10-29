@@ -7,10 +7,6 @@ local feedkey = function(key, mode)
 	vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
 end
 
-local luasnip = require("luasnip")
-local cmp = require("cmp")
-local lspkind = require("lspkind")
-
 cmp.setup({
 	snippet = {
 		expand = function(args)
@@ -56,7 +52,6 @@ cmp.setup({
 	sources = {
 		{ name = "nvim_lsp" },
 		{ name = "path" },
-		-- { name = "luasnip" },
 		{ name = "vsnip" },
 		{ name = "buffer", keyword_length = 3 },
 	},
@@ -67,22 +62,6 @@ cmp.setup({
 		ghost_text = true,
 	},
 })
-
-local s = luasnip.snippet
-local t = luasnip.text_node
-local i = luasnip.insert_node
-luasnip.snippets = {
-	all = {
-		s("test", {
-			t({ "", "After expanding, the cursor is here ->" }),
-			i(1),
-			t({ "After jumping forward once, cursor is here ->" }),
-			i(2),
-			t({ "", "After jumping once more, the snippet is exited there ->" }),
-			i(0),
-		}),
-	},
-}
 
 -- TypeScript
 -- TypeScript language server

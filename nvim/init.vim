@@ -40,12 +40,12 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-vsnip'
-Plug 'saadparwaiz1/cmp_luasnip'
+" Plug 'saadparwaiz1/cmp_luasnip'
 
 Plug 'onsails/lspkind-nvim'
 
 " TODO get luasnip to work properly
-Plug 'l3mon4d3/luasnip'
+" Plug 'l3mon4d3/luasnip'
 
 " Trying out vsnip
 Plug 'hrsh7th/vim-vsnip'
