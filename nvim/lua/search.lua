@@ -16,12 +16,18 @@ wk.register({
 		R = { "<cmd>Telescope oldfiles<CR>", "recent files" },
 		m = { '<cmd>lua require("telescope.builtin").marks()<CR>', "marks" },
 		t = { '<cmd>lua require("telescope.builtin").colorscheme()<CR>', "themes" },
-		b = { '<cmd>lua require("telescope.builtin").current_buffer_fuzzy_find()<CR>', "current buffer" },
+		b = {
+			'<cmd>lua require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_ivy())<CR>',
+			"current buffer",
+		},
 		g = { "<cmd>Telescope gh pull_request<CR>", "pull requests" },
 		q = { '<cmd>lua require("telescope.builtin").quickfix()<CR>', "quickfix list" },
 		l = { '<cmd>lua require("telescope.builtin").loclist()<CR>', "location list" },
 		['"'] = { '<cmd>lua require("telescope.builtin").registers()<CR>', "registers" },
-		[";"] = { '<cmd>lua require("telescope.builtin").command_history()<CR>', "recent commands" },
+		[";"] = {
+			'<cmd>lua require("telescope.builtin").command_history(require("telescope.themes").get_ivy())<CR>',
+			"recent commands",
+		},
 		s = { '<cmd>lua require("telescope.builtin").lsp_document_symbols()<CR>', "document symbols" },
 		S = { '<cmd>lua require("telescope.builtin").lsp_workspace_symbols()<CR>', "workspace symbols" },
 		a = {
@@ -30,18 +36,30 @@ wk.register({
 		},
 		k = { '<cmd>lua require("telescope.builtin").lsp_definitions()<CR>', "definitions" },
 		b = { '<cmd>lua require("telescope.builtin").buffers()<CR>', "buffers" },
-		e = { '<cmd>lua require("telescope.builtin").lsp_document_diagnostics()<CR>', "document diagnostics" },
+		e = {
+			'<cmd>lua require("telescope.builtin").lsp_document_diagnostics(require("telescope.themes").get_ivy())<CR>',
+			"document diagnostics",
+		},
 		h = { '<cmd>lua require("telescope.builtin").help_tags()<CR>', "help tags" },
 		c = { '<cmd>lua require("telescope.builtin").git_bcommits()<CR>', "buffer commits" },
-		[":"] = { '<cmd>lua require("telescope.builtin").builtin()<CR>', "Telescope builtins" },
+		[":"] = {
+			'<cmd>lua require("telescope.builtin").builtin(require("telescope.themes").get_ivy())<CR>',
+			"Telescope builtins",
+		},
 		z = { '<cmd>lua require("telescope.builtin").spell_suggest()<CR>', "spelling suggestions" },
 		w = { '<cmd>lua require("custom.telescope").search_word()<CR>', "word under cursor" },
 		["."] = { '<cmd>lua require("custom.telescope").search_dotfiles()<CR>', "dotfiles" },
 		T = { "<cmd>TodoTelescope<CR>", "todos" },
 	},
-	["/"] = { '<cmd>lua require("telescope.builtin").live_grep()<CR>', "live grep" },
+	["/"] = {
+		'<cmd>lua require("telescope.builtin").live_grep(require("telescope.themes").get_ivy())<CR>',
+		"live grep",
+	},
 	["<leader>"] = { '<cmd>lua require("telescope.builtin").git_files()<CR>', "project search" },
-	[";"] = { '<cmd>lua require("telescope.builtin").commands()<CR>', "command palette" },
+	[";"] = {
+		'<cmd>lua require("telescope.builtin").commands(require("telescope.themes").get_ivy())<CR>',
+		"command palette",
+	},
 }, {
 	prefix = "<leader>",
 })
