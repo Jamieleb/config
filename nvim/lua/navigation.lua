@@ -67,6 +67,15 @@ wk.register({
 		e = { "<cmd>NvimTreeToggle<CR>", "file explorer" },
 		d = { "<cmd>lua _gobang_toggle()<CR>", "database explorer" },
 	},
+	h = {
+		name = "harpoon",
+		h = { "<cmd>lua require('harpoon.mark').add_file()<CR>", "mark current file" },
+		e = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>", "edit harpoon marks" },
+		a = { "<cmd>lua require('harpoon.ui').nav_file(1)<CR>", "navigate to file 1" },
+		s = { "<cmd>lua require('harpoon.ui').nav_file(2)<CR>", "navigate to file 2" },
+		d = { "<cmd>lua require('harpoon.ui').nav_file(3)<CR>", "navigate to file 3" },
+		f = { "<cmd>lua require('harpoon.ui').nav_file(4)<CR>", "navigate to file 4" },
+	},
 }, {
 	prefix = "<leader>",
 })

@@ -109,6 +109,8 @@ Plug 'windwp/nvim-projectconfig'
 Plug 'edluffy/specs.nvim'
 " Todo comment highlighting
 Plug 'folke/todo-comments.nvim'
+" Improved Marks
+Plug 'ThePrimeagen/harpoon'
 call plug#end()
 
 " Config
