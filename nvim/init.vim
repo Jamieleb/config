@@ -53,7 +53,7 @@ Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'rafamadriz/friendly-snippets'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'lewis6991/spellsitter.nvim'
+" Plug 'lewis6991/spellsitter.nvim'
 
 Plug 'mhartington/formatter.nvim'
 

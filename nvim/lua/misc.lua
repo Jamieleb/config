@@ -1,5 +1,5 @@
 require("colorizer").setup()
-require("spellsitter").setup()
+-- require("spellsitter").setup()
 
 require("revj").setup({
 	keymaps = {
