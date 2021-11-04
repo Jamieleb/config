@@ -32,7 +32,7 @@ Plug 'nvim-telescope/telescope-github.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
 Plug 'ray-x/lsp_signature.nvim'
-" Plug 'glepnir/lspsaga.nvim'
+" Plug 'glepnir/lspsaga.nvim' - not currently maintained
 Plug 'tami5/lspsaga.nvim'
 Plug 'folke/trouble.nvim'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -41,21 +41,15 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-vsnip'
-" Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'github/copilot.vim'
 
 Plug 'onsails/lspkind-nvim'
 
-" TODO get luasnip to work properly
-" Plug 'l3mon4d3/luasnip'
-
-" Trying out vsnip
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'rafamadriz/friendly-snippets'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-" Plug 'lewis6991/spellsitter.nvim'
 
 Plug 'mhartington/formatter.nvim'
 
@@ -160,19 +154,6 @@ require('which-key').setup({
     ["<tab>"] = "TAB",
   }
 })
-EOF
-
-" local lua config
-lua << EOF
-require('misc')
-require('buffers')
-require('git')
-require('navigation')
-require('search')
-require('windows')
-require('terminal')
-require('project')
-require('file')
 EOF
 
 " Theme
