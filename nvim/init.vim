@@ -41,6 +41,7 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-vsnip'
 " Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'github/copilot.vim'
 
 Plug 'onsails/lspkind-nvim'
 
@@ -172,6 +173,9 @@ require('terminal')
 require('project')
 require('file')
 EOF
+
+imap <silent><script><expr> <C-j> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
 
 " Theme
 set background=dark
