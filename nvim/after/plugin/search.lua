@@ -16,10 +16,6 @@ wk.register({
 		R = { "<cmd>Telescope oldfiles<CR>", "recent files" },
 		m = { '<cmd>lua require("telescope.builtin").marks()<CR>', "marks" },
 		t = { '<cmd>lua require("telescope.builtin").colorscheme()<CR>', "themes" },
-		b = {
-			'<cmd>lua require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_ivy())<CR>',
-			"current buffer",
-		},
 		g = { "<cmd>Telescope gh pull_request<CR>", "pull requests" },
 		q = { '<cmd>lua require("telescope.builtin").quickfix()<CR>', "quickfix list" },
 		l = { '<cmd>lua require("telescope.builtin").loclist()<CR>', "location list" },
