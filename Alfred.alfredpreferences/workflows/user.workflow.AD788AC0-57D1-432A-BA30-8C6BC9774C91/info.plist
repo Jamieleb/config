@@ -73,6 +73,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>E16C434A-9052-491A-AF93-7D874D97826C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D87F0659-219B-45BC-B9DC-6B452EA2EE04</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>F7E91B03-75A1-49D7-88B2-43DD9073F9C2</key>
 		<array>
 			<dict>
@@ -244,9 +257,57 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>8</integer>
+				<key>hotmod</key>
+				<integer>1966080</integer>
+				<key>hotstring</key>
+				<string>C</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>E16C434A-9052-491A-AF93-7D874D97826C</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>paths</key>
 				<array>
-					<string>/System/Volumes/Data/Applications/Microsoft Outlook.app</string>
+					<string>~/Applications/Chrome Apps.localized/ClickUp.app</string>
+				</array>
+				<key>toggle</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.launchfiles</string>
+			<key>uid</key>
+			<string>D87F0659-219B-45BC-B9DC-6B452EA2EE04</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>paths</key>
+				<array>
+					<string>~/Applications/Chrome Apps.localized/Outlook (PWA).app</string>
 				</array>
 				<key>toggle</key>
 				<false/>
@@ -459,6 +520,20 @@
 			<integer>190</integer>
 			<key>ypos</key>
 			<integer>375</integer>
+		</dict>
+		<key>D87F0659-219B-45BC-B9DC-6B452EA2EE04</key>
+		<dict>
+			<key>xpos</key>
+			<integer>510</integer>
+			<key>ypos</key>
+			<integer>140</integer>
+		</dict>
+		<key>E16C434A-9052-491A-AF93-7D874D97826C</key>
+		<dict>
+			<key>xpos</key>
+			<integer>340</integer>
+			<key>ypos</key>
+			<integer>140</integer>
 		</dict>
 		<key>F65406A9-4F6E-442E-AE55-F45096BC6346</key>
 		<dict>
