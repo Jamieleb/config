@@ -56,6 +56,7 @@ wk.register({
 	S = { "<cmd>lua _rails_services()<CR>", "search services" },
 	G = { "<cmd>lua _rails_resources()<CR>", "search graphiti resources" },
 	j = { "<cmd>lua _toggle_worker()<CR>", "toggle jobs worker" },
+	J = { "<cmd>AsyncRun rails jobs:clear<CR>", "clear jobs" },
 }, {
 	prefix = "<leader>.",
 })
