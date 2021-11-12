@@ -7,7 +7,6 @@ local webpack = Terminal:new({
 	close_on_exit = true,
 })
 local start_worker = Terminal:new({ cmd = "rails jobs:work", hidden = true, close_on_exit = true })
-clear_jobs = Terminal:new({ cmd = "rails jobs:clear", hidden = true, close_on_exit = true })
 local custom_tele = require("custom.telescope")
 
 function _rails_models()
@@ -57,7 +56,6 @@ wk.register({
 	S = { "<cmd>lua _rails_services()<CR>", "search services" },
 	G = { "<cmd>lua _rails_resources()<CR>", "search graphiti resources" },
 	j = { "<cmd>lua _toggle_worker()<CR>", "toggle jobs worker" },
-	J = { "<cmd>lua clear_jobs()<CR>", "clear jobs" },
 }, {
 	prefix = "<leader>.",
 })
