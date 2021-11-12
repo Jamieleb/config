@@ -2,6 +2,7 @@ require("toggleterm").setup({
 	open_mapping = [[<leader>tt]],
 	start_in_insert = false,
 	insert_mappings = false,
+	persist_size = false,
 })
 
 local wk = require("which-key")
