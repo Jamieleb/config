@@ -307,7 +307,7 @@
 			<dict>
 				<key>paths</key>
 				<array>
-					<string>~/Applications/Chrome Apps.localized/Outlook (PWA).app</string>
+					<string>/Applications/Microsoft Outlook.app</string>
 				</array>
 				<key>toggle</key>
 				<false/>
