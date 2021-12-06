@@ -4,7 +4,7 @@ Run install script to clear config files and replace with symlinks to the files 
 
 ## Neovim
 
-Requires NeoVim 0.5 - [install here](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+Requires NeoVim Nightly - [install here](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 Run :PlugInstall to install various plugins
 
 ### Dependencies:
@@ -17,5 +17,6 @@ Run :PlugInstall to install various plugins
 - Node && [Typescript-language-server](https://github.com/theia-ide/typescript-language-server)
 - Go && [gopls](https://github.com/theia-ide/typescript-language-server)
 - [efm-langserver](https://github.com/mattn/efm-langserver)
+- Rust && Rust Analyzer(TODO: Add link)
 - ripgreg, bat, fd for Neovim Telescope
 - gobang `brew install tako8ki/tap/gobang` [link](https://github.com/TaKO8Ki/gobang)
