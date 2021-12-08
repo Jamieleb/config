@@ -16,6 +16,7 @@ Plug 'kdheepak/lazygit.nvim'
 Plug 'TimUntersberger/neogit'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'pwntester/octo.nvim'
+Plug 'sindrets/diffview.nvim'
 
 " Tab line
 Plug 'kyazdani42/nvim-web-devicons'

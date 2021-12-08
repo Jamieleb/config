@@ -1,4 +1,9 @@
-require'neogit'.setup()
+require'neogit'.setup({
+  integrations = {
+    diffview = true
+  }
+})
+require'diffview'.setup()
 require('gitsigns').setup {
   keymaps = {
     -- Default keymap options
