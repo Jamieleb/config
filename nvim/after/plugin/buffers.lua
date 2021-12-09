@@ -10,7 +10,7 @@ wk.register({
 		p = { "<cmd>BufferPrevious<CR>", "close buffers to left" },
 		g = { "<cmd>BufferPick<CR>", "Buffer Pick" },
 		o = { "<cmd>BufferCloseAllButCurrent<CR>", "close other buffers" },
-		b = { "<cmd>Telescope buffers<CR>", "Telescope buffers" },
+		b = { "<cmd>Telescope buffers previewer=false theme=ivy<CR>", "Telescope buffers" },
 		l = { "<C-^>", "last buffer" },
 		["/"] = {
 			"<cmd> Telescope current_buffer_fuzzy_find previewer=false theme=ivy<CR>",
