@@ -3,6 +3,8 @@ vim.opt.completeopt = { "menuone", "noinsert", "noselect" }
 local saga = require("lspsaga")
 saga.init_lsp_saga()
 
+require("renamer").setup()
+
 local wk = require("which-key")
 wk.register({
 	l = {
@@ -10,7 +12,7 @@ wk.register({
 		d = { '<cmd>lua require("lspsaga.provider").preview_definition()<CR>', "preview definition" },
 		D = { "<cmd>lua vim.lsp.buf.definition()<CR>", "go to definition" },
 		r = { "<cmd>Trouble lsp_references<CR>", "show references in Trouble" },
-		R = { '<cmd>lua require("lspsaga.rename").rename()<CR>', "rename symbol" },
+		R = { '<cmd>lua require("renamer").rename()<CR>', "rename symbol" },
 		k = { '<cmd>lua require("lspsaga.hover").render_hover_doc()<CR>', "show documentation" },
 		e = { '<cmd>lua require("lspsaga.diagnostic").show_line_diagnostics()<CR>', "show line diagnostics" },
 		n = { '<cmd>lua require("lspsaga.diagnostic").lsp_jump_diagnostic_next()<CR>', "next diagnostic" },

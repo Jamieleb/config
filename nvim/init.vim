@@ -35,6 +35,7 @@ Plug 'kabouzeid/nvim-lspinstall'
 Plug 'ray-x/lsp_signature.nvim'
 " Plug 'glepnir/lspsaga.nvim' - not currently maintained
 Plug 'tami5/lspsaga.nvim'
+Plug 'filipdutescu/renamer.nvim'
 Plug 'folke/trouble.nvim'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
