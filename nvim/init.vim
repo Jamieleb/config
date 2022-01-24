@@ -159,7 +159,7 @@ require('which-key').setup({
 })
 EOF
 
-imap <silent><script><expr> <C-j> copilot#Accept("")
+imap <silent><script><expr> <Right> copilot#Accept("")
 let g:copilot_no_tab_map = v:true
 
 " Theme
