@@ -1,3 +1,5 @@
+require('zen-mode').setup()
+
 local wk = require("which-key")
 wk.register({
 	b = {
@@ -16,6 +18,7 @@ wk.register({
 			"<cmd> Telescope current_buffer_fuzzy_find previewer=false theme=ivy<CR>",
 			"search current buffer",
 		},
+    f = { "<cmd>ZenMode<CR>", "focus mode" },
 	},
 	x = {
 		name = "scratch",

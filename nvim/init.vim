@@ -111,6 +111,10 @@ Plug 'edluffy/specs.nvim'
 Plug 'folke/todo-comments.nvim'
 " Improved Marks
 Plug 'ThePrimeagen/harpoon'
+" Neorg
+Plug 'nvim-neorg/neorg'
+" zen mode
+Plug 'folke/zen-mode.nvim'
 call plug#end()
 
 " Config
@@ -123,8 +127,26 @@ let mapleader=" "
 let maplocalleader="\\"
 
 lua <<EOF
+local parser_configs = require('nvim-treesitter.parsers').get_parser_configs()
+
+parser_configs.norg_meta = {
+  install_info = {
+    url = "https://github.com/nvim-neorg/tree-sitter-norg-meta",
+    files = { "src/parser.c" },
+    branch = "main"
+  },
+}
+
+parser_configs.norg_table = {
+  install_info = {
+    url = "https://github.com/nvim-neorg/tree-sitter-norg-table",
+    files = { "src/parser.c" },
+    branch = "main"
+  },
+}
+
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained",
+  ensure_installed = { 'norg', 'norg_meta', 'norg_table', 'markdown', 'javascript', 'typescript', 'ruby', 'rust' },
   highlight = {
   enable = true,
   additional_vim_regex_highlighting = false,
