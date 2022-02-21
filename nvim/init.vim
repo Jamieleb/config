@@ -106,7 +106,7 @@ Plug 'mizlan/iswap.nvim'
 " Project specific consig
 Plug 'windwp/nvim-projectconfig'
 " See where cursor jumps to
-Plug 'edluffy/specs.nvim'
+" Plug 'edluffy/specs.nvim'
 " Todo comment highlighting
 Plug 'folke/todo-comments.nvim'
 " Improved Marks
