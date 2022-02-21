@@ -115,6 +115,7 @@ Plug 'ThePrimeagen/harpoon'
 Plug 'nvim-neorg/neorg'
 " zen mode
 Plug 'folke/zen-mode.nvim'
+Plug 'Pocco81/TrueZen.nvim'
 call plug#end()
 
 " Config
@@ -146,7 +147,7 @@ parser_configs.norg_table = {
 }
 
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { 'norg', 'norg_meta', 'norg_table', 'markdown', 'javascript', 'typescript', 'ruby', 'rust' },
+  ensure_installed = { 'norg_meta', 'norg_table', 'javascript', 'typescript', 'ruby', 'rust' },
   highlight = {
   enable = true,
   additional_vim_regex_highlighting = false,
