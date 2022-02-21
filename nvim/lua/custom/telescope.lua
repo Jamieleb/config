@@ -21,7 +21,6 @@ require("telescope").setup({
 	},
 	pickers = {
 		buffers = {
-			sort_lastused = true,
 			theme = "dropdown",
 			previewer = false,
 			mappings = {
