@@ -98,6 +98,8 @@ require("lspconfig").tsserver.setup({
 	end,
 })
 
+require"fidget".setup{}
+
 require("custom/efm")
 
 -- Ruby

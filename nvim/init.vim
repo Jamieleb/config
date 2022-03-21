@@ -44,6 +44,7 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/cmp-nvim-lua'
+Plug 'j-hui/fidget.nvim'
 Plug 'github/copilot.vim'
 
 Plug 'onsails/lspkind-nvim'
