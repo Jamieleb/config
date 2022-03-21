@@ -22,12 +22,6 @@ require("lightspeed").setup({
 -- 	},
 -- })
 
-require("nvim-tree").setup({
-	update_focused_file = {
-		enable = true,
-	},
-})
-
 require("todo-comments").setup()
 
 local Terminal = require("toggleterm.terminal").Terminal
@@ -64,7 +58,7 @@ wk.register({
 	o = {
 		name = "open",
 		r = { "<cmd>RnvimrToggle<CR>", "ranger" },
-		e = { "<cmd>NvimTreeToggle<CR>", "file explorer" },
+		e = { "<cmd>Dirbuf<CR>", "file explorer" },
 		d = { "<cmd>lua _gobang_toggle()<CR>", "database explorer" },
 	},
 	h = {

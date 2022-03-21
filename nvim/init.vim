@@ -89,8 +89,7 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'ggandor/lightspeed.nvim'
 " Buffer navigation
 Plug 'kevinhwang91/rnvimr'
-" File Tree
-Plug 'kyazdani42/nvim-tree.lua'
+Plug 'elihunter173/dirbuf.nvim'
 " NVIM in the browser
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 " Improved increment/decrement
