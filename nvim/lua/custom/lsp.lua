@@ -14,18 +14,8 @@ local source_mapping = {
 	buffer = "[Buffer]",
 	nvim_lsp = "[LSP]",
 	nvim_lua = "[Lua]",
-	cmp_tabnine = "[TN]",
 	path = "[Path]",
 }
-
-local tabnine = require("cmp_tabnine.config")
-tabnine:setup({
-  max_lines = 1000;
-  max_num_results = 20;
-  sort = true;
-  run_on_every_keystroke = true;
-  snippet_placeholder = '..';
-})
 
 cmp.setup({
 	snippet = {
@@ -74,10 +64,8 @@ cmp.setup({
 	sources = {
 		{ name = "nvim_lsp" },
     { name = "nvim_lua" },
-    { name = "neorg"  },
 		{ name = "path" },
 		{ name = "vsnip" },
-    { name = "cmp_tabnine" },
 		{ name = "buffer", keyword_length = 3 },
 	},
   formatting = {
@@ -97,19 +85,6 @@ cmp.setup({
   experimental = {
     ghost_text = false, -- doesn't work well with copilot
   },
-})
-
-cmp.setup.cmdline(":", {
-  source = {
-    name = "cmdline",
-    name = "buffer",
-  },
-})
-
-cmp.setup.cmdline("/", {
-	source = {
-		name = "buffer",
-	},
 })
 
 -- TypeScript
