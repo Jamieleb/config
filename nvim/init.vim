@@ -128,29 +128,11 @@ let mapleader=" "
 let maplocalleader="\\"
 
 lua <<EOF
-local parser_configs = require('nvim-treesitter.parsers').get_parser_configs()
-
-parser_configs.norg_meta = {
-  install_info = {
-    url = "https://github.com/nvim-neorg/tree-sitter-norg-meta",
-    files = { "src/parser.c" },
-    branch = "main"
-  },
-}
-
-parser_configs.norg_table = {
-  install_info = {
-    url = "https://github.com/nvim-neorg/tree-sitter-norg-table",
-    files = { "src/parser.c" },
-    branch = "main"
-  },
-}
-
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { 'norg_meta', 'norg_table', 'javascript', 'typescript', 'ruby', 'rust' },
+  ensure_installed = 'maintained',
   highlight = {
-  enable = true,
-  additional_vim_regex_highlighting = false,
+    enable = true,
+    additional_vim_regex_highlighting = false,
   },
     incremental_selection = {
     enable = true,
