@@ -82,6 +82,7 @@ wk.register({
 		'<cmd>lua require("telescope.builtin").file_browser({ cwd = require("telescope.utils").buffer_dir() })<CR>',
 		"explorer",
 	},
+  h = { "<cmd>:lua require('memento').toggle()<CR>", "recently closed files" },
 }, {
 	prefix = "<leader>f",
 })

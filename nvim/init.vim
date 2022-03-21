@@ -116,6 +116,7 @@ Plug 'nvim-neorg/neorg'
 " zen mode
 Plug 'folke/zen-mode.nvim'
 Plug 'Pocco81/TrueZen.nvim'
+Plug 'gaborvecsei/memento.nvim'
 call plug#end()
 
 " Config
