@@ -90,6 +90,7 @@ Plug 'ggandor/lightspeed.nvim'
 " Buffer navigation
 Plug 'kevinhwang91/rnvimr'
 Plug 'elihunter173/dirbuf.nvim'
+Plug 'toppair/reach.nvim'
 " NVIM in the browser
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 " Improved increment/decrement
