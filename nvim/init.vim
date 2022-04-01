@@ -99,6 +99,8 @@ Plug 'monaqa/dial.nvim'
 Plug 'kana/vim-textobj-user'
 Plug 'sgur/vim-textobj-parameter'
 Plug 'AckslD/nvim-revJ.lua'
+" Case replacement
+Plug 'johmsalas/shake.nvim'
 " scratch buffers
 Plug 'mtth/scratch.vim'
 " swap args
