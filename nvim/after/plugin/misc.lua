@@ -38,53 +38,6 @@ require("neorg").setup({
 	},
 })
 
-local shake = require("shake")
-
-shake.register_keybindings(shake.api.to_constant_case, {
-	current_word = "crn",
-	visual = "crn",
-	operator = "cron",
-	lsp_rename = "crN",
-})
-shake.register_keybindings(shake.api.to_camel_case, {
-	current_word = "crc",
-	visual = "crc",
-	operator = "croc",
-	lsp_rename = "crC",
-})
-shake.register_keybindings(shake.api.to_dash_case, {
-	current_word = "crd",
-	visual = "crd",
-	operator = "crod",
-	lsp_rename = "crD",
-})
-shake.register_keybindings(shake.api.to_pascal_case, {
-	current_word = "crp",
-	visual = "crp",
-	operator = "crop",
-	lsp_rename = "crP",
-})
-shake.register_keybindings(shake.api.to_snake_case, {
-	current_word = "crs",
-	visual = "crs",
-	operator = "cros",
-	lsp_rename = "crS",
-})
-
-shake.register_replace_command("Subs", {
-	shake.api.to_upper_case,
-	shake.api.to_lower_case,
-	shake.api.to_snake_case,
-	shake.api.to_dash_case,
-	shake.api.to_constant_case,
-	shake.api.to_dot_case,
-	shake.api.to_phrase_case,
-	shake.api.to_camel_case,
-	shake.api.to_pascal_case,
-	shake.api.to_title_case,
-	shake.api.to_path_case,
-})
-
 local wk = require("which-key")
 wk.register({
 	K = "which_key_ignore",
