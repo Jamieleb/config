@@ -43,10 +43,14 @@ wk.register({
 			'<cmd>lua require("telescope.builtin").builtin(require("telescope.themes").get_ivy())<CR>',
 			"Telescope builtins",
 		},
-		z = { '<cmd>Telescope spell_suggest theme=ivy<CR>', "spelling suggestions" },
+		z = { "<cmd>Telescope spell_suggest theme=ivy<CR>", "spelling suggestions" },
 		w = { '<cmd>lua require("custom.telescope").search_word()<CR>', "word under cursor" },
 		["."] = { '<cmd>lua require("custom.telescope").search_dotfiles()<CR>', "dotfiles" },
 		T = { "<cmd>TodoTelescope<CR>", "todos" },
+		p = {
+			"<cmd>Telescope projects<CR>",
+			"search projects",
+		},
 	},
 	["/"] = {
 		'<cmd>lua require("telescope.builtin").live_grep(require("telescope.themes").get_ivy())<CR>',

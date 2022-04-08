@@ -29,6 +29,9 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-telescope/telescope-github.nvim'
 
+" Project management
+Plug 'ahmedkhalf/project.nvim'
+
 " LSP, Linting, and Completion plugins
 Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
@@ -166,10 +169,13 @@ require('which-key').setup({
     ["<tab>"] = "TAB",
   }
 })
+require('project_nvim').setup()
 EOF
 
 imap <silent><script><expr> <Right> copilot#Accept("")
 let g:copilot_no_tab_map = v:true
+
+tnoremap <C-n> <C-\><C-n>
 
 " Theme
 set background=dark

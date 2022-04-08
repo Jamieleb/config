@@ -49,6 +49,7 @@ require("telescope").setup({
 require("telescope").load_extension("fzf")
 require("telescope").load_extension("octo")
 require("telescope").load_extension("gh")
+require("telescope").load_extension("projects")
 
 local M = {}
 M.search_dotfiles = function()
