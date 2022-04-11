@@ -1,5 +1,6 @@
 require("colorizer").setup()
 -- require("spellsitter").setup()
+require("yanky").setup()
 
 require("revj").setup({
 	keymaps = {
@@ -38,7 +39,20 @@ require("neorg").setup({
 	},
 })
 
+vim.api.nvim_set_keymap("n", "p", "<Plug>(YankyPutAfter)", {})
+vim.api.nvim_set_keymap("n", "P", "<Plug>(YankyPutBefore)", {})
+vim.api.nvim_set_keymap("x", "p", "<Plug>(YankyPutAfter)", {})
+vim.api.nvim_set_keymap("x", "P", "<Plug>(YankyPutBefore)", {})
+vim.api.nvim_set_keymap("n", "gp", "<Plug>(YankyGPutAfter)", {})
+vim.api.nvim_set_keymap("n", "gP", "<Plug>(YankyGPutBefore)", {})
+vim.api.nvim_set_keymap("x", "gp", "<Plug>(YankyGPutAfter)", {})
+vim.api.nvim_set_keymap("x", "gP", "<Plug>(YankyGPutBefore)", {})
+
+vim.api.nvim_set_keymap("n", "<c-n>", "<Plug>(YankyCycleForward)", {})
+vim.api.nvim_set_keymap("n", "<c-p>", "<Plug>(YankyCycleBackward)", {})
+
 local wk = require("which-key")
+
 wk.register({
 	K = "which_key_ignore",
 })

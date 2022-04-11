@@ -102,6 +102,8 @@ Plug 'monaqa/dial.nvim'
 Plug 'kana/vim-textobj-user'
 Plug 'sgur/vim-textobj-parameter'
 Plug 'AckslD/nvim-revJ.lua'
+" better yank and put
+Plug 'gbprod/yanky.nvim'
 " Case replacement & other goodies
 Plug 'tpope/vim-abolish'
 " scratch buffers
