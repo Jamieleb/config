@@ -3,6 +3,13 @@ call plug#begin("~/.vim/plugged")
 Plug 'glepnir/zephyr-nvim'
 Plug 'Th3Whit3Wolf/one-nvim'
 Plug 'folke/tokyonight.nvim'
+Plug 'luisiacc/gruvbox-baby', {'branch': 'main'}
+Plug 'savq/melange'
+Plug 'rafamadriz/neon'
+Plug 'sainnhe/everforest'
+Plug 'Mofiqul/dracula.nvim'
+Plug 'yashguptaz/calvera-dark.nvim'
+
 
 " Status Line
 Plug 'vim-airline/vim-airline'
@@ -181,7 +188,7 @@ tnoremap <C-n> <C-\><C-n>
 
 " Theme
 set background=dark
-colorscheme tokyonight
+colorscheme melange
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='atomic'

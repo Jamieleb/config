@@ -9,7 +9,7 @@ abbr -a rc rails console
 abbr -a rs rails server
 abbr -a wp ./bin/webpack-dev-server
 abbr -a nv nvim
-abbr -a icloud cd ~/Library/Mobile\ Documents/com~apple~CloudDocs
+abbr -a icloud ~/Library/Mobile\ Documents/com~apple~CloudDocs
 
 function doom -d "Start the Emacs daemon and opens the Emacs Client"
     command emacs --daemon

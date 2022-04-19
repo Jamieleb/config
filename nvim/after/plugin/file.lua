@@ -12,6 +12,7 @@ require("formatter").setup({
 		typescript = { prettier_js },
 		typescriptreact = { prettier_js },
 		javascriptreact = { prettier_js },
+    css = { prettier_js },
 		ruby = {
 			function()
 				return {
