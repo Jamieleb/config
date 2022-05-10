@@ -10,7 +10,6 @@ Plug 'sainnhe/everforest'
 Plug 'Mofiqul/dracula.nvim'
 Plug 'yashguptaz/calvera-dark.nvim'
 
-
 " Status Line
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -73,6 +72,7 @@ Plug 'folke/which-key.nvim'
 
 " Async tasks
 Plug 'skywind3000/asyncrun.vim'
+Plug 'jedrzejboczar/toggletasks.nvim'
 "Auto comment
 Plug 'tpope/vim-commentary'
 " Auto Pairs
@@ -144,7 +144,7 @@ let maplocalleader="\\"
 
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = 'maintained',
+  ensure_installed = {'lua', 'typescript', 'javascript', 'ruby', 'vim', 'rust', 'css', 'fish', 'tsx'},
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = false,
@@ -188,7 +188,7 @@ tnoremap <C-n> <C-\><C-n>
 
 " Theme
 set background=dark
-colorscheme melange
+colorscheme neon
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='atomic'
