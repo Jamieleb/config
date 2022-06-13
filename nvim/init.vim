@@ -23,6 +23,8 @@ Plug 'TimUntersberger/neogit'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'pwntester/octo.nvim'
 Plug 'sindrets/diffview.nvim'
+Plug 'ldelossa/litee.nvim'
+Plug 'ldelossa/gh.nvim'
 
 " Tab line
 Plug 'kyazdani42/nvim-web-devicons'

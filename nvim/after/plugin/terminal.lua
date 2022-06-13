@@ -5,7 +5,7 @@ require("toggleterm").setup({
 	persist_size = false,
 })
 
-require("toggletasks").setup()
+-- require("toggletasks").setup()
 
 local wk = require("which-key")
 wk.register({
