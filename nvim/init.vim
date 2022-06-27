@@ -70,7 +70,11 @@ Plug 'mhartington/formatter.nvim'
 
 " UI Plugins
 Plug 'glepnir/dashboard-nvim'
+
+" keymap plugins
 Plug 'folke/which-key.nvim'
+Plug 'anuvyklack/keymap-layer.nvim' " dependency of:
+Plug 'anuvyklack/hydra.nvim'
 
 " Async tasks
 Plug 'skywind3000/asyncrun.vim'
