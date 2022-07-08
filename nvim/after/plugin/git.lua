@@ -65,6 +65,7 @@ wk.register({
 	g = {
 		name = "git",
 		g = { "<cmd>Neogit<CR>", "Neogit" },
+    G = 'Hydra git mode',
 		l = { "<cmd>LazyGit<CR>", "LazyGit" },
 		c = { "<cmd>Neogit commit<CR>", "Commit" },
 		m = { "<cmd>AsyncRun git checkout master && git pull<CR>", "checkout master" },

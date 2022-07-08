@@ -1,7 +1,5 @@
 require("lightspeed").setup({
-	jump_to_first_match = true,
-	highlight_unique_chars = true,
-	grey_out_search_area = true,
+	jump_to_unique_chars = true,
 })
 
 -- require("specs").setup({
