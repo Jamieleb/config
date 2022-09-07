@@ -15,3 +15,4 @@ set cursorline
 set showtabline=1
 set switchbuf=usetab
 set hidden
+set laststatus=3
