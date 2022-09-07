@@ -23,6 +23,8 @@ Plug 'TimUntersberger/neogit'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'pwntester/octo.nvim'
 Plug 'sindrets/diffview.nvim'
+Plug 'ldelossa/litee.nvim'
+Plug 'ldelossa/gh.nvim'
 
 " Tab line
 Plug 'kyazdani42/nvim-web-devicons'
@@ -68,7 +70,11 @@ Plug 'mhartington/formatter.nvim'
 
 " UI Plugins
 Plug 'glepnir/dashboard-nvim'
+
+" keymap plugins
 Plug 'folke/which-key.nvim'
+Plug 'anuvyklack/keymap-layer.nvim' " dependency of:
+Plug 'anuvyklack/hydra.nvim'
 
 " Async tasks
 Plug 'skywind3000/asyncrun.vim'

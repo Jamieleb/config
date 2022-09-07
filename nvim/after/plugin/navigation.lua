@@ -1,4 +1,6 @@
-require("lightspeed").setup({})
+require("lightspeed").setup({
+	jump_to_unique_chars = true,
+})
 
 -- require("specs").setup({
 -- 	show_jumps = true,

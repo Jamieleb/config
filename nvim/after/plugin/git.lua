@@ -1,52 +1,90 @@
-require'neogit'.setup({
-  integrations = {
-    diffview = true
-  }
+require("neogit").setup({
+	integrations = {
+		diffview = true,
+	},
 })
-require'diffview'.setup()
-require('gitsigns').setup {
-  keymaps = {
-    -- Default keymap options
-    noremap = true,
+require("diffview").setup()
 
-    ['n ]c'] = { expr = true, "&diff ? ']c' : '<cmd>lua require\"gitsigns\".next_hunk()<CR>'"},
-    ['n [c'] = { expr = true, "&diff ? '[c' : '<cmd>lua require\"gitsigns\".prev_hunk()<CR>'"},
+local Terminal = require("toggleterm.terminal").Terminal
 
-    ['n <leader>gs'] = '<cmd>lua require"gitsigns".stage_hunk()<CR>',
-    ['v <leader>gs'] = '<cmd>lua require"gitsigns".stage_hunk({vim.fn.line("."), vim.fn.line("v")})<CR>',
-    ['n <leader>gu'] = '<cmd>lua require"gitsigns".undo_stage_hunk()<CR>',
-    ['n <leader>gr'] = '<cmd>lua require"gitsigns".reset_hunk()<CR>',
-    ['v <leader>gr'] = '<cmd>lua require"gitsigns".reset_hunk({vim.fn.line("."), vim.fn.line("v")})<CR>',
-    ['n <leader>gR'] = '<cmd>lua require"gitsigns".reset_buffer()<CR>',
-    ['n <leader>gv'] = '<cmd>lua require"gitsigns".preview_hunk()<CR>',
-    ['n <leader>gb'] = '<cmd>lua require"gitsigns".blame_line(true)<CR>',
+local git_dash = Terminal:new({
+	cmd = "gh dash",
+	direction = "float",
+	float_opts = {
+		border = "double",
+	},
+	on_open = function(term)
+		vim.cmd("startinsert!")
+	end,
+})
 
-    -- Text objects
-    ['o ih'] = ':<C-U>lua require"gitsigns".select_hunk()<CR>',
-    ['x ih'] = ':<C-U>lua require"gitsigns".select_hunk()<CR>'
-  }
-}
+local git_notify = Terminal:new({
+	cmd = "gh notify",
+	direction = "float",
+	float_opts = {
+		border = "double",
+	},
+	on_open = function(term)
+		vim.cmd("startinsert!")
+	end,
+})
 
-local wk = require('which-key')
+function _git_dash_toggle()
+	git_dash:toggle()
+end
+
+function _git_notify_toggle()
+	git_notify:toggle()
+end
+
+require("gitsigns").setup({
+	keymaps = {
+		-- Default keymap options
+		noremap = true,
+
+		["n ]c"] = { expr = true, "&diff ? ']c' : '<cmd>lua require\"gitsigns\".next_hunk()<CR>'" },
+		["n [c"] = { expr = true, "&diff ? '[c' : '<cmd>lua require\"gitsigns\".prev_hunk()<CR>'" },
+
+		["n <leader>gs"] = '<cmd>lua require"gitsigns".stage_hunk()<CR>',
+		["v <leader>gs"] = '<cmd>lua require"gitsigns".stage_hunk({vim.fn.line("."), vim.fn.line("v")})<CR>',
+		["n <leader>gu"] = '<cmd>lua require"gitsigns".undo_stage_hunk()<CR>',
+		["n <leader>gr"] = '<cmd>lua require"gitsigns".reset_hunk()<CR>',
+		["v <leader>gr"] = '<cmd>lua require"gitsigns".reset_hunk({vim.fn.line("."), vim.fn.line("v")})<CR>',
+		["n <leader>gR"] = '<cmd>lua require"gitsigns".reset_buffer()<CR>',
+		["n <leader>gv"] = '<cmd>lua require"gitsigns".preview_hunk()<CR>',
+		["n <leader>gb"] = '<cmd>lua require"gitsigns".blame_line(true)<CR>',
+
+		-- Text objects
+		["o ih"] = ':<C-U>lua require"gitsigns".select_hunk()<CR>',
+		["x ih"] = ':<C-U>lua require"gitsigns".select_hunk()<CR>',
+	},
+})
+
+local wk = require("which-key")
 wk.register({
-  g = {
-    name = 'git',
-    g = { '<cmd>Neogit<CR>', 'Neogit' },
-    l = { '<cmd>LazyGit<CR>', 'LazyGit' },
-    c = { '<cmd>Neogit commit<CR>', 'Commit' },
-    m = { '<cmd>AsyncRun git checkout master && git pull<CR>', 'checkout master' },
-    d = { '<cmd>AsyncRun git checkout develop && git pull<CR>', 'checkout develop' },
-    p = { '<cmd>AsyncRun git pull<CR>', 'pull' },
-    P = { '<cmd>AsyncRun git push<CR>', 'push' },
-    h = {
-      name = 'github',
-      c = { "<cmd>execute 'AsyncRun gh pr checkout '.input('checkout PR > ')<CR>", 'checkout PR by number' },
-    },
-    s = { 'stage hunk' },
-    u = { 'unstage hunk' },
-    r = { 'reset hunk' },
-    R = { 'reset buffer' },
-    v = { 'preview hunk' },
-    b = { 'blame line' },
-  },
-}, { prefix = '<leader>' })
+	g = {
+		name = "git",
+		g = { "<cmd>Neogit<CR>", "Neogit" },
+    G = 'Hydra git mode',
+		l = { "<cmd>LazyGit<CR>", "LazyGit" },
+		c = { "<cmd>Neogit commit<CR>", "Commit" },
+		m = { "<cmd>AsyncRun git checkout master && git pull<CR>", "checkout master" },
+		d = { "<cmd>AsyncRun git checkout develop && git pull<CR>", "checkout develop" },
+		p = { "<cmd>AsyncRun git pull<CR>", "pull" },
+		P = { "<cmd>AsyncRun git push<CR>", "push" },
+		h = {
+			name = "github",
+			c = { "<cmd>execute 'AsyncRun gh pr checkout '.input('checkout PR > ')<CR>", "checkout PR by number" },
+			d = { "<cmd>lua _git_dash_toggle()<CR>", "github dashboard" },
+			n = { "<cmd>lua _git_notify_toggle()<CR>", "github notifications" },
+		},
+		s = { "stage hunk" },
+		u = { "unstage hunk" },
+		r = { "reset hunk" },
+		R = { "reset buffer" },
+		v = { "preview hunk" },
+		b = { "blame line" },
+	},
+}, {
+	prefix = "<leader>",
+})
