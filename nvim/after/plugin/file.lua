@@ -58,7 +58,19 @@ require("formatter").setup({
 				}
 			end,
 		},
-	},
+    elixir = {
+      function()
+        return {
+          exe = "mix",
+          args = {
+            "format",
+            "-",
+          },
+          stdin = true,
+        }
+      end,
+    },
+  },
 })
 
 function _format_and_write()

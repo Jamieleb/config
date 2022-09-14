@@ -1,6 +1,5 @@
 call plug#begin("~/.vim/plugged")
 " Themes
-Plug 'glepnir/zephyr-nvim'
 Plug 'Th3Whit3Wolf/one-nvim'
 Plug 'folke/tokyonight.nvim'
 Plug 'luisiacc/gruvbox-baby', {'branch': 'main'}
@@ -65,6 +64,7 @@ Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'rafamadriz/friendly-snippets'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
 Plug 'mhartington/formatter.nvim'
 
@@ -148,7 +148,7 @@ let maplocalleader="\\"
 
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = {'lua', 'typescript', 'javascript', 'ruby', 'vim', 'rust', 'css', 'fish', 'tsx'},
+  ensure_installed = {'lua', 'typescript', 'javascript', 'ruby', 'vim', 'rust', 'css', 'fish', 'tsx', 'elixir'},
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = false,

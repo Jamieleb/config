@@ -63,28 +63,28 @@ cmp.setup({
 	},
 	sources = {
 		{ name = "nvim_lsp" },
-    { name = "nvim_lua" },
+		{ name = "nvim_lua" },
 		{ name = "path" },
 		{ name = "vsnip" },
 		{ name = "buffer", keyword_length = 3 },
 	},
-  formatting = {
-    format = function(entry, vim_item)
-      vim_item.kind = lspkind.presets.default[vim_item.kind]
-      local menu = source_mapping[entry.source.name]
-      if entry.source.name == 'cmp_tabnine' then
-        if entry.completion_item.data ~= nil and entry.completion_item.data.detail ~= nil then
-          menu = entry.completion_item.data.detail .. ' ' .. menu
-        end
-        vim_item.kind = ''
-      end
-      vim_item.menu = menu
-      return vim_item
-    end
-  },
-  experimental = {
-    ghost_text = false, -- doesn't work well with copilot
-  },
+	formatting = {
+		format = function(entry, vim_item)
+			vim_item.kind = lspkind.presets.default[vim_item.kind]
+			local menu = source_mapping[entry.source.name]
+			if entry.source.name == "cmp_tabnine" then
+				if entry.completion_item.data ~= nil and entry.completion_item.data.detail ~= nil then
+					menu = entry.completion_item.data.detail .. " " .. menu
+				end
+				vim_item.kind = ""
+			end
+			vim_item.menu = menu
+			return vim_item
+		end,
+	},
+	experimental = {
+		ghost_text = false, -- doesn't work well with copilot
+	},
 })
 
 -- TypeScript
@@ -98,7 +98,7 @@ require("lspconfig").tsserver.setup({
 	end,
 })
 
-require"fidget".setup{}
+require("fidget").setup({})
 
 require("custom/efm")
 
@@ -129,4 +129,8 @@ require("rust-tools").setup({
 	server = {
 		capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
 	},
+})
+
+require("lspconfig").elixirls.setup({
+	cmd = { "/Users/jamesclebrun/.elixir-ls/language_server.sh" },
 })
