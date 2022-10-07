@@ -32,9 +32,9 @@ Plug 'romgrk/barbar.nvim'
 " Telescope dependencies
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-telescope/telescope-github.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 " Project management
 Plug 'ahmedkhalf/project.nvim'

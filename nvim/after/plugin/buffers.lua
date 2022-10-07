@@ -1,5 +1,5 @@
 require("zen-mode").setup()
-require("reach").setup()
+require("reach").setup({ notifications = true })
 
 local true_zen = require("true-zen")
 

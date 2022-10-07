@@ -92,7 +92,7 @@ cmp.setup({
 -- npm install -g typescript typescript-language-server
 require("lspconfig").tsserver.setup({
 	on_attach = function(client)
-		client.resolved_capabilities.document_formatting = false
+		client.server_capabilities.document_formatting = false
 		require("lsp_signature").on_attach()
 		-- require("completion").on_attach()
 	end,
