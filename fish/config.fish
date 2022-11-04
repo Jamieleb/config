@@ -26,3 +26,5 @@ starship init fish | source
 fish_add_path /opt/homebrew/opt/openssl@1.1/bin
 fish_add_path $HOME/Library/Python/3.8/bin
 fish_add_path $HOME/.local/bin
+
+export GPG_TTY=$(tty)
