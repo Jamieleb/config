@@ -78,7 +78,7 @@ lvim.builtin.which_key.mappings["f"] = {
 
 lvim.builtin.which_key.mappings["b"]["k"] = { "<cmd>BufferKill<CR>", "Previous" }
 lvim.builtin.which_key.mappings["b"]["p"] = { "<cmd>BufferLineCyclePrev<CR>", "Previous" }
-lvim.builtin.which_key.mappings["b"]["b"] = { "<cmd>Telescope buffers previewer=false theme=ivy<CR>", "Telescope buffers" }
+lvim.builtin.which_key.mappings["b"]["s"] = { "<cmd>Telescope buffers previewer=false theme=ivy<CR>", "Telescope buffers" }
 lvim.builtin.which_key.mappings["b"]["z"] = { "<cmd>ZenMode<CR>", "Zen Mode" }
 lvim.builtin.which_key.mappings["b"]["/"] = {
   "<cmd> Telescope current_buffer_fuzzy_find previewer=false theme=ivy<CR>",

@@ -9,6 +9,7 @@ lvim.plugins = {
   "folke/trouble.nvim",
   "rcarriga/nvim-dap-ui",
   'lukas-reineke/indent-blankline.nvim',
+  'toppair/reach.nvim',
   {
     'jedrzejboczar/toggletasks.nvim',
     requires = {

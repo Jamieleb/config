@@ -17,6 +17,8 @@ require('user.options')
 require('user.keymaps')
 require('user.zen-mode')
 require('user.lsp')
+require('user.indent-blankline')
+require('user.reach')
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
