@@ -27,19 +27,25 @@ lvim.leader = "space"
 
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
+lvim.keys.insert_mode["<A-j>"] = false
+lvim.keys.insert_mode["<A-k>"] = false
+lvim.keys.normal_mode["<A-j>"] = false
+lvim.keys.normal_mode["<A-k>"] = false
+lvim.keys.visual_block_mode["<A-j>"] = false
+lvim.keys.visual_block_mode["<A-k>"] = false
 
 -- Use which-key to add extra bindings with the leader-key prefix
 
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
-lvim.builtin.which_key.mappings["t"] = {
-  name = "+Trouble",
-  r = { "<cmd>Trouble lsp_references<cr>", "References" },
-  f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
-  d = { "<cmd>Trouble document_diagnostics<cr>", "Diagnostics" },
-  q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
-  l = { "<cmd>Trouble loclist<cr>", "LocationList" },
-  w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
-}
+-- lvim.builtin.which_key.mappings["t"] = {
+--   name = "+Trouble",
+--   r = { "<cmd>Trouble lsp_references<cr>", "References" },
+--   f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
+--   d = { "<cmd>Trouble document_diagnostics<cr>", "Diagnostics" },
+--   q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
+--   l = { "<cmd>Trouble loclist<cr>", "LocationList" },
+--   w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
+-- }
 lvim.builtin.which_key.mappings["j"] = { "<c-f>", "Page Down" }
 lvim.builtin.which_key.mappings["k"] = { "<c-b>", "Page Up" }
 lvim.builtin.which_key.mappings["<BS>"] = { "<c-^>", "Last Buffer" }
@@ -79,16 +85,6 @@ lvim.builtin.which_key.mappings["b"]["/"] = {
   "search current buffer",
 }
 
-lvim.builtin.which_key.mappings["o"] = {
-  name = "+Open",
-  t = { "<cmd>ToggleTerm<CR>", "Terminal" },
-  g = { "<cmd>TermExec cmd='lazygit'<CR>", 'Lazygit' },
-  T = {
-    name = "+Terminal",
-    s = { "<cmd>ToggleTerm direction=horizontal size=40<CR>", 'Horizontal Split' },
-    v = { "<cmd>ToggleTerm direction=vertical size=80<CR>", 'Vertical Split' }
-  }
-}
 lvim.builtin.which_key.mappings["<leader>"] = { require("lvim.core.telescope.custom-finders").find_project_files,
   "Find File" }
 lvim.builtin.which_key.mappings["/"] = {
@@ -101,19 +97,6 @@ lvim.builtin.which_key.mappings[";"] = {
 }
 lvim.builtin.which_key.mappings["l"]["D"] = {
   "<cmd>lua vim.lsp.buf.definition()<CR>", "go to definition"
-}
-
-lvim.builtin.which_key.mappings["d"] = {
-  name = "+Debug",
-  b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Breakpoint" },
-  c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
-  i = { "<cmd>lua require'dap'.step_into()<cr>", "Into" },
-  o = { "<cmd>lua require'dap'.step_over()<cr>", "Over" },
-  O = { "<cmd>lua require'dap'.step_out()<cr>", "Out" },
-  r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Repl" },
-  l = { "<cmd>lua require'dap'.run_last()<cr>", "Last" },
-  u = { "<cmd>lua require'dapui'.toggle()<cr>", "UI" },
-  x = { "<cmd>lua require'dap'.terminate()<cr>", "Exit" },
 }
 
 vim.cmd([[

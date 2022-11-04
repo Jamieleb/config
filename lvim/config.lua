@@ -10,6 +10,8 @@ an executable
 require('user.plugins')
 require('user.fidget')
 require('user.surround')
+require('user.terminal')
+require('user.toggletasks')
 require('user.telescope')
 require('user.options')
 require('user.keymaps')

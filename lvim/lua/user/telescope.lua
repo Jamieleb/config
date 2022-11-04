@@ -1,4 +1,5 @@
 local _, actions = pcall(require, "telescope.actions")
+require('telescope').load_extension('toggletasks')
 lvim.builtin.telescope.defaults.mappings = {
   -- for input mode
   i = {
@@ -34,7 +35,6 @@ lvim.builtin.telescope.defaults.mappings = {
     ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
     ["<C-l>"] = actions.complete_tag,
     ["<C-h>"] = actions.which_key, -- keys from pressing <C-h>
-    ["<esc>"] = actions.close,
   },
   -- for normal mode
   n = {

@@ -1,4 +1,5 @@
--- require('user.lsp.languages.ts')
+require('dapui').setup()
+require('user.lsp.languages.ts')
 -- generic LSP settings
 
 -- -- make sure server will always be installed even if the server is in skipped_servers list

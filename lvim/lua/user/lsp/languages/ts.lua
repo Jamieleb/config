@@ -1,10 +1,12 @@
+require('nvim-ts-autotag').setup()
+
 -- Setup lsp.
 vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "tsserver" })
 
 local capabilities = require("lvim.lsp").common_capabilities()
 
 require("typescript").setup {
-  -- disable_commands = false, -- prevent the plugin from creating Vim commands
+  disable_commands = false, -- prevent the plugin from creating Vim commands
   debug = false, -- enable debug logging for commands
   go_to_source_definition = {
     fallback = true, -- fall back to standard LSP definition on failure
@@ -26,6 +28,7 @@ formatters.setup {
   },
 }
 
+local mason_path = vim.fn.glob(vim.fn.stdpath "data" .. "/mason/")
 require("dap-vscode-js").setup {
   -- node_path = "node", -- Path of node executable. Defaults to $NODE_PATH, and then "node"
   debugger_path = "/Users/jamie.lebrun/vscode-js-debug", -- Path to vscode-js-debug installation.
@@ -54,7 +57,7 @@ for _, language in ipairs { "typescript", "javascript" } do
 end
 
 -- Set a linter.
--- local linters = require("lvim.lsp.null-ls.linters")
--- linters.setup({
---   { command = "eslint", filetypes = { "javascript", "typescript" } },
--- })
+local linters = require("lvim.lsp.null-ls.linters")
+linters.setup({
+  { command = "eslint", filetypes = { "javascript", "typescript" } },
+})

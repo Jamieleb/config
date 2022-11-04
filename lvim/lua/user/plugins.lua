@@ -5,9 +5,15 @@ lvim.plugins = {
   "folke/zen-mode.nvim",
   "jose-elias-alvarez/typescript.nvim",
   "mxsdev/nvim-dap-vscode-js",
-  { "microsoft/vscode-js-debug ", opt = true, run = "npm install --legacy-peer-deps && npm run compile" },
   "folke/tokyonight.nvim",
   "folke/trouble.nvim",
-  "folke/trouble.nvim",
   "rcarriga/nvim-dap-ui",
+  'lukas-reineke/indent-blankline.nvim',
+  {
+    'jedrzejboczar/toggletasks.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim',
+      'akinsho/toggleterm.nvim',
+    },
+  },
 }
