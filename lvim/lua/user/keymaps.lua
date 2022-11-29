@@ -132,6 +132,13 @@ lvim.builtin.which_key.mappings["l"]["D"] = {
   "<cmd>lua vim.lsp.buf.definition()<CR>", "go to definition"
 }
 
+lvim.builtin.which_key.mappings['J'] = {
+  name = '+TreeSJ',
+  J = { "<cmd>TSJToggle<CR>", 'Toggle under cursor' },
+  s = { "<cmd>TSJSplit<CR>", 'Split under cursor' },
+  j = { "<cmd>TSJJoin<CR>", 'Join under cursor' },
+}
+
 vim.cmd([[
 " keep cursor centered when jumping and line concatenating
 "   src ThePrimagen https://www.youtube.com/watch?v=hSHATqh8svM&t=450s

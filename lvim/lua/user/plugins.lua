@@ -37,4 +37,13 @@ lvim.plugins = {
       })
     end,
   },
+  {
+    'Wansmer/treesj',
+    requires = { 'nvim-treesitter' },
+    config = function()
+      require('treesj').setup({
+        use_default_keymaps = false,
+      })
+    end,
+  },
 }
