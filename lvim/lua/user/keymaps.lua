@@ -36,6 +36,26 @@ lvim.keys.visual_block_mode["<A-k>"] = false
 
 -- Use which-key to add extra bindings with the leader-key prefix
 
+local picker = require('window-picker')
+local function pick_window()
+  local picked_window_id = picker.pick_window() or vim.api.nvim_get_current_win()
+  vim.api.nvim_set_current_win(picked_window_id)
+end
+
+local function swap_windows()
+  local window = picker.pick_window({
+    include_current_win = false
+  })
+  local target_buffer = vim.fn.winbufnr(window)
+  -- Set the target window to contain current buffer
+  vim.api.nvim_win_set_buf(window, 0)
+  -- Set current window to contain target buffer
+  vim.api.nvim_win_set_buf(0, target_buffer)
+end
+
+vim.api.nvim_create_user_command('PickWindow', pick_window, { nargs = 0 })
+vim.api.nvim_create_user_command('SwapWindow', swap_windows, { nargs = 0 })
+
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 -- lvim.builtin.which_key.mappings["t"] = {
 --   name = "+Trouble",
@@ -64,6 +84,8 @@ lvim.builtin.which_key.mappings["w"] = {
   v = { '<C-w>v', 'vertical split' },
   s = { '<C-w>s', 'horizontal split' },
   ['='] = { '<C-w>=', 'balance splits' },
+  w = { '<cmd>PickWindow<CR>', 'Pick a window' },
+  S = { '<cmd>SwapWindow<CR>', 'Swap windows' }
 }
 lvim.builtin.which_key.mappings["f"] = {
   name = "+File",
@@ -78,12 +100,23 @@ lvim.builtin.which_key.mappings["f"] = {
 
 lvim.builtin.which_key.mappings["b"]["k"] = { "<cmd>BufferKill<CR>", "Previous" }
 lvim.builtin.which_key.mappings["b"]["p"] = { "<cmd>BufferLineCyclePrev<CR>", "Previous" }
-lvim.builtin.which_key.mappings["b"]["s"] = { "<cmd>Telescope buffers previewer=false theme=ivy<CR>", "Telescope buffers" }
+lvim.builtin.which_key.mappings["b"]["b"] = { "<cmd>Telescope buffers previewer=false theme=ivy<CR>", "Telescope buffers" }
 lvim.builtin.which_key.mappings["b"]["z"] = { "<cmd>ZenMode<CR>", "Zen Mode" }
 lvim.builtin.which_key.mappings["b"]["/"] = {
   "<cmd> Telescope current_buffer_fuzzy_find previewer=false theme=ivy<CR>",
   "search current buffer",
 }
+
+lvim.builtin.which_key.mappings['l']['t'] = {
+  name = '+Trouble',
+  t = { "<cmd>TroubleToggle<cr>", "trouble" },
+  w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "workspace" },
+  d = { "<cmd>TroubleToggle document_diagnostics<cr>", "document" },
+  q = { "<cmd>TroubleToggle quickfix<cr>", "quickfix" },
+  l = { "<cmd>TroubleToggle loclist<cr>", "loclist" },
+  r = { "<cmd>TroubleToggle lsp_references<cr>", "references" },
+}
+
 
 lvim.builtin.which_key.mappings["<leader>"] = { require("lvim.core.telescope.custom-finders").find_project_files,
   "Find File" }

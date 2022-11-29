@@ -1,5 +1,5 @@
 local _, actions = pcall(require, "telescope.actions")
-require('telescope').load_extension('toggletasks')
+-- require('telescope').load_extension('toggletasks')
 lvim.builtin.telescope.defaults.mappings = {
   -- for input mode
   i = {
