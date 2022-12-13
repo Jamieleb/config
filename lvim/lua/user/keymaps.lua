@@ -57,15 +57,6 @@ vim.api.nvim_create_user_command('PickWindow', pick_window, { nargs = 0 })
 vim.api.nvim_create_user_command('SwapWindow', swap_windows, { nargs = 0 })
 
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
--- lvim.builtin.which_key.mappings["t"] = {
---   name = "+Trouble",
---   r = { "<cmd>Trouble lsp_references<cr>", "References" },
---   f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
---   d = { "<cmd>Trouble document_diagnostics<cr>", "Diagnostics" },
---   q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
---   l = { "<cmd>Trouble loclist<cr>", "LocationList" },
---   w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
--- }
 lvim.builtin.which_key.mappings["j"] = { "<c-f>", "Page Down" }
 lvim.builtin.which_key.mappings["k"] = { "<c-b>", "Page Up" }
 lvim.builtin.which_key.mappings["<BS>"] = { "<c-^>", "Last Buffer" }
@@ -128,9 +119,24 @@ lvim.builtin.which_key.mappings[";"] = {
   '<cmd>lua require("telescope.builtin").commands(require("telescope.themes").get_ivy())<CR>',
   "command palette",
 }
+lvim.builtin.which_key.mappings['n'] = { '<cmd>MindOpenMain<cr>', 'Open Notes' }
 lvim.builtin.which_key.mappings["l"]["D"] = {
-  "<cmd>lua vim.lsp.buf.definition()<CR>", "go to definition"
+  "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", "go to definition"
 }
+lvim.builtin.which_key.mappings['l']['R'] = {
+  "<cmd>lua require('goto-preview').goto_preview_references()<cr>",
+  'References',
+}
+lvim.builtin.which_key.mappings["l"]["P"] = {
+  name = '+Preview',
+  f = { "<cmd>lua require('goto-preview').goto_preview_definition()<cr>", 'Preview definition' },
+  t = { "<cmd>lua require('goto-preview').goto_preview_type_definition()<cr>", 'Preview type definition' },
+  i = { "<cmd>lua require('goto-preview').goto_preview_implementation()<cr>", 'Preview implementation' },
+  c = { "<cmd>lua require('goto-preview').close_all_win()<cr>", 'Close all preview windows' },
+  r = { "<cmd>lua require('goto-preview').goto_preview_references()<cr>", 'Preview references' },
+}
+
+lvim.builtin.which_key.mappings['l']['a'] = { '<cmd>CodeActionMenu<cr>', 'Code actions' }
 
 lvim.builtin.which_key.mappings['J'] = {
   name = '+TreeSJ',

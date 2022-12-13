@@ -6,15 +6,31 @@ lvim.plugins = {
   "jose-elias-alvarez/typescript.nvim",
   "mxsdev/nvim-dap-vscode-js",
   "folke/tokyonight.nvim",
+  "gbprod/nord.nvim",
   'kvrohit/mellow.nvim',
   'savq/melange',
+  'sainnhe/sonokai',
   "folke/trouble.nvim",
   "rcarriga/nvim-dap-ui",
   'lukas-reineke/indent-blankline.nvim',
   'toppair/reach.nvim',
+  'ray-x/lsp_signature.nvim',
+  'glepnir/lspsaga.nvim',
+  'TimUntersberger/neogit',
+  { 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' },
   {
-    'folke/trouble.nvim',
-    cmd = 'TroubleToggle',
+    'phaazon/mind.nvim',
+    branch = 'v2.2',
+    requires = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      require'mind'.setup()
+    end
+  },
+  {
+    'rmagatti/goto-preview',
+    config = function()
+      require('goto-preview').setup()
+    end,
   },
   {
     "s1n7ax/nvim-window-picker",
@@ -33,7 +49,6 @@ lvim.plugins = {
             -- buftype = { "terminal" },
           },
         },
-        other_win_hl_color = "#80e7f2",
       })
     end,
   },
