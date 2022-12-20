@@ -10,6 +10,7 @@ lvim.plugins = {
   'kvrohit/mellow.nvim',
   'savq/melange',
   'sainnhe/sonokai',
+  'Yazeed1s/oh-lucy.nvim',
   "folke/trouble.nvim",
   "rcarriga/nvim-dap-ui",
   'lukas-reineke/indent-blankline.nvim',
