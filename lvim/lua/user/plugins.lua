@@ -16,26 +16,30 @@ lvim.plugins = {
   'lukas-reineke/indent-blankline.nvim',
   'toppair/reach.nvim',
   'ray-x/lsp_signature.nvim',
-  'glepnir/lspsaga.nvim',
+  {
+    'nvimdev/lspsaga.nvim',
+    event = "LspAttach",
+    config = function()
+      require('lspsaga').setup()
+    end,
+    dependencies = {
+      { 'nvim-tree/nvim-web-devicons' },
+      { 'nvim-treesitter/nvim-treesitter' }
+    }
+  },
   'TimUntersberger/neogit',
+  'stevearc/oil.nvim',
   { 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' },
   {
     'phaazon/mind.nvim',
     branch = 'v2.2',
-    requires = { 'nvim-lua/plenary.nvim' },
+    dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
-      require'mind'.setup()
+      require 'mind'.setup()
     end
   },
   {
-    'rmagatti/goto-preview',
-    config = function()
-      require('goto-preview').setup()
-    end,
-  },
-  {
     "s1n7ax/nvim-window-picker",
-    tag = "1.*",
     config = function()
       require("window-picker").setup({
         autoselect_one = true,
@@ -55,11 +59,65 @@ lvim.plugins = {
   },
   {
     'Wansmer/treesj',
-    requires = { 'nvim-treesitter' },
+    dependencies = { 'nvim-treesitter' },
     config = function()
       require('treesj').setup({
         use_default_keymaps = false,
       })
     end,
   },
+  {
+    'debugloop/telescope-undo.nvim',
+    dependencies = { 'nvim-telescope/telescope.nvim' },
+    config = function()
+      require("telescope").load_extension("undo")
+    end,
+  },
+  {
+    "zbirenbaum/copilot.lua",
+    event = { "VimEnter" },
+    config = function()
+      vim.defer_fn(function()
+        require("copilot").setup {
+          plugin_manager_path = get_runtime_dir() .. "/site/pack/packer",
+        }
+      end, 100)
+    end,
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua", "nvim-cmp" },
+  },
+  {
+    "stevearc/dressing.nvim",
+    opts = {}
+  },
+  {
+    'maxmx03/fluoromachine.nvim',
+    config = function()
+      local fm = require 'fluoromachine'
+      fm.setup {
+        glow = true,
+        theme = 'retrowave'
+      }
+    end
+  },
+  {
+    'google/executor.nvim',
+    config = function()
+      require("executor").setup({})
+    end,
+    dependencies = {
+      "MunifTanjim/nui.nvim"
+    }
+  },
+  {
+    'folke/flash.nvim',
+    event = "VeryLazy",
+    ---@type Flash.Config
+    opts = {},
+  }
 }
+
+lvim.builtin.cmp.formatting.source_names['copilot'] = "(Copilot)"
+table.insert(lvim.builtin.cmp.sources, 1, { name = 'copilot' })

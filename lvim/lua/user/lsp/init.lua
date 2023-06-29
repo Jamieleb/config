@@ -1,7 +1,8 @@
 require('dapui').setup()
--- require('user.lsp.lsp_saga')
 require('user.lsp.lsp_signature')
 require('user.lsp.languages.ts')
+require('user.lsp.languages.dotnet')
+
 -- generic LSP settings
 
 -- -- make sure server will always be installed even if the server is in skipped_servers list

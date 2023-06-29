@@ -120,13 +120,6 @@ lvim.builtin.which_key.mappings[";"] = {
   "command palette",
 }
 lvim.builtin.which_key.mappings['n'] = { '<cmd>MindOpenMain<cr>', 'Open Notes' }
-lvim.builtin.which_key.mappings["l"]["D"] = {
-  "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", "go to definition"
-}
-lvim.builtin.which_key.mappings['l']['R'] = {
-  "<cmd>lua require('goto-preview').goto_preview_references()<cr>",
-  'References',
-}
 lvim.builtin.which_key.mappings["l"]["P"] = {
   name = '+Preview',
   f = { "<cmd>lua require('goto-preview').goto_preview_definition()<cr>", 'Preview definition' },
@@ -134,9 +127,19 @@ lvim.builtin.which_key.mappings["l"]["P"] = {
   i = { "<cmd>lua require('goto-preview').goto_preview_implementation()<cr>", 'Preview implementation' },
   c = { "<cmd>lua require('goto-preview').close_all_win()<cr>", 'Close all preview windows' },
   r = { "<cmd>lua require('goto-preview').goto_preview_references()<cr>", 'Preview references' },
+  d = { "<cmd>lua require('goto-preview').goto_preview_definition()<cr>", 'Preview definition' }
 }
 
-lvim.builtin.which_key.mappings['l']['a'] = { '<cmd>CodeActionMenu<cr>', 'Code actions' }
+-- lvim.builtin.which_key.mappings['l']['a'] = { '<cmd>CodeActionMenu<cr>', 'Code actions' }
+lvim.builtin.which_key.mappings['l']['a'] = { '<cmd>Lspsaga code_action<CR>', 'Code action' }
+lvim.builtin.which_key.mappings['l']['r'] = { '<cmd>Lspsaga rename<cr>', 'Rename' }
+lvim.builtin.which_key.mappings['l']['d'] = { '<cmd>Lspsaga peek_definition<cr>', 'Peek definition' }
+lvim.builtin.which_key.mappings['l']['D'] = { '<cmd>Lspsaga goto_definition<cr>', 'Go to definition' }
+lvim.builtin.which_key.mappings['l']['T'] = { '<cmd>Lspsaga goto_type_definition<cr>', 'Go to type definition' }
+
+lvim.builtin.which_key.mappings['l']['v'] = { '<cmd>Lspsaga lsp_finder<cr>', 'View definition & references' }
+
+vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", { silent = true })
 
 lvim.builtin.which_key.mappings['J'] = {
   name = '+TreeSJ',
@@ -144,6 +147,16 @@ lvim.builtin.which_key.mappings['J'] = {
   s = { "<cmd>TSJSplit<CR>", 'Split under cursor' },
   j = { "<cmd>TSJJoin<CR>", 'Join under cursor' },
 }
+
+lvim.builtin.which_key.mappings['c'] = {
+  name = '+ChatGPT',
+  c = { "<cmd>ChatGPT<CR>", "Open interactive window" },
+  a = { "<cmd>ChatGPTActAs<CR>", "Open Act As prompt" },
+  e = { "<cmd>ChatGPTEditWithInstructions<CR>", "Open Edit with Instructions window" }
+}
+
+lvim.builtin.which_key.mappings['v'] = { '"*p', 'Put from system clipboard' }
+lvim.builtin.which_key.mappings['c'] = { '"*y', 'Yank to system clipboard' }
 
 vim.cmd([[
 " keep cursor centered when jumping and line concatenating

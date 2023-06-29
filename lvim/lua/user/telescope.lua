@@ -78,3 +78,6 @@ lvim.builtin.telescope.defaults.mappings = {
     ["?"] = actions.which_key,
   },
 }
+
+lvim.builtin.which_key.mappings['u'] = { '<cmd>Telescope undo<cr>', 'Telescope undo' }
+lvim.builtin.which_key.mappings['z'] = { "<cmd>Telescope spell_suggest<cr>", 'Telescope spellings'}

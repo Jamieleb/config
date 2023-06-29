@@ -20,6 +20,8 @@ require('user.lsp')
 require('user.indent-blankline')
 require('user.reach')
 require('user.neogit')
+require('user.oil')
+require('user.executor')
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
