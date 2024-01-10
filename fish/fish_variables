@@ -1,6 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export EDITOR:lvim
+SETUVAR --export FZF_DEFAULT_OPTS:\x2d\x2dreverse
 SETUVAR --export GOBIN:/Users/jamesclebrun/projects/goworkspace/bin/
 SETUVAR --export --path GOPATH:/Users/jamesclebrun/projects/goworkspace/
 SETUVAR --export PYENV_ROOT:/Users/jamesclebrun/\x2epyenv
@@ -43,4 +44,4 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/Users/jamie\x2elebrun/\x2elocal/bin\x1e/Users/jamie\x2elebrun/Library/Python/3\x2e8/bin\x1e/Users/jamielebrun/\x2ecargo/bin\x1e/Users/jamesclebrun/\x2ecargo/bin\x1e/Users/jamesclebrun/projects/goworkspace/bin\x1e/Users/jamesclebrun/Library/Python/3\x2e8/bin\x1e/Users/jamesclebrun/\x2epyenv/bin\x1e/opt/homebrew/opt/openssl\x401\x2e1/bin\x1e/opt/homebrew/opt/mysql\x405\x2e7/bin\x1e/opt/homebrew/bin
+SETUVAR fish_user_paths:/Users/jamie\x2elebrun/config/scripts\x1e/Users/jamie\x2elebrun/\x2edotnet/tools\x1e/opt/homebrew/sbin\x1e/Users/jamie\x2elebrun/\x2ecargo/bin\x1e/Users/jamie\x2elebrun/\x2elocal/bin\x1e/Users/jamie\x2elebrun/Library/Python/3\x2e8/bin\x1e/Users/jamielebrun/\x2ecargo/bin\x1e/Users/jamesclebrun/\x2ecargo/bin\x1e/Users/jamesclebrun/projects/goworkspace/bin\x1e/Users/jamesclebrun/Library/Python/3\x2e8/bin\x1e/Users/jamesclebrun/\x2epyenv/bin\x1e/opt/homebrew/opt/openssl\x401\x2e1/bin\x1e/opt/homebrew/opt/mysql\x405\x2e7/bin\x1e/opt/homebrew/bin
