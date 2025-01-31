@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+task=$(jq '.scripts | to_entries | map("\(.key) - \(.value)")' package.json | sed '1d;$d;' | sed 's/\w*"//g' | fzf | awk '{ print $1 }')
+npm run $task

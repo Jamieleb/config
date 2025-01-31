@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+command=$(jq '.scripts | to_entries | map("\(.key) - \(.value)")' package.json | sed '1d;$d;' | sed 's/\w*"//g' | fzf | awk '{ print $1 }')
+tmux neww -n $command 'npm run '$command ; exec fish
